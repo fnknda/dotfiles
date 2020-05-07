@@ -1,0 +1,28 @@
+set -o vi
+
+unalias -a
+
+alias ls='ls --color=auto'
+alias ll='ls -la'
+alias apod='brave https://apod.nasa.gov/apod/'
+alias vi=nvim
+alias ?=duck
+alias todos="grep --color -Ern 'TODO:|FIXME:'"
+alias games="echo '
+cataclysmdda
+dwarffortress
+openttd
+tibia
+wakfu
+'"
+
+export PATH=\
+$HOME/repos/gitlab.com/_joao.fukuda/dotfiles/scripts/:\
+$PATH:
+
+export CDPATH=\
+./:\
+$HOME/:\
+$HOME/Documents/devel:\
+$HOME/Documents:
+

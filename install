@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+ln -sf $PWD/bashconfig $HOME/.bash_aliases
+ls -l $HOME/.bash_aliases
+
+ln -sf $PWD/vimrc $HOME/.vimrc
+ls -l $HOME/.vimrc
+
+ln -sf $PWD/tmux.conf $HOME/.tmux.conf
+ls -l $HOME/.tmux.conf
+
