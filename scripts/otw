@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+lynx "https://overthewire.org/wargames/bandit/bandit$1.html"
+
