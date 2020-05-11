@@ -4,11 +4,11 @@ unalias -a
 
 alias ls='ls --color=auto'
 alias ll='ls -la'
-alias apod='brave https://apod.nasa.gov/apod/'
+alias apod='lynx https://apod.nasa.gov/apod/'
 alias vi=nvim
 alias ?=duck
 alias todos="grep --color -Ern 'TODO:|FIXME:'"
-alias clippass="keepassxc-cli clip -k $HOME/.passdb.key $HOME/.keepassxc/Passwords.kdbx"
+alias pwdc="keepassxc-cli clip -k $HOME/.passdb.key $HOME/.keepassxc/Passwords.kdbx"
 alias games="echo '
 cataclysmdda
 dwarffortress
