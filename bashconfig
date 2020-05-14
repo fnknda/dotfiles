@@ -8,22 +8,23 @@ alias apod='lynx https://apod.nasa.gov/apod/'
 alias vi=nvim
 alias ?=duck
 alias todos="grep --color -Ern 'TODO:|FIXME:'"
-alias pwdc="keepassxc-cli clip -k $HOME/.passdb.key $HOME/.keepassxc/Passwords.kdbx"
+alias pwdc="keepassxc-cli clip -k $HOME/.passdb.key"
 alias games="echo '
 cataclysmdda
 dwarffortress
 openttd
-tibia
 wakfu
 '"
 
 export PATH=\
 $HOME/repos/gitlab.com/_joao.fukuda/dotfiles/scripts/:\
+$HOME/.gem/ruby/2.7.0/bin:\
 $PATH:
 
 export CDPATH=\
 ./:\
 $HOME/:\
-$HOME/Documents/devel:\
+$HOME/repos/gitlab.com/:\
+$HOME/repos/github.com/:\
 $HOME/Documents:
 

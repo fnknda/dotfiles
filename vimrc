@@ -10,6 +10,8 @@ Plug 'vim-airline/vim-airline'
 
 Plug 'airblade/vim-gitgutter'
 
+Plug 'tpope/vim-surround'
+
 call plug#end()
 
 let g:airline_powerline_fonts = 1
