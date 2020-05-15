@@ -2,7 +2,7 @@ set -o vi
 
 unalias -a
 
-alias graphs="startx /usr/bin/startplasma-x11"
+alias graphs="startx"
 alias ls='ls --color=auto'
 alias ll='ls -la'
 alias apod='lynx https://apod.nasa.gov/apod/'
@@ -10,16 +10,10 @@ alias vi=vim
 alias ?=duck
 alias todos="grep --color -Ern 'TODO:|FIXME:'"
 alias pwdc="keepassxc-cli clip -k $HOME/.passdb.key"
-alias games="echo '
-cataclysmdda
-dwarffortress
-openttd
-wakfu
-'"
 
 export PATH=\
 $HOME/repos/gitlab.com/_joao.fukuda/dotfiles/scripts/:\
-$HOME/.gem/ruby/2.7.0/bin:\
+$HOME/.bin/:\
 $PATH:
 
 export CDPATH=\
