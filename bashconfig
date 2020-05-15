@@ -2,10 +2,11 @@ set -o vi
 
 unalias -a
 
+alias graphs="startx /usr/bin/startplasma-x11"
 alias ls='ls --color=auto'
 alias ll='ls -la'
 alias apod='lynx https://apod.nasa.gov/apod/'
-alias vi=nvim
+alias vi=vim
 alias ?=duck
 alias todos="grep --color -Ern 'TODO:|FIXME:'"
 alias pwdc="keepassxc-cli clip -k $HOME/.passdb.key"

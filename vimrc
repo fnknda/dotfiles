@@ -1,4 +1,4 @@
-call plug#begin(stdpath('data') . '/plugged')
+call plug#begin()
 
 Plug 'haya14busa/incsearch.vim'
 
