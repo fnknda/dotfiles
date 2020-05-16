@@ -6,4 +6,6 @@ ln -sf $PWD/bashconfig $HOME/.bash_aliases
 ln -sf $PWD/vimrc $HOME/.vimrc
 ln -sf $PWD/tmux.conf $HOME/.tmux.conf
 ln -sf $PWD/xinitrc $HOME/.xinitrc
+ln -sf $PWD/spectrwm.conf $HOME/.spectrwm.conf
+ln -sf $PWD/spectrwmbar.conf $HOME/.spectrwmbar.conf
 
