@@ -4,7 +4,7 @@ unalias -a
 
 alias graphs="startx"
 alias ls='ls --color=auto'
-alias ll='ls -la'
+alias ll='ls -oA'
 alias apod='lynx https://apod.nasa.gov/apod/'
 alias vi=vim
 alias ?=duck
@@ -19,7 +19,8 @@ $PATH:
 export CDPATH=\
 ./:\
 $HOME/:\
-$HOME/repos/gitlab.com/:\
-$HOME/repos/github.com/:\
+$HOME/repos/gitlab.com/_joao.fukuda/:\
+$HOME/repos/gitlab.com/joao.fukuda/:\
+$HOME/repos/github.com/joaofukuda/:\
 $HOME/Documents:
 

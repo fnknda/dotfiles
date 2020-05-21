@@ -16,11 +16,12 @@ call plug#end()
 
 let g:airline_powerline_fonts = 1
 
-set ts=4 sw=4 noet
+set ts=2 sw=2 noet
 
 set number
 set nowrap
 set mouse=a
+set scrolloff=7
 
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set list
