@@ -24,8 +24,8 @@ filetype plugin on
 set ts=3 sw=3 noexpandtab
 set number
 set scrolloff=7
-set textwidth=80
-set linebreak
+set wrap
+set colorcolumn=80
 
 set smartindent
 set smarttab

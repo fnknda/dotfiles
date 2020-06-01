@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "$(curl -s https://ipvigilante.com/$(curl -s https://ipinfo.io/ip))"
+
