@@ -4,7 +4,7 @@ unalias -a
 
 alias graphs="startx"
 alias ls='ls --color=auto'
-alias ll='ls -oA'
+alias ll='ls -lA'
 alias apod='lynx https://apod.nasa.gov/apod/'
 alias vi=vim
 alias ?=duck
@@ -13,7 +13,6 @@ alias pwdc="keepassxc-cli clip -k $HOME/.passdb.key"
 
 export PATH=\
 $HOME/repos/gitlab.com/_joao.fukuda/dotfiles/scripts/:\
-$HOME/.bin/:\
 $PATH:
 
 export CDPATH=\
