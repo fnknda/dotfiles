@@ -2,18 +2,22 @@ call plug#begin()
 
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 Plug 'junegunn/goyo.vim'
 Plug 'itchyny/lightline.vim'
-Plug 'andymass/vim-matchup'
+
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-indent'
+Plug 'kana/vim-textobj-line'
 
 Plug 'alessandroyorba/sierra'
 
 call plug#end()
 
+set nocompatible
 filetype plugin on
 
 let g:solarized_termcolors=256
-let g:loaded_matchit = 1
 
 syntax enable
 set background=dark
@@ -27,6 +31,7 @@ set colorcolumn=80
 set noshowmode
 set noshowcmd
 set shortmess+=F
+set relativenumber
 
 set smartindent
 set smarttab
@@ -46,12 +51,14 @@ set icon
 set hlsearch
 set incsearch
 
-let g:loaded_matchparen=1
-set noshowmatch
 set foldmethod=manual
 
 set hidden
-set history=100
+
+set path+=**
+set wildmenu
+
+set spelllang=en_us,pt_br
 
 " start at last place you were editing
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
