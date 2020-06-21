@@ -1,6 +1,5 @@
 call plug#begin()
 
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/goyo.vim'
@@ -20,6 +19,7 @@ filetype plugin on
 let g:solarized_termcolors=256
 
 syntax enable
+set omnifunc=syntaxcomplete#Complete
 set background=dark
 colorscheme sierra
 
@@ -58,6 +58,7 @@ set hidden
 set path+=**
 set wildmenu
 
+autocmd FileType markdown set spell
 set spelllang=en_us,pt_br
 
 " start at last place you were editing
@@ -68,4 +69,13 @@ noremap <silent> k gk
 noremap <silent> j gj
 noremap <silent> 0 g0
 noremap <silent> $ g$
+
+" Add rsetrictions to vim to train it
+inoremap <up> <Nop>
+inoremap <down> <Nop>
+inoremap <left> <Nop>
+inoremap <right> <Nop>
+
+nmap <C-Up> <C-a>
+nmap <C-Down> <C-x>
 
