@@ -10,3 +10,6 @@ ln -sf $PWD/spectrwm.conf $HOME/.spectrwm.conf
 ln -sf $PWD/spectrwmbar.conf $HOME/.spectrwmbar.conf
 ln -sf $PWD/errnolist $HOME/.errnolist
 
+[ ! -d $HOME/.echinus ] && mkdir $HOME/.echinus
+ln -sf $PWD/echinusrc $HOME/.echinus/echinusrc
+
