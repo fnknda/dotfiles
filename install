@@ -6,10 +6,14 @@ ln -sf $PWD/bashconfig $HOME/.bash_aliases
 ln -sf $PWD/vimrc $HOME/.vimrc
 ln -sf $PWD/tmux.conf $HOME/.tmux.conf
 ln -sf $PWD/xinitrc $HOME/.xinitrc
-ln -sf $PWD/spectrwm.conf $HOME/.spectrwm.conf
-ln -sf $PWD/spectrwmbar.conf $HOME/.spectrwmbar.conf
 ln -sf $PWD/errnolist $HOME/.errnolist
 
-[ ! -d $HOME/.echinus ] && mkdir $HOME/.echinus
-ln -sf $PWD/echinusrc $HOME/.echinus/echinusrc
+[ ! -d $HOME/.config ] && mkdir $HOME/.config
+ln -sf $PWD/alacritty.conf $HOME/.config/alacritty.yml 
+
+[ ! -d $HOME/.config/i3 ] && mkdir $HOME/.config/i3 
+ln -sf $PWD/i3.conf $HOME/.config/i3/config
+
+[ ! -d $HOME/.config/i3status ] && mkdir $HOME/.config/i3status 
+ln -sf $PWD/i3status.conf $HOME/.config/i3status/config
 
