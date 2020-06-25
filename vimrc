@@ -9,7 +9,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-line'
 
-Plug 'alessandroyorba/sierra'
+Plug 'jaredgorski/SpaceCamp'
 
 call plug#end()
 
@@ -21,7 +21,16 @@ let g:solarized_termcolors=256
 syntax enable
 set omnifunc=syntaxcomplete#Complete
 set background=dark
-colorscheme sierra
+
+set termguicolors
+colorscheme spacecamp
+
+hi Normal guibg=NONE ctermbg=NONE
+hi NonText guibg=NONE ctermbg=NONE
+hi LineNr guibg=NONE ctermbg=NONE
+hi Directory guibg=NONE ctermbg=NONE
+hi CursorLine guibg=NONE ctermbg=NONE
+hi SpecialKey guibg=NONE ctermbg=NONE
 
 set ts=3 sw=3 noexpandtab
 set number
