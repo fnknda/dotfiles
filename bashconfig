@@ -31,6 +31,7 @@ alias torw="echo http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad
 
 export PATH=\
 $HOME/repos/gitlab.com/_joao.fukuda/dotfiles/scripts/:\
+/run/media/$USER/:\
 $PATH:
 
 export CDPATH=\

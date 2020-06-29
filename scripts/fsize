@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+sed -i "s/size: .*/size: $*/g" ~/.config/alacritty.yml
+
