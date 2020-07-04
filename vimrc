@@ -46,7 +46,7 @@ set smartindent
 set smarttab
 set autoindent
 
-set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set listchars=tab:\|·,trail:~,extends:>,precedes:<
 set list
 
 set nobackup
