@@ -36,7 +36,7 @@ set ts=3 sw=3 noexpandtab
 set number
 set scrolloff=10
 set wrap
-set colorcolumn=80
+" set colorcolumn=80
 set noshowmode
 set noshowcmd
 set shortmess+=F
@@ -79,7 +79,7 @@ noremap <silent> j gj
 noremap <silent> 0 g0
 noremap <silent> $ g$
 
-" Add rsetrictions to vim to train it
+" Add restrictions to vim to force not to use arrow keys
 inoremap <up> <Nop>
 inoremap <down> <Nop>
 inoremap <left> <Nop>
@@ -87,4 +87,9 @@ inoremap <right> <Nop>
 
 nmap <C-Up> <C-a>
 nmap <C-Down> <C-x>
+
+nmap <C-k> <C-w>k
+nmap <C-j> <C-w>j
+nmap <C-l> <C-w>l
+nmap <C-h> <C-w>h
 
