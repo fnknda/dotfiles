@@ -66,7 +66,7 @@ set hidden
 set path+=**
 set wildmenu
 
-autocmd FileType markdown \| html set spell
+autocmd FileType markdown\|html set spell
 set spelllang=en_us,pt_br
 
 " start at last place you were editing
