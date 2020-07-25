@@ -36,7 +36,6 @@ set ts=3 sw=3 noexpandtab
 set number
 set scrolloff=10
 set wrap
-" set colorcolumn=80
 set noshowmode
 set noshowcmd
 set shortmess+=F
@@ -67,11 +66,15 @@ set hidden
 set path+=**
 set wildmenu
 
-autocmd FileType markdown set spell
+autocmd FileType markdown html set spell
 set spelllang=en_us,pt_br
 
 " start at last place you were editing
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+" Remove escape key delay, but breaks all maps in insert mode that have escape
+" on the sequence
+set noesckeys
 
 " don't skip lines when wrapped
 noremap <silent> k gk

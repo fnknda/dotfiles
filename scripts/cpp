@@ -1,3 +1,3 @@
 #!/usr/bin/bash
 
-lynx "en.cppreference.com/mwiki/index.php?search=$*"
+elinks "en.cppreference.com/mwiki/index.php?search=$*"

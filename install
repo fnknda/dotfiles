@@ -2,11 +2,14 @@
 
 [ ! -e $HOME/.vim/autoload/plug.vim ] && curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-ln -sf $PWD/bashconfig $HOME/.bash_aliases
+ln -sf $PWD/bashrc $HOME/.bash_aliases
 ln -sf $PWD/vimrc $HOME/.vimrc
 ln -sf $PWD/tmux.conf $HOME/.tmux.conf
 ln -sf $PWD/xinitrc $HOME/.xinitrc
 ln -sf $PWD/errnolist $HOME/.errnolist
+
+[ ! -d $HOME/.elinks ] && mkdir $HOME/.elinks
+ln -sf $PWD/elinks.conf $HOME/.elinks/elinks.conf
 
 [ ! -d $HOME/.config ] && mkdir $HOME/.config
 ln -sf $PWD/alacritty.conf $HOME/.config/alacritty.yml 
