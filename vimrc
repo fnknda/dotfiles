@@ -66,6 +66,7 @@ set hidden
 set path+=**
 set wildmenu
 
+set encoding=utf-8
 autocmd FileType markdown\|html set spell
 set spelllang=en_us,pt_br
 
