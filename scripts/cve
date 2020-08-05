@@ -1,0 +1,3 @@
+#!/bin/bash
+
+elinks https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=$*?
