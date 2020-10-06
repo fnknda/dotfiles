@@ -1,0 +1,3 @@
+#!/bin/bash
+
+elinks "https://www.sinonimos.com.br/busca.php?q=$*"

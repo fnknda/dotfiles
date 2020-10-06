@@ -16,7 +16,7 @@ set -o vi
 # The history number of this command: \!
 # The command number of this command: \#
 
-PS1='┌─┤\[\e[34m\]\u\[\e[m\]@\[\e[35m\]\h\[\e[m\]├─┤\[\e[32m\]\w\[\e[m\]│\n└──┤\$ '
+PS1='┌─[\[\e[34m\]\u\[\e[m\]@\[\e[35m\]\h\[\e[m\]]─[\[\e[32m\]\w\[\e[m\]]\n└──┤\$ '
 
 unalias -a
 
@@ -24,10 +24,11 @@ alias graphs="startx"
 alias ls='ls --color=auto'
 alias ll='ls -lA'
 alias apod='elinks https://apod.nasa.gov/apod/'
-alias ?=duck
 alias todos="grep --color -Ern 'TODO:|FIXME:'"
 alias pwdc="keepassxc-cli clip -k $HOME/.passdb.key /run/media/coccafukuda/passwords/database"
 alias torw="echo http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion/wiki/index.php/Main_Page | xclip"
+alias sec="sudo lxc exec sec bash"
+alias ?=duck
 alias ..="cd .."
 
 export PATH=\

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+keepassxc-cli $1 -k ~/.passdb.key /run/media/coccafukuda/passwords/database $2

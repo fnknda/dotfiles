@@ -7,6 +7,7 @@ ln -sf $PWD/vimrc $HOME/.vimrc
 ln -sf $PWD/tmux.conf $HOME/.tmux.conf
 ln -sf $PWD/xinitrc $HOME/.xinitrc
 ln -sf $PWD/errnolist $HOME/.errnolist
+ln -sf $PWD/gdbinit $HOME/.gdbinit
 
 [ ! -d $HOME/.elinks ] && mkdir $HOME/.elinks
 ln -sf $PWD/elinks.conf $HOME/.elinks/elinks.conf
