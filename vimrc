@@ -41,9 +41,9 @@ set noshowcmd
 set shortmess+=F
 set relativenumber
 
-set smartindent
 set smarttab
-set autoindent
+
+filetype indent on
 
 set listchars=tab:\|·,trail:~,extends:>,precedes:<
 set list
