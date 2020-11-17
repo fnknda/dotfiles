@@ -20,7 +20,6 @@ PS1='┌─[\[\e[34m\]\u\[\e[m\]@\[\e[35m\]\h\[\e[m\]]─[\[\e[32m\]\w\[\e[m\]]\
 
 unalias -a
 
-alias graphs="startx"
 alias ls='ls --color=auto'
 alias grep='grep --color'
 alias ll='ls -lA'
