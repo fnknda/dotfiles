@@ -33,15 +33,16 @@ hi CursorLine guibg=NONE ctermbg=NONE
 hi SpecialKey guibg=NONE ctermbg=NONE
 
 set ts=3 sw=3 noexpandtab
+set relativenumber
 set number
 set scrolloff=10
 set wrap
 set noshowmode
 set noshowcmd
 set shortmess+=F
-set relativenumber
 
 set smarttab
+set autoindent
 
 filetype indent on
 
@@ -63,6 +64,7 @@ set foldmethod=manual
 
 set hidden
 
+set ignorecase
 set path+=**
 set wildmenu
 
@@ -77,12 +79,6 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " on the sequence
 set noesckeys
 
-" don't skip lines when wrapped
-noremap <silent> k gk
-noremap <silent> j gj
-noremap <silent> 0 g0
-noremap <silent> $ g$
-
 " Add restrictions to vim to force not to use arrow keys
 inoremap <up> <Nop>
 inoremap <down> <Nop>
@@ -91,9 +87,4 @@ inoremap <right> <Nop>
 
 nmap <C-Up> <C-a>
 nmap <C-Down> <C-x>
-
-nmap <C-k> <C-w>k
-nmap <C-j> <C-w>j
-nmap <C-l> <C-w>l
-nmap <C-h> <C-w>h
 
