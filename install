@@ -16,11 +16,12 @@ ln -sf $PWD/gdbinit $HOME/.gdbinit
 ln -sf $PWD/elinks.conf $HOME/.elinks/elinks.conf
 
 [ ! -d $HOME/.config ] && mkdir $HOME/.config
-ln -sf $PWD/alacritty.conf $HOME/.config/alacritty.yml 
+ln -sf $PWD/alacritty.conf $HOME/.config/alacritty.yml
+ln -sf $PWD/starship.toml $HOME/.config/starship.toml
 
-[ ! -d $HOME/.config/i3 ] && mkdir $HOME/.config/i3 
+[ ! -d $HOME/.config/i3 ] && mkdir $HOME/.config/i3
 ln -sf $PWD/i3.conf $HOME/.config/i3/config
 
-[ ! -d $HOME/.config/i3status ] && mkdir $HOME/.config/i3status 
+[ ! -d $HOME/.config/i3status ] && mkdir $HOME/.config/i3status
 ln -sf $PWD/i3status.conf $HOME/.config/i3status/config
 

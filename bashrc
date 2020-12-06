@@ -1,7 +1,5 @@
 set -o vi
 
-PS1='┌─[\[\e[34m\]\u\[\e[m\]@\[\e[35m\]\h\[\e[m\]]─[\[\e[32m\]\w\[\e[m\]]\n└──┤\$ '
-
 unalias -a
 
 alias ls='ls --color=auto'
