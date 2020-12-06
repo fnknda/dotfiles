@@ -1,30 +1,32 @@
-# Fukuda
+# Fukuda's dotfiles
 
-My config for linux. I try to keep all important configs here as i frequently format my notebook, but like to keep all things the same
+My configuration files for Linux. I try to keep all important configurations here as I frequently wipe my notebook, create servers and VMs but always like to keep things the same.
 
-There are configs for the following programs:
+Here in this repository are configuration files for the following programs:
 
-* Alacritty (terminal)
-* Vim (text editor)
-* I3 (window manager)
-* I3bar (status bar)
+* alacritty (terminal)
 * bash (Linux's shell)
+* i3bar (status bar)
+* i3 (window manager)
+* starship (multi shell prompt)
 * tmux (terminal window manager)
-
-And some other programs I use with these:
-
+* vim (text editor)
 * xorg-server (window server)
 * xorg-xinit
-* picom (window compositor)
-* TorBrowser (private browser)
-* PaleMoon (open-source browser)
-* Lynx (terminal browser)
-* feh (for backgorund image)
+
+And here is a list of some other programs I like to use with the ones mentioned above:
+
+* autotools
+* cmake
+* d_menu (launcher)
+* elinks (terminal browser)
+* feh (for background image)
+* firefox (browser)
+* gcc
 * git
 * grub
 * networkmanager
-* gcc
-* cmake
 * openssh
-* d_menu (launcher)
+* picom (window compositor)
+* torbrowser (private browser)
 
