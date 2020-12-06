@@ -29,4 +29,6 @@ And here is a list of some other programs I like to use with the ones mentioned 
 * openssh
 * picom (window compositor)
 * torbrowser (private browser)
+* noto-fonts (special characters)
+* ttf-nerd-fonts-symbols-mono (symbols)
 
