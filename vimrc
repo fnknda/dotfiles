@@ -1,8 +1,10 @@
 call plug#begin()
 
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
-Plug 'junegunn/goyo.vim'
+Plug 'preservim/nerdcommenter'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-fugitive'
+
 Plug 'itchyny/lightline.vim'
 
 Plug 'kana/vim-textobj-user'
@@ -17,6 +19,16 @@ set nocompatible
 filetype plugin on
 
 let g:solarized_termcolors=256
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_w = 1
 
 syntax enable
 set omnifunc=syntaxcomplete#Complete
