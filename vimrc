@@ -1,16 +1,19 @@
 call plug#begin()
 
-Plug 'tpope/vim-surround'
 Plug 'preservim/nerdcommenter'
-Plug 'scrooloose/syntastic'
-Plug 'tpope/vim-fugitive'
+Plug 'rust-lang/rust.vim'
+Plug 'tpope/vim-surround'
+" Static code checker
+	Plug 'scrooloose/syntastic'
+" Run git comments (better) on vim with :G
+	Plug 'tpope/vim-fugitive'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
 
-Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-line'
+Plug 'kana/vim-textobj-user'
 
 Plug 'jaredgorski/SpaceCamp'
 
