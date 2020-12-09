@@ -34,6 +34,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_check_on_w = 1
 
+let g:syntastic_rust_checkers = ['rustc']
+
 syntax enable
 set omnifunc=syntaxcomplete#Complete
 set background=dark
