@@ -5,6 +5,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
 
+Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
 
 Plug 'kana/vim-textobj-user'
@@ -44,7 +45,9 @@ hi Directory guibg=NONE ctermbg=NONE
 hi CursorLine guibg=NONE ctermbg=NONE
 hi SpecialKey guibg=NONE ctermbg=NONE
 
-set ts=3 sw=3 noexpandtab
+set ts=3
+set sw=3
+set noexpandtab
 set relativenumber
 set number
 set scrolloff=10
@@ -86,10 +89,6 @@ set spelllang=en_us,pt_br
 
 " start at last place you were editing
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-
-" Remove escape key delay, but breaks all maps in insert mode that have escape
-" on the sequence
-set noesckeys
 
 " Add restrictions to vim to force not to use arrow keys
 inoremap <up> <Nop>

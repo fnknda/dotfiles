@@ -3,6 +3,7 @@ set -o vi
 unalias -a
 
 alias ls='ls --color=auto'
+alias vim='nvim'
 alias grep='grep --color'
 alias ll='ls -lA'
 alias apod='elinks https://apod.nasa.gov/apod/'

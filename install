@@ -1,12 +1,12 @@
 #!/bin/bash
 
-[ ! -e $HOME/.vim/autoload/plug.vim ] &&\
-	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+[ ! -e $HOME/.local/share/nvim/site/autoload/plug.vim ] &&\
+	sh -c 'curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+	       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-( curl -fsSL https://starship.rs/install.sh | bash ) && echo 'eval "$(starship init bash)"' >> ~/.bashrc
+sh -c 'curl -fsSL https://starship.rs/install.sh'
 
 ln -sf $PWD/bashrc $HOME/.bash_aliases
-ln -sf $PWD/vimrc $HOME/.vimrc
 ln -sf $PWD/tmux.conf $HOME/.tmux.conf
 ln -sf $PWD/xinitrc $HOME/.xinitrc
 ln -sf $PWD/errnolist $HOME/.errnolist
@@ -18,6 +18,9 @@ ln -sf $PWD/elinks.conf $HOME/.elinks/elinks.conf
 [ ! -d $HOME/.config ] && mkdir $HOME/.config
 ln -sf $PWD/alacritty.conf $HOME/.config/alacritty.yml
 ln -sf $PWD/starship.toml $HOME/.config/starship.toml
+
+[ ! -d $HOME/.config/nvim ] && mkdir $HOME/.config/nvim
+ln -sf $PWD/vimrc $HOME/.config/nvim/init.vim
 
 [ ! -d $HOME/.config/i3 ] && mkdir $HOME/.config/i3
 ln -sf $PWD/i3.conf $HOME/.config/i3/config

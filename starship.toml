@@ -16,10 +16,16 @@ symbol = "cmake"
 [git_branch]
 symbol = "branch "
 
+[hostname]
+ssh_only = false
+
+[ruby]
+symbol = "ruby "
+
+[rust]
+symbol = "rust "
+
 [username]
 show_always = true
 format = "[$user]($style)@"
-
-[hostname]
-ssh_only = false
 
