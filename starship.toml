@@ -9,6 +9,14 @@ add_newline = false
 [package]
 disabled = true
 
+[[battery.display]]
+threshold = 10
+style = "bold red"
+
+[[battery.display]]
+threshold = 20
+style = "bold yellow"
+
 [cmake]
 format = "via [$symbol $version]($style) "
 symbol = "cmake"
