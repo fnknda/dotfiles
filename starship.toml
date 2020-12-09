@@ -21,11 +21,26 @@ style = "bold yellow"
 format = "via [$symbol $version]($style) "
 symbol = "cmake"
 
+[erlang]
+symbol = "erlang "
+
 [git_branch]
 symbol = "branch "
 
 [hostname]
 ssh_only = false
+
+[lua]
+symbol = "lua "
+
+[perl]
+symbol = "perl "
+
+[php]
+symbol = "php "
+
+[python]
+symbol = "python "
 
 [ruby]
 symbol = "ruby "
