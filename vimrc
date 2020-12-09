@@ -3,6 +3,8 @@ call plug#begin()
 Plug 'preservim/nerdcommenter'
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-surround'
+Plug 'justinmk/vim-sneak'
+Plug 'mhinz/vim-startify'
 " Static code checker
 	Plug 'scrooloose/syntastic'
 " Run git comments (better) on vim with :G
@@ -15,14 +17,12 @@ Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
 
-Plug 'jaredgorski/SpaceCamp'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
 set nocompatible
 filetype plugin on
-
-let g:solarized_termcolors=256
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -36,12 +36,15 @@ let g:syntastic_check_on_w = 1
 
 let g:syntastic_rust_checkers = ['rustc']
 
+let g:gruvbox_termcolors = 16
+let g:gruvbox_invert_signs = 0
+
 syntax enable
 set omnifunc=syntaxcomplete#Complete
 set background=dark
 
 set termguicolors
-colorscheme spacecamp
+colorscheme gruvbox
 
 hi Normal guibg=NONE ctermbg=NONE
 hi NonText guibg=NONE ctermbg=NONE
@@ -52,7 +55,10 @@ hi SpecialKey guibg=NONE ctermbg=NONE
 
 set ts=3
 set sw=3
+set cindent
 set noexpandtab
+set smarttab
+set autoindent
 set relativenumber
 set number
 set scrolloff=10
@@ -60,9 +66,6 @@ set wrap
 set noshowmode
 set noshowcmd
 set shortmess+=F
-
-set smarttab
-set autoindent
 
 filetype indent on
 
