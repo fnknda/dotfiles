@@ -55,6 +55,7 @@ hi SpecialKey guibg=NONE ctermbg=NONE
 
 set ts=3
 set sw=3
+set tw=80
 set cindent
 set noexpandtab
 set smarttab
@@ -66,7 +67,7 @@ set wrap
 set noshowmode
 set noshowcmd
 set shortmess+=F
-set cc=80
+set cc=+1
 
 filetype indent on
 
