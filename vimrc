@@ -66,6 +66,7 @@ set wrap
 set noshowmode
 set noshowcmd
 set shortmess+=F
+set cc=80
 
 filetype indent on
 

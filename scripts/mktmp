@@ -1,0 +1,26 @@
+#!/bin/bash
+
+case $1 in
+	cpp)
+		export EXT=cpp
+	;;
+
+	rust)
+		export EXT=rs
+	;;
+
+	*)
+		echo 'Define a file type to create'
+		echo -e '\tAllowed file types:'
+		echo -e '\t\t- cpp'
+		echo -e '\t\t- rust'
+		exit
+	;;
+esac
+
+cd /tmp
+touch main.$EXT
+bash -c "nvim main.$EXT; bash"
+rm main.$EXT
+cd /tmp
+
