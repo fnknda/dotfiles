@@ -1,12 +1,18 @@
 #!/bin/bash
 
+EXT=''
+FILE_TEXT=''
+FILES_TO_REMOVE=''
+
 case $1 in
 	cpp)
-		export EXT=cpp
+		EXT=cpp
+		FILES_TO_REMOVE='a.out'
 	;;
 
 	rust)
-		export EXT=rs
+		EXT=rs
+		FILES_TO_REMOVE='main'
 	;;
 
 	*)
@@ -19,8 +25,7 @@ case $1 in
 esac
 
 cd /tmp
-touch main.$EXT
+cp $HOME/.templates/temp.$EXT /tmp/main.$EXT
 bash -c "nvim main.$EXT; bash"
-rm main.$EXT
-cd /tmp
+rm -f main.$EXT $FILES_TO_REMOVE
 

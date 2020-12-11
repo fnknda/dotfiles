@@ -10,6 +10,7 @@ ln -sf $PWD/bashrc $HOME/.bash_aliases
 ln -sf $PWD/tmux.conf $HOME/.tmux.conf
 ln -sf $PWD/xinitrc $HOME/.xinitrc
 ln -sf $PWD/errnolist $HOME/.errnolist
+ln -sf $PWD/templates $HOME/.templates
 ln -sf $PWD/gdbinit $HOME/.gdbinit
 
 [ ! -d $HOME/.elinks ] && mkdir $HOME/.elinks
