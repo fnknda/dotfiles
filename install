@@ -12,6 +12,7 @@ ln -sf $PWD/xinitrc $HOME/.xinitrc
 ln -sf $PWD/errnolist $HOME/.errnolist
 ln -sf $PWD/templates $HOME/.templates
 ln -sf $PWD/gdbinit $HOME/.gdbinit
+ln -sf $PWD/Xmodmap $HOME/.Xmodmap
 
 [ ! -d $HOME/.elinks ] && mkdir $HOME/.elinks
 ln -sf $PWD/elinks.conf $HOME/.elinks/elinks.conf
