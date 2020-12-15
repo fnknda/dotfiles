@@ -30,6 +30,9 @@ symbol = "branch "
 [hostname]
 ssh_only = false
 
+[java]
+symbol = "java "
+
 [lua]
 symbol = "lua "
 

@@ -5,6 +5,11 @@ FILE_TEXT=''
 FILES_TO_REMOVE=''
 
 case $1 in
+	c)
+		EXT=c
+		FILES_TO_REMOVE='a.out'
+	;;
+
 	cpp)
 		EXT=cpp
 		FILES_TO_REMOVE='a.out'
@@ -18,6 +23,7 @@ case $1 in
 	*)
 		echo 'Define a file type to create'
 		echo -e '\tAllowed file types:'
+		echo -e '\t\t- c'
 		echo -e '\t\t- cpp'
 		echo -e '\t\t- rust'
 		exit
