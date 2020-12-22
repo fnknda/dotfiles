@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo "$(curl -s https://ipvigilante.com/$(curl -s https://ipinfo.io/ip))"
+curl -s https://ipwhois.app/json/$(curl -s https://ipinfo.io/ip) | jq
 

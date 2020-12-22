@@ -6,7 +6,8 @@ Here in this repository are configuration files for the following programs:
 
 * alacritty (terminal)
 * bash (Linux's shell)
-* i3bar (status bar)
+* dmenu (launcher)
+* i3status (status bar)
 * i3 (window manager)
 * starship (multi shell prompt)
 * tmux (terminal window manager)
@@ -18,16 +19,18 @@ And here is a list of some other programs I like to use with the ones mentioned 
 
 * autotools
 * cmake
-* d_menu (launcher)
 * elinks (terminal browser)
 * feh (for background image)
 * firefox (browser)
 * gcc
 * git
 * grub
+* polybar (i3status alternative)
+* light (hardware brightness control)
 * networkmanager
 * openssh
 * picom (window compositor)
+* rofi (dmenu alternative)
 * torbrowser (private browser)
 * noto-fonts (special characters)
 * ttf-nerd-fonts-symbols-mono (symbols)

@@ -35,7 +35,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_check_on_w = 1
 let g:syntastic_loc_list_height=5
 
-let g:syntastic_rust_checkers = ['rustc']
+let g:rust_recommended_style = 0
 
 let g:gruvbox_termcolors = 16
 let g:gruvbox_invert_signs = 0
