@@ -21,6 +21,9 @@ style = "bold yellow"
 format = "via [$symbol $version]($style) "
 symbol = "cmake"
 
+[directory]
+read_only = "(read only) "
+
 [erlang]
 symbol = "erlang "
 
