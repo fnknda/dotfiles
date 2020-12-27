@@ -7,7 +7,7 @@ add_newline = false
 
 # Disable the package module, hiding it from the prompt completely
 [package]
-disabled = true
+symbol = "pkg "
 
 [[battery.display]]
 threshold = 10
