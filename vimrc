@@ -12,6 +12,7 @@ Plug 'mhinz/vim-startify'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
+Plug 'preservim/nerdtree'
 
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-line'
