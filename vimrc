@@ -57,7 +57,7 @@ hi SpecialKey guibg=NONE ctermbg=NONE
 
 set ts=3
 set sw=3
-set tw=80
+set tw=0
 set cindent
 set noexpandtab
 set smarttab
@@ -69,7 +69,7 @@ set wrap
 set noshowmode
 set noshowcmd
 set shortmess+=F
-set cc=+1
+set cc=80
 
 filetype indent on
 
@@ -102,11 +102,18 @@ set spelllang=en_us,pt_br
 " start at last place you were editing
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
+set mouse=a
+
 " Add restrictions to vim to force not to use arrow keys
 inoremap <up> <Nop>
 inoremap <down> <Nop>
 inoremap <left> <Nop>
 inoremap <right> <Nop>
+
+nmap <C-k> <C-w>k
+nmap <C-j> <C-w>j
+nmap <C-l> <C-w>l
+nmap <C-h> <C-w>h
 
 nmap <C-Up> <C-a>
 nmap <C-Down> <C-x>

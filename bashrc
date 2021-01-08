@@ -10,8 +10,7 @@ alias alacritty='alacritty -e tmux'
 alias apod='elinks https://apod.nasa.gov/apod/'
 alias todos="grep --color -Ern 'TODO:|FIXME:'"
 alias pwdc="keepassxc-cli clip -k $HOME/.passdb.key /media/passwords/database"
-alias torw="echo http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion/wiki/index.php/Main_Page | xclip"
-alias batt="echo Battery at: \$(cat /sys/class/power_supply/BAT0/capacity)%"
+alias torw="echo http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion/wiki/index.php/Main_Page"
 alias ?=duck
 alias ..="cd .."
 
