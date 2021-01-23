@@ -2,12 +2,15 @@
 add_newline = false
 
 # Replace the "❯" symbol in the prompt with "➜"
-# [character]                            # The name of the module we are configuring is "character"
-# success_symbol = "[➜](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+[character]                            # The name of the module we are configuring is "character"
+success_symbol = "[コマンド](bold #31f9fb)"
+error_symbol = "[コマンド](bold #31f9fb)"
+vicmd_symbol = "[コマンド](bold #31f9fb)"
 
 # Disable the package module, hiding it from the prompt completely
 [package]
 symbol = "pkg "
+disabled = true
 
 [[battery.display]]
 threshold = 10
@@ -22,16 +25,21 @@ format = "via [$symbol $version]($style) "
 symbol = "cmake"
 
 [directory]
-read_only = "(read only) "
+style = "bold #fe02f9"
+read_only = "(read only)"
+format = "[$path]($style) [で](bold #31f9fb)[$read_only]($read_only_style) "
 
 [erlang]
 symbol = "erlang "
 
 [git_branch]
-symbol = "branch "
+symbol = " ブランチ"
+format = "[$branch$symbol]($style) で "
 
 [hostname]
+style = "#fe02f9 bold"
 ssh_only = false
+format = "[$hostname]($style) [·](bold #31f9fb) "
 
 [java]
 symbol = "java "
@@ -56,5 +64,6 @@ symbol = "rust "
 
 [username]
 show_always = true
-format = "[$user]($style)@"
+style_user = "#fe02f9 bold"
+format = "[$user]($style)[@](bold #31f9fb)"
 

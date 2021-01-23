@@ -16,7 +16,7 @@ font pango:monospace 9
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 #exec --no-startup-id nm-applet
 
-exec --no-startup-id feh --bg-fill $HOME/Documents/wallpapers/vapor.jpg
+exec_always --no-startup-id feh --bg-fill $HOME/Documents/wallpapers/vapor.jpg
 
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status

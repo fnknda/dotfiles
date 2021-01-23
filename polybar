@@ -8,16 +8,16 @@
 ;=====================================================
 
 [colors]
-background = #00000000
+background = #80010b11
 background-alt = #f72f343f
-foreground = #ffffff
+foreground = #fe02f9
 foreground-alt = #f3f4f5
 foreground-dim = #676e7d
 primary = #ffb52a
 secondary = #e60053
 alert = #ff6600
 
-high = #268bd2
+high = #31f9fb
 high-alt = #0c2b41
 
 ; other colors
@@ -38,7 +38,7 @@ white = #FFFFFF
 ;bottom = true
 override-redirect = true
 width = 100%
-height = 20
+height = 25
 offset-x = 0
 offset-y = 0
 ;radius = 6.0
@@ -55,42 +55,24 @@ foreground = ${colors.foreground}
 line-size = 0
 line-color = #f00
 
-border-size = 0
-border-color = #00000000
+border-size = 5
+border-color = #50010b11
 
 padding-left = 3
 padding-right = 3
 
 module-margin-left = 0
-module-margin-right = 2
+module-margin-right = 5
 
-;font-0 = fixed:pixelsize=10;1
-;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-;font-0 = firacode:size=12:weight=bold
-font-0 = hermit:size=9
-;font-1 = FontAwesome:size=11
-;font-2 = siji:pixelsize=10;1
+font-0 = Sarasa Mono CL:size=10:weight=bold
 
-;modules-left = menu i3 xwindow
-;modules-left = menu i3 xwindow
-;modules-center = mpd
-;modules-right = fsroot fshome  xkeyboard memory cpu xbacklight volume wlan eth battery temperature date powermenu
 modules-left = i3
-modules-center = wlan eth cpu memory volume battery
-modules-right = date powermenu
+modules-center = wlan eth volume battery
+modules-right = date
 
-tray-position = right
-;tray-padding = 2
-;tray-transparent = true
-;tray-background = #0063ff
+;tray-position = right
 
-;wm-restack = bspwm
 wm-restack = i3
-
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -129,39 +111,41 @@ label-indicator-underline = ${colors.secondary}
 
 [module/i3]
 type = internal/i3
+
 format = <label-state> <label-mode>
 name-sort = true
 strip-wsnumbers = true
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
+
+ws-icon-0 = 1;一
+ws-icon-1 = 2;二
+ws-icon-2 = 3;三
+ws-icon-3 = 4;四
+ws-icon-4 = 5;五
+ws-icon-5 = 6;六
+ws-icon-6 = 7;七
+ws-icon-7 = 8;八
+ws-icon-8 = 9;九
+ws-icon-9 = 10;十
 
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
 
-label-mode-padding = 5
-label-mode-foreground = #000
+label-mode = %mode%
+label-mode-padding = 0
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-label-focused = %name%
-label-focused-background = ${module/bspwm.label-focused-background}
-label-focused-underline = ${module/bspwm.label-focused-underline}
-label-focused-padding = ${module/bspwm.label-focused-padding}
+label-focused = %icon%
+label-focused-overline = ${colors.high}
+label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %name%
-label-unfocused-padding = ${module/bspwm.label-occupied-padding}
+label-unfocused = %icon%
+label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %name%
-label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = ${self.label-focused-padding}
+label-visible = %icon%
+label-visible-padding = 2
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %name%
@@ -227,27 +211,16 @@ card = intel_backlight
 type = internal/cpu
 interval = 2
 format-prefix = "CPU "
-;format-underline = #f90000
 label = %percentage%%
 
 [module/memory]
 inherit = module/theme
-format-underline = #999999
 type = internal/memory
 interval = 2
-format-prefix = "MEM "
-;format-underline = #4bffdc
+format-prefix = "メモリー "
 ;label = %percentage%%
 label = %gb_used%/%gb_total%
-;label-foreground = #ed5456
-label-foreground = #999999
-
-;bar-used-width = 10
-bar-used-gradient = true
-bar-used-foreground-0 = #0088CC
-bar-used-foreground-1 = #2f8419
-bar-used-foreground-2 = #f5a70a
-bar-used-foreground-3 = #ed5456
+label-foreground = ${colors.foreground}
 
 [module/wlan]
 inherit = module/theme
@@ -259,12 +232,10 @@ interval = 1
 format-connected = <label-connected>
 ;label-connected-foreground = ${colors.high}
 
-;format-connected-underline = #0a6cf5
-;label-connected =  %essid%
-;label-connected =    %downspeed% |     %upspeed% 
-label-connected = "W %signal% [ D %downspeed% U %upspeed% ]"
+format-connected-underline = ${colors.high}
+label-connected = "wi-Fi %signal% [ ダウン %downspeed% アップ %upspeed% ]"
 
-format-disconnected = W OFF
+format-disconnected = W オフ
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
@@ -282,12 +253,12 @@ type = internal/network
 interface = enp3s0
 interval = 3.0
 
-format-connected-underline = #55aa55
-format-connected-prefix = "E "
-format-connected-prefix-foreground = ${colors.foreground-alt}
+format-connected-overline = ${colors.high}
+format-connected-prefix = "イーサネット "
 label-connected = %local_ip%
+;label-connected-foreground = ${colors.foreground-alt}
 
-format-disconnected = "E OFF"
+format-disconnected = "イーサネット オフ"
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
@@ -297,7 +268,7 @@ format-disconnected = "E OFF"
 type = internal/date
 interval = 1
 
-date = %a %d-%m-%Y
+date = %d-%m-%Y
 date-alt = " %Y-%m-%d"
 
 time = %H:%M:%S
@@ -314,16 +285,13 @@ type = internal/volume
 master-mixer = Master
 
 ;format-underline = #55aa55
-format-volume-foreground = ${colors.green}
+;format-volume-foreground = ${colors.green}
 
-format-volume = V <label-volume>
-
+format-volume = ボリューム <label-volume>
 format-volume-prefix = ""
-format-muted-prefix = ""
 
-label-muted = [muted]
-label-muted-foreground = ${colors.red}
-label-muted-font = 1
+label-muted = ボリューム [ミュートされた]
+format-muted-prefix = ""
 
 [module/battery]
 type = internal/battery
@@ -336,28 +304,14 @@ format-underline = #55aa55
 label-charging = %percentage%%
 label-discharging = %percentage%%
 label-full = FULL
-format-charging = <animation-charging> <label-charging>
-format-charging-foreground = ${colors.foreground-alt}
-format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-foreground = ${colors.orange}
-format-full-foreground = ${colors.green}
-format-charging-prefix = "C"
-format-discharging-prefix = "D"
+format-charging = <label-charging>
+format-charging-foreground = ${colors.foreground}
+format-discharging = <label-discharging>
+format-discharging-foreground = ${colors.foreground}
+format-full-foreground = ${colors.foreground}
+format-charging-prefix = "バッテリー 充電 "
+format-discharging-prefix = "バッテリー 放電 "
 format-full-prefix = ""
-
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
-animation-charging-framerate = 750
-
 
 [module/temperature]
 type = internal/temperature
