@@ -67,7 +67,7 @@ colors:
     cyan:    '0x54ced6'
     white:   '0xffffff'
 
-background_opacity: 0.5
+background_opacity: 0.7
 
 key_bindings:
   - {key: V, mods: Control|Shift, action: Paste}
@@ -99,7 +99,7 @@ live_config_reload: true
 debug:
   render_timer: false
   persistent_logging: false
-  log_level: None
+  log_level: OFF
   print_events: false
   ref_test: false
 

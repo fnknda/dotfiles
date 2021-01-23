@@ -2,22 +2,26 @@ set -o vi
 
 unalias -a
 
-alias ls='ls --color=auto'
-alias vim='nvim'
-alias grep='grep --color'
-alias ll='ls -lA'
+alias ..="cd .."
+alias ?=duck
 alias alacritty='alacritty -e tmux'
 alias apod='elinks https://apod.nasa.gov/apod/'
-alias todos="grep --color -Ern 'TODO:|FIXME:'"
-alias pwdc="keepassxc-cli clip -k $HOME/.passdb.key /media/passwords/database"
-alias torw="echo http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion/wiki/index.php/Main_Page"
-alias ?=duck
-alias ..="cd .."
+alias grep='grep --color'
+alias ll='ls -lA'
+alias ls='ls --color=auto'
+alias ms=monsetup
+alias pwdc='keepassxc-cli clip -k $HOME/.passdb.key /media/passwords/database'
+alias todos='grep --color -Ern "TODO:|FIXME:"'
+alias torw='echo http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion/wiki/index.php/Main_Page'
+alias vim=nvim
+
+export DOTFILES=$HOME/repos/gitlab.com/_joao.fukuda/dotfiles
 
 export PATH=\
-$HOME/repos/gitlab.com/_joao.fukuda/dotfiles/scripts/:\
+$DOTFILES/scripts/:\
 /run/media/$USER/:\
-$PATH:
+$PATH:\
+$HOME/.bin
 
 export CDPATH=\
 ./:\

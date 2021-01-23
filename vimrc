@@ -115,6 +115,11 @@ nmap <C-j> <C-w>j
 nmap <C-l> <C-w>l
 nmap <C-h> <C-w>h
 
+nmap <C-w><C-k> <C-w>-
+nmap <C-w><C-j> <C-w>+
+nmap <C-w><C-l> <C-w>>
+nmap <C-w><C-h> <C-w><
+
 nmap <C-Up> <C-a>
 nmap <C-Down> <C-x>
 

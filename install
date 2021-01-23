@@ -7,7 +7,7 @@
 curl -fsSL https://starship.rs/install.sh | bash
 
 ln -sf $PWD/bashrc $HOME/.bash_aliases
-ln -sf $PWD/tmux.conf $HOME/.tmux.conf
+ln -sf $PWD/tmux $HOME/.tmux.conf
 ln -sf $PWD/xinitrc $HOME/.xinitrc
 ln -sf $PWD/errnolist $HOME/.errnolist
 ln -sf $PWD/templates $HOME/.templates
@@ -15,15 +15,22 @@ ln -sf $PWD/gdbinit $HOME/.gdbinit
 ln -sf $PWD/Xmodmap $HOME/.Xmodmap
 
 [ ! -d $HOME/.elinks ] && mkdir $HOME/.elinks
-ln -sf $PWD/elinks.conf $HOME/.elinks/elinks.conf
+ln -sf $PWD/elinks $HOME/.elinks/elinks.conf
 
 [ ! -d $HOME/.config ] && mkdir $HOME/.config
-ln -sf $PWD/alacritty.conf $HOME/.config/alacritty.yml
-ln -sf $PWD/starship.toml $HOME/.config/starship.toml
+ln -sf $PWD/alacritty $HOME/.config/alacritty.yml
+ln -sf $PWD/starship $HOME/.config/starship.toml
 
 [ ! -d $HOME/.config/nvim ] && mkdir $HOME/.config/nvim
-ln -sf $PWD/vimrc $HOME/.config/nvim/init.vim
+ln -sf $PWD/vim $HOME/.config/nvim/init.vim
 
 [ ! -d $HOME/.config/i3 ] && mkdir $HOME/.config/i3
-ln -sf $PWD/i3.conf $HOME/.config/i3/config
+ln -sf $PWD/i3 $HOME/.config/i3/config
 
+[ ! -d $HOME/.config/rofi ] && mkdir $HOME/.config/rofi
+ln -sf $PWD/rofi $HOME/.config/rofi/config.rasi
+ln -sf $PWD/rofi_theme $HOME/.config/rofi/onedark.rasi
+
+[ ! -d $HOME/.config/polybar ] && mkdir $HOME/.config/polybar
+ln -sf $PWD/polybar $HOME/.config/polybar/config
+ln -sf $PWD/polybar_launch $HOME/.config/polybar/launch.sh

@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sed -i "s/background_opacity: .*/background_opacity: $*/g" ~/.config/alacritty.yml
+sed -i "s/background_opacity: .*/background_opacity: $*/g" $DOTFILES/alacritty.conf
 
