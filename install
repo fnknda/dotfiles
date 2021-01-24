@@ -10,9 +10,10 @@ ln -sf $PWD/bashrc $HOME/.bash_aliases
 ln -sf $PWD/tmux $HOME/.tmux.conf
 ln -sf $PWD/xinitrc $HOME/.xinitrc
 ln -sf $PWD/errnolist $HOME/.errnolist
-ln -sf $PWD/templates $HOME/.templates
 ln -sf $PWD/gdbinit $HOME/.gdbinit
 ln -sf $PWD/Xmodmap $HOME/.Xmodmap
+
+[ ! -d $HOME/.templates ] && ln -sf $PWD/templates $HOME/.templates
 
 [ ! -d $HOME/.elinks ] && mkdir $HOME/.elinks
 ln -sf $PWD/elinks $HOME/.elinks/elinks.conf
@@ -22,7 +23,7 @@ ln -sf $PWD/alacritty $HOME/.config/alacritty.yml
 ln -sf $PWD/starship $HOME/.config/starship.toml
 
 [ ! -d $HOME/.config/nvim ] && mkdir $HOME/.config/nvim
-ln -sf $PWD/vim $HOME/.config/nvim/init.vim
+ln -sf $PWD/vimrc $HOME/.config/nvim/init.vim
 
 [ ! -d $HOME/.config/i3 ] && mkdir $HOME/.config/i3
 ln -sf $PWD/i3 $HOME/.config/i3/config
