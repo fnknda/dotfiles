@@ -85,6 +85,7 @@ set hidden
 set ignorecase
 set path+=**
 set wildmenu
+set lazyredraw
 
 set encoding=utf-8
 autocmd FileType markdown\|html set spell
@@ -92,8 +93,6 @@ set spelllang=en_us,pt_br
 
 " start at last place you were editing
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-
-set mouse=a
 
 " Add restrictions to vim to force not to use arrow keys
 inoremap <up> <Nop>
@@ -113,4 +112,12 @@ nmap <C-w><C-h> <C-w><
 
 nmap <C-Up> <C-a>
 nmap <C-Down> <C-x>
+
+" Personal custom mapping
+
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
+nnoremap <C-p> :GFiles<CR>
+nnoremap <leader>c :noh<CR>
 
