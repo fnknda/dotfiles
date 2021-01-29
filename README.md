@@ -7,10 +7,16 @@ Here in this repository are configuration files for the following programs:
 * alacritty (terminal)
 * bash (Linux's shell)
 * dmenu (launcher)
+* git
 * i3-gaps (window manager)
 * i3status (status bar)
+* networkmanager
+* picom (window compositor)
+* polybar (i3status alternative)
+* rofi (dmenu alternative)
 * starship (multi shell prompt)
 * tmux (terminal window manager)
+* tomb (encrypted files as device)
 * vim (text editor)
 * xorg-server (window server)
 * xorg-xinit
@@ -18,23 +24,21 @@ Here in this repository are configuration files for the following programs:
 And here is a list of some other programs I like to use with the ones mentioned above:
 
 * autotools
+* bat (cat alternative)
 * cmake
 * elinks (terminal browser)
+* exa (ls alternative)
+* fd (find alternative)
 * feh (for background image)
-* firefox (browser)
 * gcc
-* git
 * grub
 * keepassxc-cli (password manager)
+* librewolf (browser)
 * light (hardware brightness control)
 * lxd (containers on linux)
-* networkmanager
 * noto-fonts (special characters)
 * openssh
-* picom (window compositor)
-* polybar (i3status alternative)
-* rofi (dmenu alternative)
-* tomb (encrypted files as device)
+* ripgrep (grep alternative)
 * torbrowser (private browser)
 * ttf-nerd-fonts-symbols-mono (symbols)
 
