@@ -1,18 +1,20 @@
 call plug#begin()
 
-Plug 'preservim/nerdcommenter'
+Plug 'tyru/caw.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-surround'
 Plug 'justinmk/vim-sneak'
 Plug 'mhinz/vim-startify'
+" File fuzzy finder
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	Plug 'junegunn/fzf.vim'
 " Static code checker
-	Plug 'scrooloose/syntastic'
+	Plug 'dense-analysis/ale'
 " Run git comments (better) on vim with :G
 	Plug 'tpope/vim-fugitive'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
-Plug 'preservim/nerdtree'
 
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-line'
@@ -24,17 +26,6 @@ call plug#end()
 
 set nocompatible
 filetype plugin on
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_check_on_w = 1
-let g:syntastic_loc_list_height=5
 
 let g:rust_recommended_style = 0
 

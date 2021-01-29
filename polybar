@@ -148,11 +148,9 @@ label-visible = %icon%
 label-visible-padding = 2
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %name%
-label-urgent-background = ${module/bspwm.label-urgent-background}
-label-urgent-padding = ${module/bspwm.label-urgent-padding}
-
-;
+label-urgent = %icon%
+label-urgent-padding = 2
+label-urgent-foreground = ${colors.high}
 
 [module/mpd]
 type = internal/mpd

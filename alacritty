@@ -67,7 +67,7 @@ colors:
     cyan:    '0x54ced6'
     white:   '0xffffff'
 
-background_opacity: 0.7
+background_opacity: 0.8
 
 key_bindings:
   - {key: V, mods: Control|Shift, action: Paste}

@@ -1,6 +1,6 @@
 #!/usr/bun/bash
 
-xset r rate 200 40
+xset r rate 200 60
 xset s off
 setxkbmap br
 [ -f ~/.Xmodmap ] && xmodmap ~/.Xmodmap
