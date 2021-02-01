@@ -16,10 +16,10 @@ alias todos='grep --color -Ern "TODO:|FIXME:"'
 alias torw='echo http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion/wiki/index.php/Main_Page'
 alias vim=nvim
 
-export DOTFILES=$HOME/repos/gitlab.com/_joao.fukuda/dotfiles
+export DF=$HOME/repos/gitlab.com/_joao.fukuda/dotfiles
 
 export PATH=\
-$DOTFILES/scripts/:\
+$DF/scripts/:\
 /run/media/$USER/:\
 $PATH:\
 $HOME/.bin
