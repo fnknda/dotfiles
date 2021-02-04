@@ -4,9 +4,19 @@ My configuration files for Linux. I try to keep all important configurations her
 
 ## How to use:
 
-Just use `stow` to manage links:
+First you must clone, download, reproduce, reverse engineer or otherwise acquire this repository. The easier way goes like this:
 
-There are three packages:
+```
+git clone https://gitlab.com/_joao.fukuda/dotfiles.git
+cd dotfiles
+./install
+```
+
+This install script installs `Starship`'s requirements (but you still have to put some things on your `.bashrc`) and `NeoVim`'s `VimPlug`, BUT -- this is the most important part of install --  it also configures `.dotfiles.path` on the home directory, which helps some of my scripts find home through the environmental variable `DF`.
+
+Then just use `stow` to manage the many SymLinks (or create them your own if you are a *digital masochist*).
+
+`Stow` installs packages and there are three packages in this repository:
 * Base: Programs that have the capability to be run on any computer (server, pc, disposable, smartphone... You name it)
 * Gui: Programs that I use for my graphical interface (servers for example won't have this)
 * Extras: Might use, might not... Who knows. These programs are not that useful or are otherwise situational
