@@ -6,5 +6,5 @@
 
 curl -fsSL https://starship.rs/install.sh | bash
 
-echo "dirname `realpath install`" > ~/.dotfiles.path
+echo $(dirname `realpath install`) > ~/.dotfiles.path
 

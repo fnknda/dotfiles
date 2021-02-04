@@ -80,7 +80,7 @@ set wildmenu
 set lazyredraw
 
 set encoding=utf-8
-autocmd FileType markdown\|html set spell
+autocmd FileType markdown\|html\|tex set spell
 set spelllang=en_us,pt_br
 
 " start at last place you were editing
