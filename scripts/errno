@@ -1,4 +1,4 @@
 #!/bin/bash
 
-grep -P "^$1\t" $HOME/.errnolist
+\grep -P "^$1\t" $HOME/.errnolist
 

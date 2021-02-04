@@ -17,7 +17,7 @@ alias torw='echo http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad
 alias vim=nvim
 alias vi=nvim
 
-export DF=$HOME/repos/gitlab.com/_joao.fukuda/dotfiles
+export DF=`\cat ~/.dotfiles.path`
 
 export PATH=\
 $DF/scripts/:\
