@@ -1,16 +1,18 @@
 #!/bin/bash
 
+xrandr --auto
+
 case $1 in
 	double )
 		xrandr --output HDMI-1 --right-of eDP-1
 		xrandr --output HDMI-1 --rotate left
 		xrandr --output eDP-1 --pos 0x1152
-		feh --bg-fill ~/Documents/wallpapers/vapor.jpg
 	;;
 	single )
 		xrandr --output HDMI-1 --off
 		xrandr --output eDP-1 --pos 0x0
-		feh --bg-fill ~/Documents/wallpapers/vapor.jpg
 	;;
 esac
+
+feh --bg-fill ~/Documents/wallpapers/vapor.jpg
 
