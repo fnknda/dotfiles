@@ -15,6 +15,7 @@ alias spotify='spotifyd -u johnfukuda12 -p `cat /media/passwords/spotifyPWD` --n
 alias todos='grep --color -Ern "TODO:|FIXME:"'
 alias torw='echo http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion/wiki/index.php/Main_Page'
 alias vim=nvim
+alias vi=nvim
 
 export DF=$HOME/repos/gitlab.com/_joao.fukuda/dotfiles
 

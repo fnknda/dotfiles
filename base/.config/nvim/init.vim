@@ -7,6 +7,8 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-abolish'
 Plug 'justinmk/vim-sneak'
 Plug 'mhinz/vim-startify'
+Plug 'honza/vim-snippets'
+Plug 'sirver/UltiSnips'
 " File fuzzy finder
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
@@ -50,7 +52,7 @@ set wrap
 set noshowmode
 set noshowcmd
 set shortmess+=F
-set cc=80
+set cc=81
 
 filetype indent on
 
