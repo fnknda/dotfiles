@@ -24,6 +24,7 @@ Plug 'morhetz/gruvbox'
 
 call plug#end()
 
+" Plugin configs {
 set nocompatible
 filetype plugin on
 
@@ -37,7 +38,9 @@ set omnifunc=syntaxcomplete#Complete
 
 set termguicolors
 colorscheme gruvbox
+" }
 
+" Visual stuff and style {
 set ts=3
 set sw=3
 set tw=0
@@ -53,31 +56,33 @@ set noshowmode
 set noshowcmd
 set shortmess+=F
 set cc=81
+set laststatus=2
 
 filetype indent on
 
 set listchars=tab:\|·,trail:~,extends:>,precedes:<
 set list
 
+let g:netrw_banner=0
+" }
+
+" Vim's functionalities on the background {
 set nobackup
 set nowritebackup
 set noswapfile
 
-set laststatus=2
-
-set icon
-
 set hlsearch
-set incsearch
 
 set foldmethod=manual
 
 set hidden
 
+set tags=./tags;$HOME
 set ignorecase
 set path+=**
 set wildmenu
 set lazyredraw
+" }
 
 set encoding=utf-8
 autocmd FileType markdown\|html\|tex set spell
@@ -123,7 +128,8 @@ nmap <C-Down> <C-x>
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 
-nnoremap <C-p> :GFiles<CR>
+nnoremap <leader>gp :GFiles<CR>
+nnoremap <leader>p :Files<CR>
 nnoremap <leader>c :noh<CR>
 nnoremap <leader>h :Startify<CR>
 

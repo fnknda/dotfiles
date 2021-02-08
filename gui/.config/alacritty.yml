@@ -24,7 +24,7 @@ font:
     family: monospace
     style: italic
 
-  size: 9.0
+  size: 10
 
   offset:
     x: 0
