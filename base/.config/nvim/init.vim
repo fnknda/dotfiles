@@ -131,5 +131,7 @@ let mapleader=" "
 nnoremap <leader>gp :GFiles<CR>
 nnoremap <leader>p :Files<CR>
 nnoremap <leader>c :noh<CR>
-nnoremap <leader>h :Startify<CR>
+nnoremap <leader><leader> :Startify<CR>
+nnoremap <leader>l :bnext<CR>
+nnoremap <leader>h :bprevious<CR>
 
