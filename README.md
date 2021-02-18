@@ -49,6 +49,7 @@ Here in this repository are configuration files for the following programs:
 #### Gui
 
 * alacritty (terminal)
+* dunst (notification daemon)
 * i3-gaps (window manager)
 * picom (window compositor)
 * polybar (i3status alternative)

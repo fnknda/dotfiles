@@ -101,11 +101,14 @@ bindsym $mod+Shift+Up move workspace to output up
 bindsym $mod+Shift+Down move workspace to output down
 bindsym $mod+m move workspace to output left
 
-assign [class="[tT]or"]2
-assign [class="[fF]irefox"]2
-assign [class="[lL]ibre[wW]olf"]2
-assign [class="[dD]iscord"]3
-assign [class="[tT]elegram"]3
+assign [class="(?i)tor"]2
+assign [class="(?i)firefox"]2
+assign [class="(?i)librewolf"]2
+assign [class="(?i)discord"]3
+assign [class="(?i)telegram"]3
+assign [class="(?i)steam"]5
+
+for_window [class="(?i)spotify"] move to workspace 4
 
 # reload the config file
 bindsym $mod+Shift+c reload

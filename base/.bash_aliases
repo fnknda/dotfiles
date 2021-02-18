@@ -11,11 +11,11 @@ alias ll='ls -lA'
 alias ls='ls --color=auto'
 alias ms=monsetup
 alias pwdc='keepassxc-cli clip -k $HOME/.passdb.key /media/passwords/database'
-alias spotify='spotifyd -u johnfukuda12 -p `cat /media/passwords/spotifyPWD` --no-daemon'
 alias todos='grep --color -Ern "TODO:|FIXME:"'
 alias torw='echo http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion/wiki/index.php/Main_Page'
 alias vim=nvim
 alias vi=nvim
+alias z=zoxide
 
 export DF=`\cat ~/.dotfiles.path`
 
