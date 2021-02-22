@@ -1,8 +1,8 @@
 set -o vi
+shopt -s autocd
 
 unalias -a
 
-alias ..="cd .."
 alias ?=duck
 alias alacritty='alacritty -e tmux'
 alias apod='elinks https://apod.nasa.gov/apod/'

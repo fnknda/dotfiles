@@ -53,6 +53,7 @@ Here in this repository are configuration files for the following programs:
 * i3-gaps (window manager)
 * picom (window compositor)
 * polybar (i3status alternative)
+* qutebrowser (vim-like browser)
 * rofi (dmenu alternative)
 
 #### Extras
@@ -69,7 +70,6 @@ Almost indispensable programs
 * gcc
 * git (version manager)
 * keepassxc-cli (password manager)
-* librewolf (browser)
 * lxd (containers on linux)
 * stow (symlink farm manager)
 * tomb (encrypted files as device)
@@ -90,6 +90,7 @@ Neither good nor bad... Useful nonetheless
 * autotools
 * dmenu (launcher)
 * grub
+* librewolf (browser)
 * light (hardware brightness control)
 * networkmanager
 * noto-fonts (special characters)
