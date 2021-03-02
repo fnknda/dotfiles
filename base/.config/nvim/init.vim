@@ -1,6 +1,6 @@
 call plug#begin()
 
-Plug 'tyru/caw.vim'
+Plug 'preservim/nerdcommenter'
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
@@ -19,6 +19,9 @@ Plug 'sirver/UltiSnips'
 
 Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
+
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-line'
 
 Plug 'morhetz/gruvbox'
 
@@ -110,11 +113,6 @@ vnoremap <down> <Nop>
 vnoremap <left> <Nop>
 vnoremap <right> <Nop>
 
-nmap <C-k> <C-w>k
-nmap <C-j> <C-w>j
-nmap <C-l> <C-w>l
-nmap <C-h> <C-w>h
-
 nmap <C-w><C-k> <C-w>-
 nmap <C-w><C-j> <C-w>+
 nmap <C-w><C-l> <C-w>>
@@ -128,10 +126,11 @@ nmap <C-Down> <C-x>
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 
-nnoremap <leader>gp :GFiles<CR>
-nnoremap <leader>p :Files<CR>
-nnoremap <leader>c :noh<CR>
 nnoremap <leader><leader> :Startify<CR>
-nnoremap <leader>l :bnext<CR>
+nnoremap <leader>d :Vex<CR>:vert resize 20<CR>
+nnoremap <leader>gp :GFiles<CR>
 nnoremap <leader>h :bprevious<CR>
+nnoremap <leader>l :bnext<CR>
+nnoremap <leader>p :Files<CR>
+nnoremap <leader>x :noh<CR>
 

@@ -74,6 +74,7 @@ Almost indispensable programs
 * stow (symlink farm manager)
 * tomb (encrypted files as device)
 * torbrowser (private browser)
+* xdotool (automate keystrokes and clicks)
 
 #### Bloated favorites
 My guilty pleasures

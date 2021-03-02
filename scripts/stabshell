@@ -1,0 +1,22 @@
+#!/bin/bash
+
+function command() {
+xdotool type "$1" && \
+xdotool key KP_Enter
+}
+
+function control() {
+xdotool key ctrl+$1
+}
+
+function stabilize() {
+	command "fg" && \
+	command "exec python3 -c 'import pty; pty.spawn(\"/bin/bash\")'" && \
+	control z && \
+	command "stty raw -echo" && \
+	command "fg" && \
+	command "export TERM=xterm"
+}
+
+stabilize &
+

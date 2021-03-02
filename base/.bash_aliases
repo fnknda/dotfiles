@@ -1,5 +1,6 @@
 set -o vi
 shopt -s autocd
+bind "set completion-ignore-case on"
 
 unalias -a
 
