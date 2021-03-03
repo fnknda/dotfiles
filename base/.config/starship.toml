@@ -1,69 +1,42 @@
-# Don't print a new line at the start of the prompt
 add_newline = false
 
-# Replace the "❯" symbol in the prompt with "➜"
-[character]                            # The name of the module we are configuring is "character"
-success_symbol = "[コマンド](bold #31f9fb)"
-error_symbol = "[コマンド](bold #31f9fb)"
-vicmd_symbol = "[コマンド](bold #31f9fb)"
-
-# Disable the package module, hiding it from the prompt completely
-[package]
-symbol = "pkg "
-disabled = true
-
-[[battery.display]]
-threshold = 10
-style = "bold red"
-
-[[battery.display]]
-threshold = 20
-style = "bold yellow"
-
-[cmake]
-format = "via [$symbol $version]($style) "
-symbol = "cmake"
-
-[directory]
-style = "bold #fe02f9"
-read_only = "(read only)"
-format = "[$path]($style) [で](bold #31f9fb)[$read_only]($read_only_style) "
-
-[erlang]
-symbol = "erlang "
-
-[git_branch]
-symbol = " ブランチ"
-format = "[$branch$symbol]($style) で "
-
-[hostname]
-style = "#fe02f9 bold"
-ssh_only = false
-format = "[$hostname]($style) [·](bold #31f9fb) "
-
-[java]
-symbol = "java "
-
-[lua]
-symbol = "lua "
-
-[perl]
-symbol = "perl "
-
-[php]
-symbol = "php "
-
-[python]
-symbol = "python "
-
-[ruby]
-symbol = "ruby "
-
-[rust]
-symbol = "rust "
+format = """
+$username\
+$hostname\
+$directory\
+$cmd_duration\
+$line_break\
+$jobs\
+$battery\
+$time\
+$status\
+$character"""
 
 [username]
 show_always = true
-style_user = "#fe02f9 bold"
-format = "[$user]($style)[@](bold #31f9fb)"
+style_user = "#ebdbb2"
+format = "[$user]($style)[@](bold #fabd2f)"
+
+[hostname]
+style = "#ebdbb2"
+ssh_only = false
+format = "[$hostname [·](bold #fabd2f) ]($style)"
+
+[directory]
+style = "#ebdbb2"
+read_only = "(read only)"
+format = "[$path]($style) [で](bold #fabd2f) "
+
+[[battery.display]]
+threshold = 10
+style = "bold #fb4934"
+
+[[battery.display]]
+threshold = 20
+style = "bold #fabd2f"
+
+[character]
+success_symbol = "[コマンド](bold #ebdbb2)"
+error_symbol = "[コマンド](bold #ebdbb2)"
+vicmd_symbol = "[コマンド](bold #ebdbb2)"
 

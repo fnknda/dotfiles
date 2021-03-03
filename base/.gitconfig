@@ -1,0 +1,8 @@
+[user]
+	name = João Fukuda
+	email = joao.fukuda@protonmail.com
+[core]
+	editor = nvim
+[pull]
+	rebase = false
+
