@@ -1,42 +1,42 @@
 add_newline = false
 
 format = """
-$username\
-$hostname\
-$directory\
-$cmd_duration\
-$line_break\
-$jobs\
-$battery\
-$time\
-$status\
-$character"""
+$username$hostname$directory
+$jobs$battery$cmd_duration$character"""
 
 [username]
 show_always = true
 style_user = "#ebdbb2"
-format = "[$user]($style)[@](bold #fabd2f)"
+format = "[$user]($style)"
 
 [hostname]
 style = "#ebdbb2"
-ssh_only = false
-format = "[$hostname [·](bold #fabd2f) ]($style)"
+format = "[@](bold #fabd2f)[$hostname]($style)"
 
 [directory]
 style = "#ebdbb2"
-read_only = "(read only)"
-format = "[$path]($style) [で](bold #fabd2f) "
+format = " [· [$path]($style) で](bold #fabd2f) "
+
+[jobs]
+threshold = 0
+style = "bold #fabd2f"
+format = '[\[$number\]]($style) '
 
 [[battery.display]]
-threshold = 10
+threshold = 25
 style = "bold #fb4934"
 
 [[battery.display]]
-threshold = 20
+threshold = 33
 style = "bold #fabd2f"
 
+[cmd_duration]
+style = "bold #fabd2f"
+format = '[\($duration\)]($style) '
+
 [character]
-success_symbol = "[コマンド](bold #ebdbb2)"
-error_symbol = "[コマンド](bold #ebdbb2)"
-vicmd_symbol = "[コマンド](bold #ebdbb2)"
+success_symbol = ""
+error_symbol = ""
+vicmd_symbol = ""
+format = "[コマンド](bold #ebdbb2) [❯](bold #fabd2f) "
 

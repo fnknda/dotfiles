@@ -7,6 +7,7 @@ unalias -a
 alias ?=duck
 alias alacritty='alacritty -e tmux'
 alias apod='elinks https://apod.nasa.gov/apod/'
+alias gitl='git log --oneline --all --graph --decorate'
 alias grep='grep --color'
 alias ll='ls -lA'
 alias ls='ls --color=auto'
