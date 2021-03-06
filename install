@@ -3,17 +3,17 @@
 # Install VimPlug
 [ ! -e $HOME/.local/share/nvim/site/autoload/plug.vim ] &&\
 	sh -c 'curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # Install Starship
-if [ ! -e ~/.config/starship.toml ]
-then
+[ ! -e /usr/local/bin/starship ] &&\
 	curl -o install_starship.sh https://starship.rs/install.sh &&\
-		chmod +x install_starship.sh &&\
-		./install_starship.sh --yes &&\
-		echo 'eval "$(starship init bash)"' >> ~/.bashrc &&\
-		rm install_starship.sh
-fi
+	chmod +x install_starship.sh &&\
+	./install_starship.sh --yes &&\
+	rm install_starship.sh
+
+[ -z "`grep 'starship' ~/.bashrc`" ] &&\
+	echo 'eval "$(starship init bash)"' >> ~/.bashrc
 
 # Add a file with dotfiles path on home (used on .bash_aliases)
 echo $(dirname `realpath $0`) > ~/.dotfiles.path
