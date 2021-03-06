@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo docker ps --all -q | xargs sudo docker rm -v
+

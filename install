@@ -8,10 +8,11 @@
 # Install Starship
 if [ ! -e ~/.config/starship.toml ]
 then
-	curl -o /tmp/install.sh https://starship.rs/install.sh &&\
-		chmod +x /tmp/install.sh &&\
-		/tmp/install.sh --yes &&\
-		echo 'eval "$(starship init bash)"' >> ~/.bashrc
+	curl -o install_starship.sh https://starship.rs/install.sh &&\
+		chmod +x install_starship.sh &&\
+		./install_starship.sh --yes &&\
+		echo 'eval "$(starship init bash)"' >> ~/.bashrc &&\
+		rm install_starship.sh
 fi
 
 # Add a file with dotfiles path on home (used on .bash_aliases)
