@@ -1,0 +1,15 @@
+#!/bin/bash
+
+root=`pwd`
+for file in `fd '\.git$' -t d --hidden`
+do
+	cd `realpath $root/$file`/..
+	out="`git status -s`"
+	if [ -n "$out" ]
+	then
+		echo -e "`pwd`: \e[1;91mGit repo not up-to-date\e[m"
+	else
+		echo -e "`pwd`: \e[1;92mGit repo up-to-date\e[m"
+	fi
+done
+
