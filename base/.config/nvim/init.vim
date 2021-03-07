@@ -12,6 +12,7 @@ Plug 'sirver/UltiSnips'
 " File fuzzy finder
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
+	Plug 'stsewd/fzf-checkout.vim'
 " Static code checker
 	Plug 'dense-analysis/ale'
 " Run git comments (better) on vim with :G
@@ -130,9 +131,16 @@ let mapleader=" "
 
 nnoremap <leader><leader> :Startify<CR>
 nnoremap <leader>d :Vex<CR>:vert resize 20<CR>
-nnoremap <leader>gp :GFiles<CR>
+nnoremap <leader>fc :GBranches<CR>
+nnoremap <leader>ff :Files<CR>
+nnoremap <leader>fg :GFiles<CR>
+nnoremap <leader>fr :Rg<CR>
+nnoremap <leader>ga :Git add --all<CR>
+nnoremap <leader>gc :Git commit<CR>
+nnoremap <leader>gs :G<CR>
+nnoremap <leader>gf :diffget //2<CR>
+nnoremap <leader>gj :diffget //3<CR>
 nnoremap <leader>h :bprevious<CR>
 nnoremap <leader>l :bnext<CR>
-nnoremap <leader>p :Files<CR>
 nnoremap <leader>x :noh<CR>
 
