@@ -1,0 +1,10 @@
+#!/bin/bash
+
+SKPID=`ps -e | grep screenkey | awk '{print $1}'`
+if [ -z "$SKPID" ]
+then
+	screenkey -s small --no-systray --opacity 0.7 --timeout 1 &
+else
+	kill $SKPID
+fi
+

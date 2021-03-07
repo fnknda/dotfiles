@@ -55,6 +55,7 @@ Here in this repository are configuration files for the following programs:
 * polybar (i3status alternative)
 * qutebrowser (vim-like browser)
 * rofi (dmenu alternative)
+* screenkey (shows keypress on screen)
 
 #### Extras
 
