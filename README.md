@@ -55,7 +55,6 @@ Here in this repository are configuration files for the following programs:
 * polybar (i3status alternative)
 * qutebrowser (vim-like browser)
 * rofi (dmenu alternative)
-* screenkey (shows keypress on screen)
 
 #### Extras
 
@@ -72,6 +71,7 @@ Almost indispensable programs
 * git (version manager)
 * keepassxc-cli (password manager)
 * lxd (containers on linux)
+* screenkey (shows keypress on screen)
 * stow (symlink farm manager)
 * tomb (encrypted files as device)
 * torbrowser (private browser)
