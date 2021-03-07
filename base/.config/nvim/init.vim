@@ -17,6 +17,7 @@ Plug 'sirver/UltiSnips'
 " Run git comments (better) on vim with :G
 	Plug 'tpope/vim-fugitive'
 
+Plug 'yuttie/comfortable-motion.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
 
