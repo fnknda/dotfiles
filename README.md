@@ -54,7 +54,7 @@ Here in this repository are configuration files for the following programs:
 * picom (window compositor)
 * polybar (i3status alternative)
 * qutebrowser (vim-like browser)
-* rofi (dmenu alternative)
+* rofi (launcher)
 
 #### Extras
 
@@ -67,15 +67,20 @@ is a list of some other programs I (sometimes) like to use with the ones mention
 Almost indispensable programs
 
 * cmake
+* docker (containers)
+* entr (command executer when modifying files)
 * gcc
 * git (version manager)
 * keepassxc-cli (password manager)
-* lxd (containers on linux)
 * screenkey (shows keypress on screen)
 * stow (symlink farm manager)
 * tomb (encrypted files as device)
 * torbrowser (private browser)
+* transmission (torrent client)
+* weechat (IRC client)
 * xdotool (automate keystrokes and clicks)
+* xournalpp (wacom tablet note taking)
+* zathura (pdf reader)
 
 #### Bloated favorites
 My guilty pleasures
@@ -84,26 +89,34 @@ My guilty pleasures
 * exa (ls alternative)
 * fd (find alternative)
 * feh (for background image)
+* gpick (color palette manager)
 * ripgrep (grep alternative)
 
 #### Neutral stance
 Neither good nor bad... Useful nonetheless
 
 * autotools
-* dmenu (launcher)
+* bluetoothctl (bluetooth devices manager)
+* bluez (bluetooth firmware)
+* chrony (Network Time Protocol daemon)
 * grub
-* librewolf (browser)
 * light (hardware brightness control)
 * networkmanager
 * noto-fonts (special characters)
 * openssh
+* teeldear (man, but tips and tricks)
 * ttf-nerd-fonts-symbols-mono (symbols)
+* vlc (media player)
 * xorg-server (window server)
 * xorg-xinit
 
 #### Alternatives
 Alternative programs that might substitute some of the above mentioned
 
+* dmenu (launcher)
 * i3status (status bar)
+* librewolf (browser)
+* lxd (containers on linux)
 * vim (text editor)
+* zsh (shell)
 

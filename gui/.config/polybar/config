@@ -21,7 +21,7 @@ wm-restack = i3
 type = internal/i3
 
 format = <label-state> <label-mode>
-name-sort = true
+index-sort = true
 strip-wsnumbers = true
 
 ws-icon-0 = 1;1
@@ -56,7 +56,7 @@ label-visible-padding = 1
 ; urgent = Workspace with urgency hint set
 label-urgent = %icon%
 label-urgent-padding = 1
-label-urgent-background = ${colors.black1}
+label-urgent-background = ${colors.black2}
 
 [module/date]
 type = internal/date

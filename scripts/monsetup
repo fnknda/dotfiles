@@ -14,5 +14,3 @@ case $1 in
 	;;
 esac
 
-feh --bg-fill ~/Documents/wallpapers/vapor.jpg
-
