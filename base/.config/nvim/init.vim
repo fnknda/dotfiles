@@ -135,7 +135,6 @@ nnoremap <leader>fc :GBranches<CR>
 nnoremap <leader>ff :Files<CR>
 nnoremap <leader>fg :GFiles<CR>
 nnoremap <leader>fr :Rg<CR>
-nnoremap <leader>ga :Git add --all<CR>
 nnoremap <leader>gc :Git commit<CR>
 nnoremap <leader>gp :Git push<CR>
 nnoremap <leader>gs :G<CR>

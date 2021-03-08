@@ -1,26 +1,28 @@
 [global]
-	geometry = "300x5-25-25"
-	font = monospace 10
+	geometry = "200x120-25-25"
+	font = monospace 16
 	format = "<b>%s</b>\n%b"
-	browser = /home/coccafukuda/librewolf -new-tab
+	separator_height = 5
+	padding = 2
+	horizontal_padding = 5
 
 [shortcuts]
 	close = ctrl+space
 	close_all = ctrl+shift+space
 
 [urgency_low]
-	background = "#010b1133"
-	foreground = "#31f9fb"
-	timeout = 10
+	background = "#282828"
+	foreground = "#fbf1c7"
+	timeout = 3
 
 [urgency_normal]
-	background = "#010b1133"
-	foreground = "#fe02f9"
-	timeout = 10
+	background = "#504945"
+	foreground = "#fbf1c7"
+	timeout = 7
 
 [urgency_critical]
-	background = "#fe02f9"
-	foreground = "#010b11"
-	frame_color = "#ff0000"
+	background = "#fabd2f"
+	foreground = "#282828"
+	frame_color = "#fb4934"
 	timeout = 0
 
