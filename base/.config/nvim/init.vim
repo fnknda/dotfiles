@@ -4,7 +4,6 @@ Plug 'preservim/nerdcommenter'
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-abolish'
 Plug 'justinmk/vim-sneak'
 Plug 'mhinz/vim-startify'
 Plug 'honza/vim-snippets'
@@ -24,6 +23,7 @@ Plug 'itchyny/lightline.vim'
 
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-line'
+Plug 'kana/vim-textobj-indent'
 
 Plug 'morhetz/gruvbox'
 
