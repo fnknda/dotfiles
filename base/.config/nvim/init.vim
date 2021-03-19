@@ -55,7 +55,7 @@ set smarttab
 set autoindent
 set relativenumber
 set number
-set scrolloff=10
+set scrolloff=3
 set wrap
 set noshowmode
 set noshowcmd
