@@ -1,5 +1,5 @@
 [global]
-	geometry = "200x120-25-25"
+	geometry = "500x120-25-25"
 	font = monospace 16
 	format = "<b>%s</b>\n%b"
 	separator_height = 5

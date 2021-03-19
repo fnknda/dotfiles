@@ -34,3 +34,5 @@ $HOME/repos/gitlab.com/joao.fukuda/:\
 $HOME/repos/github.com/joaofukuda/:\
 $HOME/Documents:
 
+export HISTCONTROL=ignoreboth:erasedups
+
