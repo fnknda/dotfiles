@@ -129,18 +129,37 @@ nmap <C-Down> <C-x>
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 
+" File Navigations {
 nnoremap <leader><leader> :Startify<CR>
 nnoremap <leader>d :Vex<CR>:vert resize 20<CR>
 nnoremap <leader>fc :GBranches<CR>
 nnoremap <leader>ff :Files<CR>
 nnoremap <leader>fg :GFiles<CR>
 nnoremap <leader>fr :Rg<CR>
+" }
+
+" Git commands {
 nnoremap <leader>gc :Git commit<CR>
 nnoremap <leader>gp :Git push<CR>
 nnoremap <leader>gs :G<CR>
 nnoremap <leader>gf :diffget //2<CR>
 nnoremap <leader>gj :diffget //3<CR>
-nnoremap <leader>h :bprevious<CR>
-nnoremap <leader>l :bnext<CR>
-nnoremap <leader>x :noh<CR>
+" }
+
+" Buffer history {
+nnoremap <leader>hh :bprevious<CR>
+nnoremap <leader>hl :bnext<CR>
+" }
+
+" Tabs {
+nnoremap <leader>tl :tabnext<CR>
+nnoremap <leader>th :tabprevious<CR>
+nnoremap <leader>tc :tabnew<CR>:Explore<CR>
+nnoremap <leader>td :tabclose<CR>
+" }
+
+" Miscs {
+nnoremap <leader>r :so ~/.config/nvim/init.vim<CR>
+nnoremap <leader>x :noh<CR>:<Esc>
+" }
 
