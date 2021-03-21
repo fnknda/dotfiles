@@ -4,26 +4,27 @@ My configuration files for Linux. I try to keep all important configurations her
 
 ## How to use:
 
-First you must clone, download, reproduce, reverse engineer or otherwise acquire this repository. The easier way goes like this:
+First you must clone, download, reproduce, reverse engineer or otherwise acquire this repository. The easiest way goes like this:
 
-```
+```bash
 git clone https://gitlab.com/_joao.fukuda/dotfiles.git
 cd dotfiles
 ./install
 ```
 
-This install script installs `Starship`'s requirements (but you still have to put some things on your `.bashrc`) and `NeoVim`'s `VimPlug`, BUT -- this is the most important part of install --  it also configures `.dotfiles.path` on the home directory, which helps some of my scripts find home through the environmental variable `DF`.
+This `./install` script installs `Starship` terminal prompt and `NeoVim`'s `VimPlug`, AND --- last but not least ---  it also adds the file `.dotfiles.path` to your home directory, which helps some of my scripts find the dotfiles installation directory through the environmental variable `DF` (which is, to no surprise, set to the contents of what's inside of `~/.dotfiles.path`).
 
-Then just use `stow` to manage the many SymLinks (or create them your own if you are a *digital masochist*).
+Then just use `stow` to manage the many SymLinks (or create them yourself if you identify as a *digital masochist*).
 
-`Stow` installs packages and there are three packages in this repository:
-* Base: Programs that have the capability to be run on any computer (server, pc, disposable, smartphone... You name it)
-* Gui: Programs that I use for my graphical interface (servers for example won't have this)
-* Extras: Might use, might not... Who knows. These programs are not that useful or are otherwise situational
+`Stow` installs **packages** and there are three packages in this repository:
+
+* `base`: Programs that have the capability to be run on any computer (server, pc, disposable, smartphone... You name it)
+* `gui`: Programs that I use for my graphical interface (servers for example won't have this)
+* `extras`: Might use, might not... Who knows. These programs are not that useful or are otherwise situational
 
 For every package you want installed, just do:
 
-```
+```bash
 stow -t ~ -S <package_name>
 ```
 
@@ -31,7 +32,7 @@ Where package name is one of `base`, `gui` or `extras`.
 
 And to remove said packages, just do:
 
-```
+```bash
 stow -t ~ -D <package_name>
 ```
 
