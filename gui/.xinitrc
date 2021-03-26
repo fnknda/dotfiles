@@ -1,4 +1,4 @@
-#!/usr/bun/bash
+#!/usr/bin/bash
 
 xset r rate 200 60
 xset s off
