@@ -326,7 +326,3 @@ c.colors.tabs.pinned.selected.odd.bg = c.colors.tabs.pinned.selected.even.bg
 
 # Foreground color of pinned selected odd tabs.
 c.colors.tabs.pinned.selected.odd.fg = c.colors.tabs.selected.odd.fg
-
-# Background color for webpages if unset (or empty to use the theme's
-# color).
-c.colors.webpage.bg = bg4

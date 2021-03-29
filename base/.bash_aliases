@@ -21,10 +21,10 @@ alias vi=nvim
 export DF=`cat ~/.dotfiles.path`
 
 export PATH=\
-$DF/scripts/:\
-/run/media/$USER/:\
-$PATH:\
-$HOME/.bin
+$HOME/.bin:\
+$DF/scripts:\
+/run/media/$USER:\
+$PATH
 
 export CDPATH=\
 ./:\
@@ -35,4 +35,5 @@ $HOME/repos/github.com/joaofukuda/:\
 $HOME/Documents:
 
 export HISTCONTROL=ignoreboth:erasedups
+export EDITOR=nvim
 
