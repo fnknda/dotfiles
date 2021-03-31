@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/bin/sh
 
 elinks "en.cppreference.com/mwiki/index.php?search=$*"

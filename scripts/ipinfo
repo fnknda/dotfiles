@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 curl -s https://ipwhois.app/json/$(curl -s https://ipinfo.io/ip)
 

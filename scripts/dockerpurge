@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "REMOVING CONTAINERS"
 containers=`sudo docker ps --all -q`

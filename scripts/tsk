@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 SKPID=`ps -e | grep screenkey | awk '{print $1}'`
 if [ -z "$SKPID" ]

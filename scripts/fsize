@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 sed -i "s/size: .*/size: $*/g" $DF/gui/.config/alacritty.yml
 
