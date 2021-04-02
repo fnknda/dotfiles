@@ -146,12 +146,8 @@ nnoremap <leader>gf :diffget //2<CR>
 nnoremap <leader>gj :diffget //3<CR>
 " }
 
-" Buffer history {
-nnoremap <leader>hh :bprevious<CR>
-nnoremap <leader>hl :bnext<CR>
-" }
-
-" Tabs {
+" Multi-file workflow {
+nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>tl :tabnext<CR>
 nnoremap <leader>th :tabprevious<CR>
 nnoremap <leader>tc :tabnew<CR>:Explore<CR>
@@ -161,5 +157,10 @@ nnoremap <leader>td :tabclose<CR>
 " Miscs {
 nnoremap <leader>r :so ~/.config/nvim/init.vim<CR>
 nnoremap <leader>x :noh<CR>:<Esc>
+" }
+
+" Movement {
+nnoremap <C-k> k<C-y>
+nnoremap <C-j> j<C-e>
 " }
 
