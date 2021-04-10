@@ -20,6 +20,7 @@ Plug 'preservim/tagbar'
 
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
 
 Plug 'kana/vim-textobj-user'
