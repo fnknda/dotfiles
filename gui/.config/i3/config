@@ -101,6 +101,7 @@ assign [class="(?i)signal"]3
 assign [class="(?i)steam"]5
 
 for_window [class="(?i)spotify"] move to workspace 4
+for_window [class="(?i)factorio"] move to workspace 5
 
 # reload the config file
 bindsym $mod+Shift+c reload

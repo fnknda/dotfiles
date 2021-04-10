@@ -3,7 +3,13 @@
 SKPID=`ps -e | grep screenkey | awk '{print $1}'`
 if [ -z "$SKPID" ]
 then
-	screenkey -s small --no-systray --opacity 0.7 --timeout 0.5 &
+	screenkey\
+		--no-systray\
+		--opacity 0\
+		--timeout 0.7\
+		-p fixed\
+		-m\
+		-g '39%x5%+2%-10%' &
 else
 	kill $SKPID
 fi

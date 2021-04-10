@@ -8,6 +8,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'mhinz/vim-startify'
 Plug 'honza/vim-snippets'
 Plug 'sirver/UltiSnips'
+Plug 'preservim/tagbar'
 " File fuzzy finder
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
@@ -136,6 +137,7 @@ nnoremap <leader>fc :GBranches<CR>
 nnoremap <leader>ff :Files<CR>
 nnoremap <leader>fg :GFiles<CR>
 nnoremap <leader>fr :Rg<CR>
+nnoremap <leader>ft :Tags<CR>
 " }
 
 " Git commands {
@@ -156,7 +158,8 @@ nnoremap <leader>td :tabclose<CR>
 
 " Miscs {
 nnoremap <leader>r :so ~/.config/nvim/init.vim<CR>
-nnoremap <leader>x :noh<CR>:<Esc>
+nnoremap <leader>x :noh<CR>
+nnoremap <F8> :TagbarToggle<CR>
 " }
 
 " Movement {
