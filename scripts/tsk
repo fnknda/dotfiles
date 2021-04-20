@@ -8,8 +8,7 @@ then
 		--opacity 0\
 		--timeout 0.7\
 		-p fixed\
-		-m\
-		-g '39%x5%+2%-10%' &
+		-g '40%x5%-30%-10%' &
 else
 	kill $SKPID
 fi
