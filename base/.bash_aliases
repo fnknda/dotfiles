@@ -7,7 +7,6 @@ unalias -a
 alias ?=duck
 alias alacritty='alacritty -e tmux'
 alias apod='elinks https://apod.nasa.gov/apod/'
-alias ct="fd --hidden -t f '.*\.[ch]pp' ./src/ | entr ctags -R ./src/"
 alias gitl='git log --oneline --all --graph --decorate'
 alias gits='git status -s'
 alias grep='grep --color'
