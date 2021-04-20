@@ -9,6 +9,9 @@ Plug 'mhinz/vim-startify'
 Plug 'honza/vim-snippets'
 Plug 'sirver/UltiSnips'
 Plug 'preservim/tagbar'
+Plug 'mg979/vim-visual-multi'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 " File fuzzy finder
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
@@ -22,7 +25,9 @@ Plug 'yuttie/comfortable-motion.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
+Plug 'nvim-treesitter/nvim-treesitter'
 
+Plug 'kana/vim-submode'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-indent'
@@ -36,6 +41,16 @@ set nocompatible
 filetype plugin on
 
 let g:rust_recommended_style = 0
+
+let g:submode_timeoutlen = 500
+
+let g:vim_markdown_folding_level = 1
+let g:vim_markdown_conceal = 2
+let g:vim_markdown_conceal_code_blocks = 0
+let g:vim_markdown_math = 1
+let g:vim_markdown_strikethrough = 1
+let g:vim_markdown_edit_url_in = 'tab'
+let g:vim_markdown_follow_anchor = 1
 
 let g:gruvbox_termcolors = 16
 let g:gruvbox_invert_signs = 0
@@ -64,6 +79,7 @@ set noshowcmd
 set shortmess+=F
 set cc=81
 set laststatus=2
+set conceallevel=2
 
 filetype indent on
 
@@ -123,9 +139,6 @@ nmap <C-w><C-j> <C-w>+
 nmap <C-w><C-l> <C-w>>
 nmap <C-w><C-h> <C-w><
 
-nmap <C-Up> <C-a>
-nmap <C-Down> <C-x>
-
 " Personal custom mapping
 
 nnoremap <SPACE> <Nop>
@@ -155,16 +168,28 @@ nnoremap <leader>tl :tabnext<CR>
 nnoremap <leader>th :tabprevious<CR>
 nnoremap <leader>tc :tabnew<CR>:Explore<CR>
 nnoremap <leader>td :tabclose<CR>
+
+call submode#enter_with('resize', 'n', '', '<C-w><C-h>', '<C-w><')
+call submode#enter_with('resize', 'n', '', '<C-w><C-j>', '<C-w>+')
+call submode#enter_with('resize', 'n', '', '<C-w><C-k>', '<C-w>-')
+call submode#enter_with('resize', 'n', '', '<C-w><C-l>', '<C-w>>')
+call submode#leave_with('resize', 'n', '', '<Esc>')
+call submode#map('resize', 'n', '', '<C-h>', '<C-w><')
+call submode#map('resize', 'n', '', '<C-j>', '<C-w>+')
+call submode#map('resize', 'n', '', '<C-k>', '<C-w>-')
+call submode#map('resize', 'n', '', '<C-l>', '<C-w>>')
 " }
 
 " Miscs {
 nnoremap <leader>r :so ~/.config/nvim/init.vim<CR>
 nnoremap <leader>x :noh<CR>
 nnoremap <F8> :TagbarToggle<CR>
+nnoremap <leader>k <C-a>
+nnoremap <leader>j <C-x>
 " }
 
-" Movement {
-nnoremap <C-k> k<C-y>
-nnoremap <C-j> j<C-e>
+" Multi cursor {
+nmap <C-j> <C-Down>
+nmap <C-k> <C-Up>
 " }
 
