@@ -26,7 +26,7 @@ export HISTCONTROL=ignoreboth:erasedups
 export EDITOR=nvim
 
 alias ?=duck
-alias alacritty='alacritty -e tmux'
+alias alacritty='alacritty -e simple_tmux'
 alias apod='elinks https://apod.nasa.gov/apod/'
 alias dotfiles="cd $DF"
 alias gitl='git log --oneline --all --graph --decorate'
