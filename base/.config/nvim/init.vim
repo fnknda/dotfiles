@@ -1,6 +1,7 @@
 call plug#begin()
 
 Plug 'preservim/nerdcommenter'
+Plug 'preservim/nerdtree'
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
@@ -26,6 +27,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
 Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'Shougo/deoplete.nvim'
 
 Plug 'kana/vim-submode'
 Plug 'kana/vim-textobj-user'
@@ -42,9 +44,21 @@ filetype plugin on
 
 let g:rust_recommended_style = 0
 
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+let g:ale_cpp_cc_options = '-std=c++20 -Wall'
+
+let g:deoplete#enable_at_startup = 1
+
 let g:submode_timeoutlen = 500
 
-let g:vim_markdown_folding_level = 1
+let NERDTreeShowHidden = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeSortHiddenFirst = 1
+let NERDTreeSortOrder = ['\/$', '.*', '\.swp$',  '\.bak$', '\~$']
+
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_folding_level = 2
 let g:vim_markdown_conceal = 2
 let g:vim_markdown_conceal_code_blocks = 0
 let g:vim_markdown_math = 1
@@ -87,6 +101,12 @@ set listchars=tab:\|·,trail:~,extends:>,precedes:<
 set list
 
 let g:netrw_banner=0
+
+augroup python
+	autocmd!
+	autocmd FileType python setlocal ts=3 sw=3 tw=0 cindent noexpandtab smarttab autoindent wrap
+augroup end
+
 " }
 
 " Vim's functionalities on the background {
@@ -146,7 +166,7 @@ let mapleader=" "
 
 " File Navigations {
 nnoremap <leader><leader> :Startify<CR>
-nnoremap <leader>d :Vex<CR>:vert resize 20<CR>
+nnoremap <leader>d :NERDTree<CR>
 nnoremap <leader>fc :GBranches<CR>
 nnoremap <leader>ff :Files<CR>
 nnoremap <leader>fg :GFiles<CR>
@@ -184,6 +204,8 @@ call submode#map('resize', 'n', '', '<C-l>', '<C-w>>')
 nnoremap <leader>r :so ~/.config/nvim/init.vim<CR>
 nnoremap <leader>x :noh<CR>
 nnoremap <F8> :TagbarToggle<CR>
+nnoremap <C-e> j<C-e>
+nnoremap <C-y> k<C-y>
 nnoremap <leader>k <C-a>
 nnoremap <leader>j <C-x>
 " }
