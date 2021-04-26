@@ -67,13 +67,13 @@ is a list of some other programs I (sometimes) like to use with the ones mention
 #### Favorites
 Almost indispensable programs
 
+* clangd (lsp for c/c++)
 * cmake
 * docker (containers)
 * entr (command executer when modifying files)
 * gcc
 * git (version manager)
 * keepassxc-cli (password manager)
-* screenkey (shows keypress on screen)
 * stow (symlink farm manager)
 * tomb (encrypted files as device)
 * torbrowser (private browser)
@@ -92,6 +92,7 @@ My guilty pleasures
 * feh (for background image)
 * gpick (color palette manager)
 * ripgrep (grep alternative)
+* screenkey (shows keypress on screen)
 
 #### Neutral stance
 Neither good nor bad... Useful nonetheless
