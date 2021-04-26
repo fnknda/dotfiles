@@ -75,4 +75,14 @@ call submode#map('resize', 'n', '', '<C-j>', '<C-w>+')
 call submode#map('resize', 'n', '', '<C-k>', '<C-w>-')
 call submode#map('resize', 'n', '', '<C-l>', '<C-w>>')
 
+" Move In-Between Windows
+call submode#enter_with('mibw', 'n', '', '<C-w>h', '<C-w>h')
+call submode#enter_with('mibw', 'n', '', '<C-w>j', '<C-w>j')
+call submode#enter_with('mibw', 'n', '', '<C-w>k', '<C-w>k')
+call submode#enter_with('mibw', 'n', '', '<C-w>l', '<C-w>l')
+call submode#leave_with('mibw', 'n', '', '<Esc>')
+call submode#map('mibw', 'n', '', 'h', '<C-w>h')
+call submode#map('mibw', 'n', '', 'j', '<C-w>j')
+call submode#map('mibw', 'n', '', 'k', '<C-w>k')
+call submode#map('mibw', 'n', '', 'l', '<C-w>l')
 
