@@ -1,4 +1,4 @@
 #!/bin/bash
 
-tmux new -t main || tmux a || tmux new -s main
+tmux new -t 0 || tmux new
 

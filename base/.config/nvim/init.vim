@@ -1,40 +1,44 @@
 call plug#begin()
 
-Plug 'preservim/nerdcommenter'
-Plug 'preservim/nerdtree'
+" Language support
 Plug 'rust-lang/rust.vim'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'justinmk/vim-sneak'
+Plug 'plasticboy/vim-markdown'
+Plug 'sheerun/vim-polyglot'
+
+" New functionalities
 Plug 'mhinz/vim-startify'
+Plug 'preservim/nerdtree'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'stsewd/fzf-checkout.vim'
+Plug 'neovim/nvim-lspconfig'
+
+" Better motion
+Plug 'justinmk/vim-sneak'
+
+" Utils
+Plug 'godlygeek/tabular'
+Plug 'preservim/nerdcommenter'
+Plug 'tpope/vim-surround'
 Plug 'honza/vim-snippets'
 Plug 'sirver/UltiSnips'
-Plug 'preservim/tagbar'
-Plug 'mg979/vim-visual-multi'
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
-" File fuzzy finder
-	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-	Plug 'junegunn/fzf.vim'
-	Plug 'stsewd/fzf-checkout.vim'
-" Static code checker
-	Plug 'dense-analysis/ale'
-" Run git comments (better) on vim with :G
-	Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
-Plug 'yuttie/comfortable-motion.vim'
-Plug 'sheerun/vim-polyglot'
-Plug 'airblade/vim-gitgutter'
-Plug 'itchyny/lightline.vim'
-Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'Shougo/deoplete.nvim'
-
-Plug 'kana/vim-submode'
+" Improve other commands
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-indent'
+Plug 'tpope/vim-repeat'
+Plug 'kana/vim-submode'
+Plug 'mg979/vim-visual-multi'
 
+" Prettify
+Plug 'nvim-lua/completion-nvim'
 Plug 'morhetz/gruvbox'
+Plug 'airblade/vim-gitgutter'
+Plug 'itchyny/lightline.vim'
+Plug 'yuttie/comfortable-motion.vim'
+Plug 'nvim-treesitter/nvim-treesitter'
 
 call plug#end()
 
@@ -43,10 +47,6 @@ set nocompatible
 filetype plugin on
 
 let g:rust_recommended_style = 0
-
-let g:ale_set_loclist = 0
-let g:ale_set_quickfix = 1
-let g:ale_cpp_cc_options = '-std=c++20 -Wall'
 
 let g:deoplete#enable_at_startup = 1
 
