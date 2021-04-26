@@ -1,5 +1,8 @@
 #!/bin/sh
 
-xset r rate 200 40
+xset r rate 200 60
+xset s off
+xset -dpms
 setxkbmap br
+[ -f ~/.Xmodmap ] && xmodmap ~/.Xmodmap
 
