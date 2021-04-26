@@ -68,12 +68,14 @@ let g:vim_markdown_follow_anchor = 1
 
 let g:gruvbox_termcolors = 16
 let g:gruvbox_invert_signs = 0
+let g:gruvbox_invert_selection = 0
 
 syntax enable
 set omnifunc=syntaxcomplete#Complete
 
 set termguicolors
 colorscheme gruvbox
+set background=dark
 " }
 
 " Visual stuff and style {
@@ -104,7 +106,7 @@ let g:netrw_banner=0
 
 augroup python
 	autocmd!
-	autocmd FileType python setlocal ts=3 sw=3 tw=0 cindent noexpandtab smarttab autoindent wrap
+	autocmd FileType python\|elixir setlocal ts=3 sw=3 tw=0 cindent noexpandtab smarttab autoindent wrap
 augroup end
 
 " }
@@ -134,6 +136,13 @@ set spelllang=en_us,pt_br
 
 " start at last place you were editing
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+" Neovim LSP config {
+set completeopt=menuone,noinsert,noselect
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
+
+lua require'lspconfig'.clangd.setup{ on_attach = require'completion'.on_attach; }
+" }
 
 " Add restrictions to vim to force not to use arrow keys on
 " Insertion mode
@@ -208,6 +217,8 @@ nnoremap <C-e> j<C-e>
 nnoremap <C-y> k<C-y>
 nnoremap <leader>k <C-a>
 nnoremap <leader>j <C-x>
+nnoremap _ "_
+nnoremap + "+
 " }
 
 " Multi cursor {
