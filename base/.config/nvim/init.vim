@@ -15,6 +15,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'stsewd/fzf-checkout.vim'
 Plug 'neovim/nvim-lspconfig'
+Plug 'folke/lsp-trouble.nvim'
 
 " Better motion
 Plug 'justinmk/vim-sneak'
@@ -42,6 +43,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'folke/lsp-colors.nvim'
 
 call plug#end()
 

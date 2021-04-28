@@ -53,6 +53,7 @@ vim.api.nvim_set_keymap('n', '<leader>k', '<C-a>', {noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>j', '<C-x>', {noremap = true })
 vim.api.nvim_set_keymap('n', '_', '"_', {noremap = true })
 vim.api.nvim_set_keymap('n', '+', '"+', {noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>xx', ':LspTroubleToggle<CR>', {noremap = true })
 
 -- Multi cursor
 vim.api.nvim_set_keymap('n', '<C-j>', '<C-Down>', {})

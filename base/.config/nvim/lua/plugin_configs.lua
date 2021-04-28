@@ -22,5 +22,19 @@ vim.g.gruvbox_termcolors = 16
 vim.g.gruvbox_invert_signs = 0
 vim.g.gruvbox_invert_selection = 0
 
+require('trouble').setup{
+	icons = false,
+	fold_open = "v",
+	fold_closed = ">",
+	indent_lines = false,
+	signs = {
+		error = "error",
+		warning = "warn",
+		hint = "hint",
+		information = "info"
+	},
+	use_lsp_diagnostic_signs = false -- enabling this will use the signs defined in your lsp client
+}
+
 vim.cmd('colorscheme gruvbox')
 
