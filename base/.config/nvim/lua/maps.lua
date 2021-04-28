@@ -22,7 +22,6 @@ vim.api.nvim_set_keymap('v', '<right>', '<Nop>', { noremap = true })
 
 -- File Navigations
 vim.api.nvim_set_keymap('n', '<leader><leader>', ':Startify<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>d', ':NERDTree<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>fc', ':GBranches<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>ff', ':Files<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>fg', ':GFiles<CR>', { noremap = true })

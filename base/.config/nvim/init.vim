@@ -4,46 +4,45 @@ let mapleader=" "
 call plug#begin()
 
 " Language support
-Plug 'rust-lang/rust.vim'
 Plug 'plasticboy/vim-markdown'
+Plug 'rust-lang/rust.vim'
 Plug 'sheerun/vim-polyglot'
 
 " New functionalities
-Plug 'mhinz/vim-startify'
-Plug 'preservim/nerdtree'
+Plug 'folke/lsp-trouble.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'stsewd/fzf-checkout.vim'
+Plug 'mhinz/vim-startify'
 Plug 'neovim/nvim-lspconfig'
-Plug 'folke/lsp-trouble.nvim'
+Plug 'stsewd/fzf-checkout.vim'
 
 " Better motion
 Plug 'justinmk/vim-sneak'
 
 " Utils
 Plug 'godlygeek/tabular'
-Plug 'preservim/nerdcommenter'
-Plug 'tpope/vim-surround'
 Plug 'honza/vim-snippets'
+Plug 'nvim-lua/completion-nvim'
+Plug 'preservim/nerdcommenter'
 Plug 'sirver/UltiSnips'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 
 " Improve other commands
-Plug 'kana/vim-textobj-user'
-Plug 'kana/vim-textobj-line'
-Plug 'kana/vim-textobj-indent'
-Plug 'tpope/vim-repeat'
 Plug 'kana/vim-submode'
+Plug 'kana/vim-textobj-indent'
+Plug 'kana/vim-textobj-line'
+Plug 'kana/vim-textobj-user'
 Plug 'mg979/vim-visual-multi'
+Plug 'tpope/vim-repeat'
 
 " Prettify
-Plug 'nvim-lua/completion-nvim'
-Plug 'morhetz/gruvbox'
 Plug 'airblade/vim-gitgutter'
-Plug 'itchyny/lightline.vim'
-Plug 'yuttie/comfortable-motion.vim'
-Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'folke/lsp-colors.nvim'
+Plug 'itchyny/lightline.vim'
+Plug 'morhetz/gruvbox'
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'yuttie/comfortable-motion.vim'
 
 call plug#end()
 
