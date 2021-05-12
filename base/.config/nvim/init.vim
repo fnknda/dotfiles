@@ -6,7 +6,6 @@ call plug#begin()
 " Language support
 Plug 'plasticboy/vim-markdown'
 Plug 'rust-lang/rust.vim'
-Plug 'sheerun/vim-polyglot'
 
 " New functionalities
 Plug 'folke/lsp-trouble.nvim'

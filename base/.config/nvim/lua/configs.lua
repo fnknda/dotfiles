@@ -1,6 +1,8 @@
 -- Tabs
 vim.o.smarttab = true
 vim.o.cpoptions = vim.o.cpoptions .. "I"
+vim.o.tabstop = 3
+vim.o.shiftwidth = 0
 vim.bo.tabstop = 3
 vim.bo.shiftwidth = 0
 vim.bo.textwidth = 0
@@ -16,7 +18,8 @@ vim.o.showmode = false
 vim.o.showcmd = true
 vim.o.hlsearch = true
 vim.o.laststatus = 2
-vim.wo.wrap = true
+vim.wo.cursorline = true
+vim.wo.wrap = false
 vim.wo.list = true
 vim.wo.number = true
 vim.wo.relativenumber = true

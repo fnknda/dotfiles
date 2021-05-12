@@ -94,7 +94,7 @@ bindsym $mod+m move workspace to output left
 assign [class="(?i)tor"]2
 assign [class="(?i)firefox"]2
 assign [class="(?i)librewolf"]2
-assign [class="(?i)qutebrowser"]2
+assign [class="(?i)luakit"]2
 assign [class="(?i)discord"]3
 assign [class="(?i)telegram"]3
 assign [class="(?i)signal"]3
