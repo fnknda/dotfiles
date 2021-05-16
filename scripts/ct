@@ -8,5 +8,5 @@ then
 fi
 
 echo "Creating tags for files on $SRCDIRS"
-fd --hidden -t f '.*\.[ch]pp' ./$SRCDIRS | entr ctags -R ./$SRCDIRS
+fd --hidden -t f '.*\.[ch](pp)?' ./$SRCDIRS | entr ctags -R ./$SRCDIRS
 
