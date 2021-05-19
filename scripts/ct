@@ -2,11 +2,8 @@
 
 SRCDIRS="./src/"
 
-if [ -n "$*" ]
-then
-	SRCDIRS="$*"
-fi
+if [ -n "$*" ]; then SRCDIRS="$*"; fi
 
 echo "Creating tags for files on $SRCDIRS"
-fd --hidden -t f '.*\.[ch](pp)?' ./$SRCDIRS | entr ctags -R ./$SRCDIRS
-
+ctags -R $SRCDIRS
+while true; do ( fd --hidden -t f '.*\.[ch](pp)?' $SRCDIRS | entr ctags -u /_ ) 2> /dev/null; done

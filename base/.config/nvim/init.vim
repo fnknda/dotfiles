@@ -20,7 +20,7 @@ Plug 'justinmk/vim-sneak'
 
 " Utils
 Plug 'godlygeek/tabular'
-Plug 'honza/vim-snippets'
+Plug 'joaofukuda/vim-snippets'
 Plug 'nvim-lua/completion-nvim'
 Plug 'preservim/nerdcommenter'
 Plug 'sirver/UltiSnips'
