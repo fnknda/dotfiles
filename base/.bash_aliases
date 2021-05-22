@@ -35,7 +35,7 @@ alias grep='grep --color'
 alias ll='ls -lA'
 alias ls='ls --color=auto'
 alias ms=monsetup
-alias pwdc='keepassxc-cli clip -k $HOME/.passdb.key /media/passwords/database'
+alias pwdc='keepassxc-cli clip -k $HOME/.passdb.key /run/media/coccafukuda/passwords/database'
 alias todos='grep --color -Ern "TODO:|FIXME:"'
 alias torw='echo http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion/wiki/index.php/Main_Page'
 alias vim=nvim

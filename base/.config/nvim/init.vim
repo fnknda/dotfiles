@@ -24,7 +24,6 @@ Plug 'joaofukuda/vim-snippets'
 Plug 'nvim-lua/completion-nvim'
 Plug 'preservim/nerdcommenter'
 Plug 'sirver/UltiSnips'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 
 " Improve other commands
@@ -36,6 +35,7 @@ Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-repeat'
 
 " Prettify
+Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'folke/lsp-colors.nvim'
 Plug 'itchyny/lightline.vim'
@@ -58,6 +58,8 @@ augroup end
 " }
 
 autocmd FileType markdown\|html\|tex\|gitcommit set spell
+
+autocmd BufNewFile,BufRead *.ixx set syntax=cpp
 
 " start at last place you were editing
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif

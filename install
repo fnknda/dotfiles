@@ -12,10 +12,13 @@
 	./install_starship.sh --yes &&\
 	rm install_starship.sh
 
+# Install Custom bash on bash
+[ -z "`grep '.bash_aliases' ~/.bashrc`" ] &&\
+	echo '[ -f ~/.bash_aliases ] && source ~/.bash_aliases' >> ~/.bashrc
+
 # Install Starship on bash
 [ -z "`grep 'starship' ~/.bashrc`" ] &&\
 	echo 'eval "$(starship init bash)"' >> ~/.bashrc
 
 # Add a file with dotfiles path on home (used on .bash_aliases)
 echo $(dirname `realpath $0`) > ~/.dotfiles.path
-
