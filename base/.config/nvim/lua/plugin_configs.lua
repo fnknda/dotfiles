@@ -67,4 +67,3 @@ vim.g.startify_custom_header = {
 
 
 vim.cmd('colorscheme gruvbox')
-

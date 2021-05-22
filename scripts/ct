@@ -1,9 +1,27 @@
 #!/bin/sh
 
-SRCDIRS="./src"
+SRC_DIRS="./src"
+SRC_REGEX='.*\.[chi](pp|xx)?'
 
-if [ -n "$*" ]; then SRCDIRS="$*"; fi
+if [ -n "$*" ]; then SRC_DIRS="$*"; fi
 
-echo "Creating tags for files on $SRCDIRS"
-ctags -R $SRCDIR
-while true; do fd --hidden -t f '.*\.[ch](pp)?' $SRCDIRS | entr ctags -a /_; done
+if [ ! -d "$SRC_DIRS" ]
+then
+	echo "Directory $SRC_DIRS not found!"
+	exit
+else
+	echo "Creating tags on $SRC_DIRS for these files:"
+	fd --hidden -t f $SRC_REGEX $SRC_DIRS -x exa -1 {}
+	ctags -R $SRC_DIRS
+
+	while true
+	do
+		fd --hidden -t f $SRC_REGEX $SRC_DIRS | entr ctags -a /_
+		if [ $? != 0 ]
+		then
+			echo "Files changed"
+		else
+			exit
+		fi
+	done
+fi

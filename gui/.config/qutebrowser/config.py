@@ -4,7 +4,7 @@ c.content.blocking.method = "both"
 c.content.notifications.enabled = False
 c.editor.command = ["alacritty", "-e", "nvim", "{}"]
 c.statusbar.show = "in-mode"
-c.tabs.show = "switching"
+c.tabs.show = "always"
 
 config.bind('H', 'tab-prev')
 config.bind('L', 'tab-next')
