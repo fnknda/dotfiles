@@ -5,6 +5,7 @@
 	separator_height = 5
 	padding = 2
 	horizontal_padding = 5
+	icon_position = off
 
 [shortcuts]
 	close = ctrl+space

@@ -1,36 +1,37 @@
 -- Tabs
-vim.o.smarttab = true
+vim.o.autoindent = true
 vim.o.cpoptions = vim.o.cpoptions .. "I"
-vim.o.tabstop = 3
 vim.o.shiftwidth = 0
-vim.bo.tabstop = 3
-vim.bo.shiftwidth = 0
-vim.bo.textwidth = 0
+vim.o.smarttab = true
+vim.o.tabstop = 3
+vim.bo.autoindent = true
 vim.bo.cindent = true
-vim.bo.autoindent = false
 vim.bo.expandtab = false
+vim.bo.shiftwidth = 0
+vim.bo.tabstop = 3
+vim.bo.textwidth = 0
 
 -- Prettify stuff
-vim.o.listchars = "tab:|·,trail:~,extends:>,precedes:<"
 vim.o.background = "dark"
-vim.o.scrolloff = 3
-vim.o.showmode = false
-vim.o.showcmd = true
 vim.o.hlsearch = true
 vim.o.laststatus = 2
+vim.o.listchars = "tab:|·,trail:~,extends:>,precedes:<"
+vim.o.scrolloff = 3
+vim.o.showcmd = true
+vim.o.showmode = false
+vim.wo.colorcolumn = "81"
+vim.wo.conceallevel = 2
 vim.wo.cursorline = true
-vim.wo.wrap = false
+vim.wo.foldmethod = "marker"
 vim.wo.list = true
 vim.wo.number = true
 vim.wo.relativenumber = true
-vim.wo.colorcolumn = "81"
-vim.wo.conceallevel = 2
-vim.wo.foldmethod = "marker"
+vim.wo.wrap = true
 
 -- Backups and swaps
 vim.o.backup = false
-vim.o.writebackup = false
 vim.o.hidden = true
+vim.o.writebackup = false
 vim.bo.swapfile = false
 
 -- Searching
@@ -42,14 +43,14 @@ vim.o.wildmenu = true
 vim.o.lazyredraw = true
 vim.o.shortmess = vim.o.shortmess .. "F"
 vim.o.tags = vim.o.tags .. ",$HOME"
-vim.bo.fileencoding = "utf-8"
-vim.bo.spelllang = "en_us,pt_br"
-vim.bo.omnifunc = "syntaxcomplete#Complete"
 vim.o.termguicolors = true
+vim.bo.fileencoding = "utf-8"
+vim.bo.omnifunc = "syntaxcomplete#Complete"
+vim.bo.spelllang = "en_us,pt_br"
 
 -- Others
+vim.g.netrw_banner = 0
 vim.cmd('filetype plugin on')
 vim.cmd('filetype indent on')
 vim.cmd('syntax enable')
-vim.g.netrw_banner = 0
 

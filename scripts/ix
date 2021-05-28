@@ -6,4 +6,4 @@ fi
 
 url=$(curl -s -F 'f:1=<-' http://ix.io)
 echo "$url"
-echo "$url" | xclip 
+echo "$url" | xclip -sel clip

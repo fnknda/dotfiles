@@ -1,5 +1,9 @@
 #!/bin/sh
 
+mkdir -p ~/.config/nvim/plugged/
+mkdir -p ~/.config/qutebrowser/bookmarks/
+mkdir -p ~/.config/qutebrowser/qsettings/
+
 # Install VimPlug
 [ ! -e $HOME/.local/share/nvim/site/autoload/plug.vim ] &&\
 	sh -c 'curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs \

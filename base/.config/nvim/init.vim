@@ -50,6 +50,8 @@ lua require('configs')
 lua require('lsp_configs')
 lua require('maps')
 
+hi Normal guibg=NONE ctermbg=NONE
+
 " Visual stuff and style {
 augroup python
 	autocmd!
