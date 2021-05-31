@@ -41,3 +41,8 @@ alias torw='echo http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad
 alias vim=nvim
 alias vi=nvim
 
+mkcmk() {
+	echo -e "cmake_minimum_required(VERSION 3.5)\nproject($(pwd | grep -o -E '[^/]*$'))\n\n" > CMakeLists.txt
+	nvim -c 'normal G<Esc>' -c 'startinsert' CMakeLists.txt
+}
+

@@ -9,11 +9,11 @@ Plug 'rust-lang/rust.vim'
 
 " New functionalities
 Plug 'folke/lsp-trouble.nvim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'mhinz/vim-startify'
 Plug 'neovim/nvim-lspconfig'
-Plug 'stsewd/fzf-checkout.vim'
 
 " Better motion
 Plug 'justinmk/vim-sneak'
@@ -46,8 +46,8 @@ Plug 'yuttie/comfortable-motion.vim'
 call plug#end()
 
 lua require('plugin_configs')
-lua require('configs')
 lua require('lsp_configs')
+lua require('configs')
 lua require('maps')
 
 hi Normal guibg=NONE ctermbg=NONE
@@ -65,6 +65,12 @@ autocmd BufNewFile,BufRead *.ixx set syntax=cpp
 
 " start at last place you were editing
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+" Highlight yanks
+augroup LuaHighlight
+  autocmd!
+  autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank()
+augroup END
 
 " Submodes and their keybinds
 

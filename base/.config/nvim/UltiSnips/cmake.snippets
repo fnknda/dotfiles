@@ -1,0 +1,25 @@
+priority 0
+
+snippet cmake "Basic CMakeLists.txt structure"
+cmake_minimum_required(VERSION ${1:3.10})
+project(${2:app})
+
+${0}
+endsnippet
+
+snippet exec "add_executable"
+add_executable(${0:exec})
+endsnippet
+snippet lib "add_library"
+add_library(${0:lib})
+endsnippet
+
+snippet fpr "find_package REQUIRED"
+find_package(${0:pkg} REQUIRED)
+endsnippet
+snippet fpo "find_package (OPTIONAL)"
+find_package(${1:pkg})
+if (${1:pkg}_FOUND)
+${0}
+endif()
+endsnippet

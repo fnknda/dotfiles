@@ -14,6 +14,7 @@ vim.bo.textwidth = 0
 -- Prettify stuff
 vim.o.background = "dark"
 vim.o.hlsearch = true
+vim.o.inccommand = "split"
 vim.o.laststatus = 2
 vim.o.listchars = "tab:|·,trail:~,extends:>,precedes:<"
 vim.o.scrolloff = 3
