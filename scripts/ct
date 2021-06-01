@@ -3,20 +3,20 @@
 SRC_DIRS="./src"
 SRC_REGEX='.*\.[chi](pp|xx)?'
 
-if [ -n "$*" ]; then SRC_DIRS="$*"; fi
+if [ $# -ge 1 ]; then SRC_DIRS="$1"; fi
+if [ $# -eq 2 ]; then SRC_REGEX="$2"; fi
 
 if [ ! -d "$SRC_DIRS" ]
 then
 	echo "Directory $SRC_DIRS not found!"
 	exit
 else
-	echo "Creating tags on $SRC_DIRS for these files:"
-	fd --hidden -t f $SRC_REGEX $SRC_DIRS -x exa -1 {}
-	ctags -R $SRC_DIRS
-
 	while true
 	do
-		fd --hidden -t f $SRC_REGEX $SRC_DIRS | entr ctags -a /_
+		echo "Creating tags on $SRC_DIRS for these files:"
+		fd -t f $SRC_REGEX $SRC_DIRS -x ls -1 {}
+
+		fd -t f $SRC_REGEX $SRC_DIRS | entr -d ctags -R $SRC_DIRS
 		if [ $? != 0 ]
 		then
 			echo "Files changed"

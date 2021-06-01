@@ -27,6 +27,7 @@ vim.g.comfortable_motion_air_drag = 2.2
 
 vim.g.completion_enable_snippet = 'UltiSnips'
 
+
 require('trouble').setup {
 	icons = false,
 	fold_open = "v",
