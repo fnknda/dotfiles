@@ -121,4 +121,3 @@ Alternative programs that might substitute some of the above mentioned
 * lxd (containers on linux)
 * vim (text editor)
 * zsh (shell)
-

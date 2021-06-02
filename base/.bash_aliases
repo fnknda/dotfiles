@@ -10,6 +10,7 @@ export TERM=xterm-256color
 
 export PATH=\
 $HOME/.bin:\
+$HOME/.local/bin:\
 $DF/scripts:\
 /run/media/$USER:\
 $PATH
@@ -20,6 +21,7 @@ $HOME/:\
 $HOME/repos/gitlab.com/_joao.fukuda/:\
 $HOME/repos/gitlab.com/joao.fukuda/:\
 $HOME/repos/github.com/joaofukuda/:\
+$HOME/repos/tmp/:\
 $HOME/Documents:
 
 export HISTCONTROL=ignoreboth:erasedups
@@ -28,6 +30,7 @@ export EDITOR=nvim
 alias ?=duck
 alias alacritty='alacritty -e simple_tmux'
 alias apod='elinks https://apod.nasa.gov/apod/'
+alias build="cd build ; make -j ; cd -"
 alias dotfiles='cd $DF'
 alias gitl='git log --oneline --all --graph --decorate'
 alias gits='git status -s'
@@ -36,6 +39,7 @@ alias ll='ls -lA'
 alias ls='ls --color=auto'
 alias ms=monsetup
 alias pwdc='keepassxc-cli clip -k $HOME/.passdb.key /run/media/coccafukuda/passwords/database'
+alias tmpd='cd $(mktemp -d)'
 alias todos='grep --color -Ern "TODO:|FIXME:"'
 alias torw='echo http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion/wiki/index.php/Main_Page'
 alias vim=nvim

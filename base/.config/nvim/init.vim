@@ -9,18 +9,17 @@ Plug 'rust-lang/rust.vim'
 
 " New functionalities
 Plug 'folke/lsp-trouble.nvim'
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
 Plug 'mhinz/vim-startify'
 Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 " Better motion
 Plug 'justinmk/vim-sneak'
 
 " Utils
 Plug 'godlygeek/tabular'
-Plug 'joaofukuda/vim-snippets'
 Plug 'nvim-lua/completion-nvim'
 Plug 'preservim/nerdcommenter'
 Plug 'sirver/UltiSnips'
@@ -35,12 +34,12 @@ Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-repeat'
 
 " Prettify
-Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'folke/lsp-colors.nvim'
 Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
 Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'tpope/vim-fugitive'
 Plug 'yuttie/comfortable-motion.vim'
 
 call plug#end()
