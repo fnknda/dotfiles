@@ -20,7 +20,7 @@ export CDPATH=\
 $HOME/:\
 $HOME/repos/gitlab.com/_joao.fukuda/:\
 $HOME/repos/gitlab.com/joao.fukuda/:\
-$HOME/repos/github.com/joaofukuda/:\
+$HOME/repos/github.com/JoaoFukuda/:\
 $HOME/repos/tmp/:\
 $HOME/Documents:
 

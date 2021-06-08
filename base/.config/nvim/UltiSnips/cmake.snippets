@@ -14,10 +14,10 @@ snippet lib "add_library"
 add_library(${0:target})
 endsnippet
 
-snippet fpr "find_package REQUIRED"
+snippet find "find_package REQUIRED"
 find_package(${0:pkg} REQUIRED)
 endsnippet
-snippet fpo "find_package (OPTIONAL)"
+snippet findop "find_package (OPTIONAL)"
 find_package(${1:pkg})
 if (${1:pkg}_FOUND)
 ${0}
