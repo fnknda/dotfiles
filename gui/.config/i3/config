@@ -91,15 +91,19 @@ bindsym $mod+Shift+Up move workspace to output up
 bindsym $mod+Shift+Down move workspace to output down
 bindsym $mod+m move workspace to output left
 
+workspace_layout tabbed
+
 assign [class="(?i)tor"]2
 assign [class="(?i)firefox"]2
 assign [class="(?i)librewolf"]2
 assign [class="(?i)vimb"]2
 assign [class="(?i)qutebrowser"]2
+assign [class="(?i)nyxt"]2
 assign [class="(?i)discord"]3
 assign [class="(?i)telegram"]3
 assign [class="(?i)signal"]3
 assign [class="(?i)steam"]5
+assign [class="(?i)virtualbox"]9
 
 for_window [class="(?i)spotify"] move to workspace 4
 for_window [class="(?i)factorio"] move to workspace 5
