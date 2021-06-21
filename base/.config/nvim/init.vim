@@ -3,10 +3,6 @@ let mapleader=" "
 
 call plug#begin()
 
-" Language support
-Plug 'plasticboy/vim-markdown'
-Plug 'rust-lang/rust.vim'
-
 " New functionalities
 Plug 'folke/lsp-trouble.nvim'
 Plug 'mhinz/vim-startify'
@@ -51,16 +47,7 @@ lua require('maps')
 
 hi Normal guibg=NONE ctermbg=NONE
 
-" Visual stuff and style {
-augroup python
-	autocmd!
-	autocmd FileType python\|elixir setlocal ts=3 sw=3 tw=0 cindent noexpandtab smarttab autoindent wrap
-augroup end
-" }
-
 autocmd FileType markdown\|html\|tex\|gitcommit set spell
-
-autocmd BufNewFile,BufRead *.ixx set syntax=cpp
 
 " start at last place you were editing
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
