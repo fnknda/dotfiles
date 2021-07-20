@@ -2,9 +2,9 @@
 
 options() {
 	echo primary
+	echo double-high
 	echo secondary
 	echo middle-top
-	echo double-high
 	echo double-long
 }
 

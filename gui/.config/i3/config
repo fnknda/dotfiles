@@ -5,7 +5,7 @@ focus_follows_mouse no
 
 set $mod Mod4
 
-font pango:monospace 9
+font Hack 9
 
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status

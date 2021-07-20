@@ -5,6 +5,8 @@ c.content.notifications.enabled = False
 c.editor.command = ["alacritty", "-e", "nvim", "{}"]
 c.statusbar.show = "in-mode"
 
+c.fonts.default_family = "Hack"
+
 config.bind('H', 'tab-prev')
 config.bind('L', 'tab-next')
 config.bind('gH', 'tab-move -')

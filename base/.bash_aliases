@@ -8,6 +8,8 @@ export DF=`cat ~/.dotfiles.path`
 
 export TERM=xterm-256color
 
+export PS1="\e[m\W\e[1;93m\$\e[m "
+
 export PATH=\
 $HOME/.bin:\
 $HOME/.local/bin:\
@@ -28,6 +30,7 @@ export HISTCONTROL=ignoreboth:erasedups
 export EDITOR=nvim
 
 alias g=git
+alias ga='git add'
 alias gb='git branch'
 alias gcat='git cat-file -p'
 alias gc='git checkout'

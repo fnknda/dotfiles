@@ -1,5 +1,7 @@
 # Fukuda's dotfiles
 
+![POGpowered](https://images.uncyc.org/pt/5/5f/Pogpowered.gif)
+
 My configuration files for Linux. I try to keep all important configurations here as I frequently wipe my notebook, create servers and VMs but always like to keep things the same.
 
 ## How to use:

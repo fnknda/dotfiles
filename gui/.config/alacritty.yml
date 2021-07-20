@@ -13,15 +13,14 @@ window:
 
 font:
   normal:
-    family: monospace
-    style: book
+    family: Hack
 
   bold:
-    family: monospace
+    family: Hack
     style: bold
 
   italic:
-    family: monospace
+    family: Hack
     style: italic
 
   size: 11

@@ -10,7 +10,7 @@ foreground = ${colors.white}
 padding = 1
 module-margin = 2
 
-font-0 = Noto:size=11:weight=bold
+font-0 = Hack:size=11:weight=bold
 
 modules-left = i3
 modules-right = volume battery date

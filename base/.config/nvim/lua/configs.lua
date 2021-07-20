@@ -1,13 +1,12 @@
 -- Tabs
-vim.o.autoindent = true
 vim.o.cpoptions = vim.o.cpoptions .. "I"
-vim.o.shiftwidth = 0
 vim.o.smarttab = true
-vim.o.tabstop = 3
+vim.o.autoindent = true
 vim.bo.autoindent = true
-vim.bo.cindent = true
-vim.bo.expandtab = true
+vim.bo.expandtab = false
+vim.o.shiftwidth = 0
 vim.bo.shiftwidth = 0
+vim.o.tabstop = 3
 vim.bo.tabstop = 3
 vim.bo.textwidth = 0
 

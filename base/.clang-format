@@ -39,3 +39,5 @@ SpacesInConditionalStatement: false
 SpacesInParentheses: false
 SpacesInSquareBrackets: false
 Standard: Latest
+TabWidth: 3
+UseTab: ForIndentation
