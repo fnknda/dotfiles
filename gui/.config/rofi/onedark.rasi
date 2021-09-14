@@ -19,16 +19,12 @@
   cyan:       #8ec07c;
 
   emphasis:   #fb4934;
-  text:       #fbf1c7;
-  text-alt:   #d5c4a1;
-  fg:         #fbf1c7;
-  bg:         #282828;
 
   spacing: 0;
   background-color: transparent;
 
   font: "Hack 14";
-  text-color: @text;
+  text-color: @white;
 }
 
 window {
@@ -47,13 +43,13 @@ inputbar {
 }
 
 prompt {
-  text-color: @text;
+  text-color: @white;
 }
 
 textbox-prompt-colon {
   expand: false;
   str: ":";
-  text-color: @text;
+  text-color: @white;
 }
 
 entry {
@@ -68,14 +64,14 @@ listview {
 
 element {
   padding: 5px;
-  text-color: @white4;
   highlight: bold #95ee8f;
   border-radius: 3px;
+  text-color: @white;
 }
 
 element selected {
   background-color: @yellow;
-  text-color: @black;
+  text-color: @yellow;
 }
 
 element urgent, element selected urgent {

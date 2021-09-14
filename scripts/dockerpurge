@@ -1,12 +1,12 @@
 #!/bin/sh
 
 echo "REMOVING CONTAINERS"
-containers=`sudo docker ps --all -q`
-[ -n "$containers" ] && echo $containers | xargs sudo docker rm -v
+containers=`docker ps --all -q`
+[ -n "$containers" ] && echo $containers | xargs docker rm -v
 
 if [ "$1" = "all" ]
 then
-	images=`sudo docker images -q`
-	[ -n "$images" ] && echo $images | xargs sudo docker rmi
+	images=`docker images -q`
+	[ -n "$images" ] && echo $images | xargs docker rmi
 fi
 

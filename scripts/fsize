@@ -1,4 +1,4 @@
 #!/bin/sh
 
-sed -i "s/size: .*/size: $*/g" $DF/gui/.config/alacritty.yml
+sed -i "s/font_size .*/font_size $*/g" $DF/gui/.config/kitty/kitty.conf
 

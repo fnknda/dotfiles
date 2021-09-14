@@ -1,8 +1,8 @@
 #!/bin/sh
 
+mkdir -p ~/.config/{kitty,i3,rofi,polybar,dunst}/
 mkdir -p ~/.config/nvim/plugged/
-mkdir -p ~/.config/qutebrowser/bookmarks/
-mkdir -p ~/.config/qutebrowser/qsettings/
+mkdir -p ~/.config/qutebrowser/{bookmarks,qsettings}/
 
 # Install VimPlug
 [ ! -e $HOME/.local/share/nvim/site/autoload/plug.vim ] &&\
@@ -10,19 +10,19 @@ mkdir -p ~/.config/qutebrowser/qsettings/
 	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # Download Starship
-[ ! -e /usr/local/bin/starship ] &&\
-	curl -o install_starship.sh https://starship.rs/install.sh &&\
-	chmod +x install_starship.sh &&\
-	./install_starship.sh --yes &&\
-	rm install_starship.sh
+# [ ! -e /usr/local/bin/starship ] &&\
+# 	curl -o install_starship.sh https://starship.rs/install.sh &&\
+# 	chmod +x install_starship.sh &&\
+# 	./install_starship.sh --yes &&\
+# 	rm install_starship.sh
 
 # Install Custom bash on bash
 [ -z "`grep '.bash_aliases' ~/.bashrc`" ] &&\
 	echo '[ -f ~/.bash_aliases ] && source ~/.bash_aliases' >> ~/.bashrc
 
 # Install Starship on bash
-[ -z "`grep 'starship' ~/.bashrc`" ] &&\
-	echo 'eval "$(starship init bash)"' >> ~/.bashrc
+# [ -z "`grep 'starship' ~/.bashrc`" ] &&\
+# 	echo 'eval "$(starship init bash)"' >> ~/.bashrc
 
 # Add a file with dotfiles path on home (used on .bash_aliases)
 echo $(dirname `realpath $0`) > ~/.dotfiles.path

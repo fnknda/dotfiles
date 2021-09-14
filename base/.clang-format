@@ -12,7 +12,6 @@ Cpp11BracedListStyle: true
 EmptyLineBeforeAccessModifier: LogicalBlock
 FixNamespaceComments: false
 IncludeBlocks: Regroup
-IndentAccessModifiers: true
 IndentCaseLabels: true
 IndentWidth: 3
 IndentWrappedFunctionNames: true
@@ -20,7 +19,7 @@ KeepEmptyLinesAtTheStartOfBlocks: false
 MaxEmptyLinesToKeep: 1
 NamespaceIndentation: All
 PointerAlignment: Left
-SortIncludes: CaseInsensitive
+SortIncludes: true
 SortUsingDeclarations: true
 SpaceAfterLogicalNot: false
 SpaceAfterTemplateKeyword: false
@@ -34,7 +33,7 @@ SpaceBeforeSquareBrackets: false
 SpaceInEmptyBlock: true
 SpaceInEmptyParentheses: false
 SpacesBeforeTrailingComments: 1
-SpacesInAngles: Never
+SpacesInAngles: false
 SpacesInConditionalStatement: false
 SpacesInParentheses: false
 SpacesInSquareBrackets: false

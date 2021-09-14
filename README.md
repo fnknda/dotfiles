@@ -38,6 +38,15 @@ And to remove said packages, just do:
 stow -t ~ -D <package_name>
 ```
 
+### Set Default applications
+
+Through `xdg`:
+
+```bash
+xdg-settings get default-web-browser
+xdg-settings set default-web-browser org.qutebrowser.qutebrowser.desktop
+```
+
 ## Programs:
 
 Here in this repository are configuration files for the following programs:

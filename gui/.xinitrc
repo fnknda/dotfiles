@@ -1,7 +1,8 @@
 #!/usr/bin/bash
 
-xinput set-prop $(xinput | rg Touchpad | cut -d '=' -f2 | rg -o '^\d+') "libinput Tapping Enabled" 1
+xinput set-prop $(xinput | grep Touchpad | cut -d '=' -f2 | awk '{print $1}') "libinput Tapping Enabled" 1
 
 kbcfg
-redshift &
+feh --bg-fill ~/Documents/wallpapers/penguin.png
+picom -i 1.0 --no-fading-openclose -D 0 &
 exec dbus-launch i3

@@ -4,27 +4,34 @@ bind "set completion-ignore-case on"
 
 unalias -a
 
+TERM=xterm-256color
+
+git_branch () {
+	GIT_BRANCH="$(git branch --show-current 2> /dev/null)"
+	if [ $? -eq 0 ]; then
+		echo " (${GIT_BRANCH})"
+	fi
+}
+
+export PS1='\[\e[m\]\W\[\e[1;93m\]$(git_branch) \$\[\e[m\] '
+
 export DF=`cat ~/.dotfiles.path`
 
-export TERM=xterm-256color
-
-export PS1="\e[m\W\e[1;93m\$\e[m "
-
 export PATH=\
-$HOME/.bin:\
-$HOME/.local/bin:\
-$DF/scripts:\
-/run/media/$USER:\
-$PATH
+${HOME}/.bin:\
+${HOME}/.local/bin:\
+${DF}/scripts:\
+/run/media/${USER}:\
+${PATH}
 
 export CDPATH=\
 ./:\
-$HOME/:\
-$HOME/repos/gitlab.com/_joao.fukuda/:\
-$HOME/repos/gitlab.com/joao.fukuda/:\
-$HOME/repos/github.com/JoaoFukuda/:\
-$HOME/repos/tmp/:\
-$HOME/Documents:
+${HOME}/:\
+${HOME}/repos/gitlab.com/_joao.fukuda/:\
+${HOME}/repos/gitlab.com/joao.fukuda/:\
+${HOME}/repos/github.com/JoaoFukuda/:\
+${HOME}/repos/tmp/:\
+${HOME}/Documents:
 
 export HISTCONTROL=ignoreboth:erasedups
 export EDITOR=nvim
@@ -47,12 +54,12 @@ alias ?=duck
 alias alacritty='alacritty -e simple_tmux'
 alias apod='elinks https://apod.nasa.gov/apod/'
 alias build="cd build ; make -j ; cd -"
-alias dotfiles='cd $DF'
+alias dotfiles='cd ${DF}'
 alias grep='grep --color'
 alias ll='ls -lA'
 alias ls='ls --color=auto'
 alias ms=monsetup
-alias pwdc='keepassxc-cli clip -k $HOME/.passdb.key /run/media/coccafukuda/passwords/database'
+alias pwdc='keepassxc-cli clip -k ${HOME}/.passdb.key /run/media/coccafukuda/passwords/database'
 alias tmpd='cd $(mktemp -d)'
 alias todos='grep --color -Ern "TODO:|FIXME:"'
 alias torw='echo http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion/wiki/index.php/Main_Page'

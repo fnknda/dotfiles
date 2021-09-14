@@ -7,6 +7,7 @@ call plug#begin()
 Plug 'folke/lsp-trouble.nvim'
 Plug 'mhinz/vim-startify'
 Plug 'neovim/nvim-lspconfig'
+Plug 'kristijanhusak/orgmode.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -81,4 +82,3 @@ call submode#map('mibw', 'n', '', 'h', '<C-w>h')
 call submode#map('mibw', 'n', '', 'j', '<C-w>j')
 call submode#map('mibw', 'n', '', 'k', '<C-w>k')
 call submode#map('mibw', 'n', '', 'l', '<C-w>l')
-
