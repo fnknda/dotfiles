@@ -54,15 +54,16 @@ Here in this repository are configuration files for the following programs:
 #### Base
 
 * bash (Linux' shell)
+* clang-format (source code auto formatter)
+* gdb (C/C++ debugger)
 * neovim (text editor)
-* starship (multi shell prompt)
 * tmux (terminal window manager)
 
 #### Gui
 
-* alacritty (terminal)
 * dunst (notification daemon)
 * i3-gaps (window manager)
+* kitty (terminal)
 * picom (window compositor)
 * polybar (i3status alternative)
 * qutebrowser (vim-like browser)
@@ -78,20 +79,25 @@ is a list of some other programs I (sometimes) like to use with the ones mention
 #### Favorites
 Almost indispensable programs
 
+* clang (C/C++ Compiler)
 * clangd (lsp for c/c++)
-* cmake
+* cmake (build system for C/C++)
 * docker (containers)
 * entr (command executer when modifying files)
-* gcc
 * git (version manager)
 * keepassxc-cli (password manager)
+* man-db (linux manual)
+* man-pages (linux manual)
+* proxychains (proxy client)
 * stow (symlink farm manager)
 * tomb (encrypted files as device)
-* torbrowser (private browser)
-* transmission (torrent client)
+* torbrowser-launcher (private browser)
+* transmission-cli (torrent client)
+* vlc (media player)
 * weechat (IRC client)
 * xdotool (automate keystrokes and clicks)
 * xournalpp (wacom tablet note taking)
+* yay (package manager)
 * zathura (pdf reader)
 
 #### Bloated favorites
@@ -102,8 +108,11 @@ My guilty pleasures
 * fd (find alternative)
 * feh (for background image)
 * gpick (color palette manager)
+* lazygit (tui git client)
+* ranger (file manager)
 * ripgrep (grep alternative)
 * screenkey (shows keypress on screen)
+* tealdeer (tl;dr for linux commands)
 
 #### Neutral stance
 Neither good nor bad... Useful nonetheless
@@ -115,10 +124,14 @@ Neither good nor bad... Useful nonetheless
 * grub
 * light (hardware brightness control)
 * networkmanager
-* noto-fonts (special characters)
+* noto-fonts (monospace font)
+* noto-fonts-emojis (special characters)
+* noto-fonts-cjk (special characters)
+* noto-fonts-extra (special characters)
+* ttf-fira-code (font with programming ligatures)
 * openssh
+* starship (multi shell prompt)
 * teeldear (man, but tips and tricks)
-* ttf-nerd-fonts-symbols-mono (symbols)
 * vlc (media player)
 * xorg-server (window server)
 * xorg-xinit
@@ -126,7 +139,10 @@ Neither good nor bad... Useful nonetheless
 #### Alternatives
 Alternative programs that might substitute some of the above mentioned
 
+* alacritty (terminal)
 * dmenu (launcher)
+* firefox (browser)
+* gcc (Compiler Collection)
 * i3status (status bar)
 * librewolf (browser)
 * lxd (containers on linux)
