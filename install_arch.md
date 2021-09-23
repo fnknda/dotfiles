@@ -64,8 +64,8 @@ mkswap /dev/partition3
 ### Mount partitions
 
 ```bash
-mount /dev/partition1 /mnt
-mkdir -p /mnt/boot/efi && mount /dev/partition2 /mnt/boot/efi
+mount /dev/partition2 /mnt
+mkdir -p /mnt/boot/efi && mount /dev/partition1 /mnt/boot/efi
 swapon
 ```
 
