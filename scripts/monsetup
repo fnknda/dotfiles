@@ -1,14 +1,19 @@
 #!/bin/sh
 
 options() {
-	echo primary
-	echo double-high
-	echo secondary
-	echo middle-top
-	echo double-long
+	for (( I=$((${#OPTIONS[@]} - 1)); $I >= 0; I=$(($I - 1)) ))
+	do
+		echo ${OPTIONS[$I]}
+	done
 }
 
-OPTION=$(options | rofi -dmenu)
+OPTIONS=("double-long" "middle-top" "secondary" "double-high" "primary")
+if [ $# -eq 1 ]
+then
+	OPTION=${OPTIONS[$(((${#OPTIONS[@]} - 1) - $1))]}
+else
+	OPTION=$(options | rofi -dmenu)
+fi
 xrandr --auto
 case $OPTION in
 	primary )
@@ -36,3 +41,4 @@ case $OPTION in
 		xrandr --output eDP-1 --pos 0x$((1080 - 768))
 	;;
 esac
+feh --bg-fill ~/Documents/wallpapers/current.*
