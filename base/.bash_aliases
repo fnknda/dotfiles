@@ -1,5 +1,8 @@
 set -o vi
 shopt -s autocd
+shopt -s extglob
+shopt -s globstar
+shopt -s lithist
 bind "set completion-ignore-case on"
 
 unalias -a
@@ -21,7 +24,6 @@ export PATH=\
 ${HOME}/.bin:\
 ${HOME}/.local/bin:\
 ${DF}/scripts:\
-/run/media/${USER}:\
 ${PATH}
 
 export CDPATH=\

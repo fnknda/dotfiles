@@ -42,11 +42,11 @@ vim.o.wildmenu = true
 -- Miscs
 vim.o.lazyredraw = true
 vim.o.shortmess = vim.o.shortmess .. "F"
+vim.o.spelllang = "en_us,pt_br"
 vim.o.tags = vim.o.tags .. ",$HOME"
 vim.o.termguicolors = true
 vim.bo.fileencoding = "utf-8"
 vim.bo.omnifunc = "syntaxcomplete#Complete"
-vim.bo.spelllang = "en_us,pt_br"
 
 -- Others
 vim.g.netrw_banner = 0
