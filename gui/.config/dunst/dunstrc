@@ -1,15 +1,18 @@
 [global]
-	geometry = "500x120-25-25"
-	font = Hack 10
-	format = "<b>%s</b>\n%b"
+	geometry = "-200x120+100+50"
+	font = Hack 16
+	format = "(%a) %s"
 	separator_height = 5
-	padding = 2
+	padding = 10
+	horizontal_padding = 25
+	notification_height = 50
 	horizontal_padding = 5
 	icon_position = off
+	corner_radius = 5
 
 [shortcuts]
-	close = ctrl+space
-	close_all = ctrl+shift+space
+	close = mod4+n
+	close_all = mod4+shift+n
 
 [urgency_low]
 	background = "#282828"
