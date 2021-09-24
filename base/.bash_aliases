@@ -39,15 +39,17 @@ export HISTCONTROL=ignoreboth:erasedups
 export EDITOR=nvim
 
 alias g=git
-alias ga='git add'
-alias gb='git branch'
-alias gcat='git cat-file -p'
-alias gc='git checkout'
-alias gcherry='git cherry-pick'
-alias gd='git diff'
-alias gl='git log --oneline --all --graph --decorate'
-alias gr='git remote'
-alias gs='git status'
+
+alias gad='git add'
+alias gbr='git branch'
+alias gch='git checkout'
+alias gcm='git commit'
+alias gcp='git cherry-pick'
+alias gct='git cat-file -p'
+alias gdf='git diff'
+alias glg='git log --oneline --all --graph --decorate'
+alias grm='git remote'
+alias gst='git status'
 alias gsw='git switch'
 
 alias vim=nvim

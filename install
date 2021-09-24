@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# This is so stow does not link folders, only files
 mkdir -p ~/.config/{kitty,i3,rofi,polybar,dunst}/
 mkdir -p ~/.config/nvim/plugged/
 mkdir -p ~/.config/qutebrowser/{bookmarks,qsettings}/
