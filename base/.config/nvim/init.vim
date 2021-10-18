@@ -5,12 +5,15 @@ call plug#begin()
 
 " New functionalities
 Plug 'folke/lsp-trouble.nvim'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'kristijanhusak/orgmode.nvim'
 Plug 'mhinz/vim-startify'
 Plug 'neovim/nvim-lspconfig'
-Plug 'kristijanhusak/orgmode.nvim'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 
 " Better motion
 Plug 'justinmk/vim-sneak'
@@ -32,6 +35,7 @@ Plug 'tpope/vim-repeat'
 
 " Prettify
 Plug 'airblade/vim-gitgutter'
+Plug 'andweeb/presence.nvim'
 Plug 'folke/lsp-colors.nvim'
 Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'

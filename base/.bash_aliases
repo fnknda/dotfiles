@@ -7,8 +7,6 @@ bind "set completion-ignore-case on"
 
 unalias -a
 
-TERM=xterm-256color
-
 git_branch () {
 	GIT_BRANCH="$(git branch --show-current 2> /dev/null)"
 	if [ $? -eq 0 ]; then
@@ -18,7 +16,7 @@ git_branch () {
 
 export PS1='\[\e[m\]\W\[\e[1;93m\]$(git_branch) \$\[\e[m\] '
 
-export DF=`cat ~/.dotfiles.path`
+export DF=$(cat ~/.dotfiles.path)
 
 export PATH=\
 ${HOME}/.bin:\

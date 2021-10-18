@@ -3,6 +3,6 @@
 xset r rate 200 60
 xset s off
 xset -dpms
-setxkbmap br
+setxkbmap us
 [ -f ~/.Xmodmap ] && xmodmap ~/.Xmodmap
 

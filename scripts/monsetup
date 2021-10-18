@@ -38,7 +38,7 @@ case $OPTION in
 	double-long )
 		xrandr --output HDMI-1 --right-of eDP-1
 		xrandr --output HDMI-1 --rotate normal
-		xrandr --output eDP-1 --pos 0x$((1080 - 768))
+		xrandr --output eDP-1 --pos 0x0
 	;;
 esac
 feh --bg-fill ~/Documents/wallpapers/current.*
