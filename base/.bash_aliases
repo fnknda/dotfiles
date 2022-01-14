@@ -10,11 +10,18 @@ unalias -a
 git_branch () {
 	GIT_BRANCH="$(git branch --show-current 2> /dev/null)"
 	if [ $? -eq 0 ]; then
-		echo " (${GIT_BRANCH})"
+		echo -n " (${GIT_BRANCH})"
 	fi
 }
 
-export PS1='\[\e[m\]\W\[\e[1;93m\]$(git_branch) \$\[\e[m\] '
+ssh_info() {
+	if [ -n "${SSH_CONNECTION}" ]
+	then
+		echo -n " (ssh: ${USER}@${HOSTNAME})"
+	fi
+}
+
+export PS1='\[\e[m\]\W\[\e[1;93m\]$(ssh_info)$(git_branch) \$\[\e[m\] '
 
 export DF=$(cat ~/.dotfiles.path)
 

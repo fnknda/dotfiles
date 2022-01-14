@@ -20,7 +20,7 @@ bindsym $mod+Shift+s exec tsk
 
 bindsym $mod+x kill
 
-bindsym $mod+p exec --no-startup-id rofi -show run
+bindsym $mod+p exec --no-startup-id dmenu_run
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
