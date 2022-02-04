@@ -23,3 +23,6 @@ require('lspconfig').clangd.setup {
 require('lspconfig').cmake.setup {
 	capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
+require('lspconfig').pylsp.setup {
+	capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+}

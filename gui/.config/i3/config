@@ -20,7 +20,7 @@ bindsym $mod+Shift+s exec tsk
 
 bindsym $mod+x kill
 
-bindsym $mod+p exec --no-startup-id dmenu_run
+bindsym $mod+p exec --no-startup-id rofi -show run
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -101,6 +101,7 @@ assign [class="(?i)qutebrowser"] 2
 assign [class="(?i)nyxt"] 2
 assign [class="(?i)discord"] 3
 assign [class="(?i)telegram"] 3
+assign [class="(?i)element"] 3
 assign [class="(?i)signal"] 3
 assign [class="(?i)steam"] 5
 assign [class="(?i)virtualbox"] 9

@@ -7,10 +7,11 @@ bind "set completion-ignore-case on"
 
 unalias -a
 
-git_branch () {
-	GIT_BRANCH="$(git branch --show-current 2> /dev/null)"
-	if [ $? -eq 0 ]; then
-		echo -n " (${GIT_BRANCH})"
+ret_value() {
+	RETURN_VALUE=$?
+	if [ $RETURN_VALUE != 0 ]
+	then
+		echo -n "[$RETURN_VALUE] "
 	fi
 }
 
@@ -21,7 +22,14 @@ ssh_info() {
 	fi
 }
 
-export PS1='\[\e[m\]\W\[\e[1;93m\]$(ssh_info)$(git_branch) \$\[\e[m\] '
+git_branch () {
+	GIT_BRANCH="$(git branch --show-current 2> /dev/null)"
+	if [ $? -eq 0 ]; then
+		echo -n " (${GIT_BRANCH})"
+	fi
+}
+
+export PS1='\[\e[1;91m\]$(ret_value)\[\e[m\]\[\e[m\]\W\[\e[1;93m\]$(ssh_info)$(git_branch) \$\[\e[m\] '
 
 export DF=$(cat ~/.dotfiles.path)
 
@@ -34,10 +42,10 @@ ${PATH}
 export CDPATH=\
 ./:\
 ${HOME}/:\
-${HOME}/repos/gitlab.com/_joao.fukuda/:\
-${HOME}/repos/gitlab.com/joao.fukuda/:\
-${HOME}/repos/github.com/JoaoFukuda/:\
-${HOME}/repos/tmp/:\
+${HOME}/Repos/gitlab/_joao.fukuda/:\
+${HOME}/Repos/gitlab/joao.fukuda/:\
+${HOME}/Repos/github/JoaoFukuda/:\
+${HOME}/Repos/tmp/:\
 ${HOME}/Documents:
 
 export HISTCONTROL=ignoreboth:erasedups
@@ -68,6 +76,7 @@ alias grep='grep --color'
 alias ll='ls -lA'
 alias ls='ls --color=auto'
 alias ms=monsetup
+alias parrot='curl parrot.live'
 alias pwdc='keepassxc-cli clip -k ${HOME}/.passdb.key /run/media/coccafukuda/passwords/database'
 alias tmpd='cd $(mktemp -d)'
 alias todos='grep --color -Ern "TODO:|FIXME:"'

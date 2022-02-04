@@ -1,7 +1,5 @@
 #!/usr/bin/bash
 
-xinput set-prop $(xinput | grep Touchpad | cut -d '=' -f2 | awk '{print $1}') "libinput Tapping Enabled" 1
-
 kbcfg
 battery_daemon &
 feh --bg-fill ~/Documents/wallpapers/current.*
