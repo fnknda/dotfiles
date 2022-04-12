@@ -82,8 +82,3 @@ alias tmpd='cd $(mktemp -d)'
 alias todos='grep --color -Ern "TODO:|FIXME:"'
 alias torw='echo http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion/wiki/index.php/Main_Page'
 
-mkcmk() {
-	echo -e "cmake_minimum_required(VERSION 3.5)\nproject($(pwd | grep -o -E '[^/]*$'))\n\n" > CMakeLists.txt
-	nvim -c 'normal G<Esc>' -c 'startinsert' CMakeLists.txt
-}
-

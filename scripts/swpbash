@@ -1,6 +1,0 @@
-#!/bin/bash
-
-sudo mv /bin/bash /bin/bash.bkp.tmp
-sudo mv /bin/bash.bkp /bin/bash
-sudo mv /bin/bash.bkp.tmp /bin/bash.bpk
-

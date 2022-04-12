@@ -35,10 +35,6 @@ require('orgmode').setup({
 	org_default_notes_file = '~/Documents/org/refile.org',
 })
 
-require('presence'):setup({
-	main_image = "file",
-})
-
 vim.g.startify_custom_header = {
 ' ',
 '       .x\'                         .x\'                         .x\'                     ',

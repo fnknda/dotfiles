@@ -1,5 +1,8 @@
 #!/bin/sh
 
+PRIMARY_MON=eDP1
+SECONDARY_MON=HDMI1
+
 options() {
 	for (( I=$((${#OPTIONS[@]} - 1)); $I >= 0; I=$(($I - 1)) ))
 	do
@@ -17,27 +20,27 @@ fi
 xrandr --auto
 case $OPTION in
 	primary )
-		xrandr --output HDMI-1 --off
-		xrandr --output eDP-1 --pos 0x0
+		xrandr --output ${SECONDARY_MON} --off
+		xrandr --output ${PRIMARY_MON} --pos 0x0
 	;;
 	secondary )
-		xrandr --output eDP-1 --off
-		xrandr --output HDMI-1 --rotate normal
-		xrandr --output HDMI-1 --pos 0x0
+		xrandr --output ${PRIMARY_MON} --off
+		xrandr --output ${SECONDARY_MON} --rotate normal
+		xrandr --output ${SECONDARY_MON} --pos 0x0
 	;;
 	middle-top )
-		xrandr --output HDMI-1 --above eDP-1
-		xrandr --output HDMI-1 --rotate normal
-		xrandr --output eDP-1 --pos $(( (1920 - 1366)/2 ))x1080
+		xrandr --output ${SECONDARY_MON} --above ${PRIMARY_MON}
+		xrandr --output ${SECONDARY_MON} --rotate normal
+		xrandr --output ${PRIMARY_MON} --pos $(( (1920 - 1366)/2 ))x1080
 	;;
 	double-high )
-		xrandr --output HDMI-1 --right-of eDP-1
-		xrandr --output HDMI-1 --rotate left
-		xrandr --output eDP-1 --pos 0x$((1920 - 768))
+		xrandr --output ${SECONDARY_MON} --right-of ${PRIMARY_MON}
+		xrandr --output ${SECONDARY_MON} --rotate left
+		xrandr --output ${PRIMARY_MON} --pos 0x$((1920 - 768))
 	;;
 	double-long )
-		xrandr --output eDP-1 --right-of HDMI-1
-		xrandr --output eDP-1 --pos 1920x$((1080 - 768))
+		xrandr --output ${PRIMARY_MON} --right-of ${SECONDARY_MON}
+		xrandr --output ${PRIMARY_MON} --pos 1920x$((1080 - 768))
 	;;
 esac
 feh --bg-fill ~/Documents/wallpapers/current.*

@@ -36,7 +36,6 @@ Plug 'tpope/vim-repeat'
 
 " Prettify
 Plug 'airblade/vim-gitgutter'
-Plug 'andweeb/presence.nvim'
 Plug 'folke/lsp-colors.nvim'
 Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'

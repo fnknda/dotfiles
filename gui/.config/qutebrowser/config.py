@@ -2,8 +2,9 @@ config.load_autoconfig()
 
 c.content.blocking.method = "both"
 c.content.notifications.enabled = False
-c.editor.command = ["alacritty", "-e", "nvim", "{}"]
+c.editor.command = ["kitty", "nvim", "{}"]
 c.statusbar.show = "in-mode"
+c.auto_save.session = True
 
 c.fonts.default_family = "Hack"
 
