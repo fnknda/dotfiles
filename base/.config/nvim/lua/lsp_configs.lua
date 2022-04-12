@@ -17,12 +17,18 @@ cmp.setup({
 	}
 })
 
-require('lspconfig').clangd.setup {
+lspc = require('lspconfig')
+
+lspc.clangd.setup {
 	capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
-require('lspconfig').cmake.setup {
+lspc.cmake.setup {
 	capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
-require('lspconfig').pylsp.setup {
+lspc.pylsp.setup {
 	capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+}
+lspc.jdtls.setup {
+	capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+	cmd = {'jdtls'}
 }
