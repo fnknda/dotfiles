@@ -4,7 +4,7 @@ let mapleader=" "
 call plug#begin()
 
 " New functionalities
-Plug 'folke/lsp-trouble.nvim'
+Plug 'folke/trouble.nvim'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/nvim-cmp'
@@ -12,7 +12,7 @@ Plug 'kristijanhusak/orgmode.nvim'
 Plug 'mhinz/vim-startify'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': 'nvim-0.6' }
 Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 Plug 'sbdchd/neoformat'
 

@@ -1,4 +1,4 @@
-local cmp = require'cmp'
+local cmp = require('cmp')
 
 cmp.setup({
 	snippet = {
@@ -6,29 +6,33 @@ cmp.setup({
 			vim.fn["UltiSnips#Anon"](args.body)
 		end,
 	},
-	mapping = {
+	mapping = cmp.mapping.preset.insert({
 		['<C-e>'] = cmp.mapping.close(),
 		['<CR>'] = cmp.mapping.confirm({ select = true }),
-	},
-	sources = {
+	}),
+	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' },
 		{ name = 'ultisnips' },
+	}, {
 		{ name = 'buffer' },
-	}
+	})
 })
 
-lspc = require('lspconfig')
+local lspc = require('lspconfig')
 
-lspc.clangd.setup {
+lspc.clangd.setup({
 	capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-}
-lspc.cmake.setup {
+})
+
+lspc.cmake.setup({
 	capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-}
-lspc.pylsp.setup {
+})
+
+lspc.pylsp.setup({
 	capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-}
-lspc.jdtls.setup {
+})
+
+lspc.jdtls.setup({
 	capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
 	cmd = {'jdtls'}
-}
+})

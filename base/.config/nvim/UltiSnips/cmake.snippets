@@ -7,6 +7,12 @@ project(${2:app})
 ${0}
 endsnippet
 
+snippet conan "Conan basic setup"
+include(\${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
+${0}
+endsnippet
+
 snippet exec "add_executable"
 add_executable(${0:target})
 endsnippet

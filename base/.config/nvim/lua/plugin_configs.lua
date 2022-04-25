@@ -15,10 +15,10 @@ require('trouble').setup {
 	fold_closed = ">",
 	indent_lines = true,
 	signs = {
-		error = "error",
-		warning = "warn",
-		hint = "hint",
-		information = "info"
+		error = "EROR",
+		warning = "WARN",
+		hint = "HINT",
+		information = "INFO"
 	},
 	use_lsp_diagnostic_signs = false -- enabling this will use the signs defined in your lsp client
 }
@@ -34,6 +34,8 @@ require('orgmode').setup({
 	org_agenda_files = {'~/Documents/org/*'},
 	org_default_notes_file = '~/Documents/org/refile.org',
 })
+
+require('orgmode').setup_ts_grammar()
 
 vim.g.startify_custom_header = {
 ' ',
