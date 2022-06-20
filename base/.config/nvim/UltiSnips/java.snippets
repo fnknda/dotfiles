@@ -1,12 +1,16 @@
 priority 0
 
-snippet main "public static void main(String[] args)"
-class `vim_snippets#Filename('', 'name')`
+snippet cl "class"
+class ${1}
 {
-	public static void main(String[] args)
-	{
-		${0}
-	}
+	${0}
+}
+endsnippet
+
+snippet main "public static void main(String[] args)"
+public static void main(String[] args)
+{
+	${0}
 }
 endsnippet
 

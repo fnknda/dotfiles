@@ -1,4 +1,0 @@
-#!/bin/sh
-
-\grep -P "^$1\t" $HOME/.errnolist
-
