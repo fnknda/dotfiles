@@ -30,6 +30,7 @@ vim.api.nvim_set_keymap('n', '<leader>gr', ':Telescope lsp_references<CR>', { no
 vim.api.nvim_set_keymap('n', '<leader>fg', ':Telescope git_files<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>fr', ':Telescope registers<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>ft', ':Telescope tags<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>fs', ':Telescope live_grep<CR>', { noremap = true })
 
 -- Git commands
 vim.api.nvim_set_keymap('n', '<leader>gc', ':Git commit<CR>', { noremap = true })
