@@ -56,10 +56,10 @@ ${HOME}/Repos/tmp/:\
 ${HOME}/Documents/:
 
 export HISTCONTROL=ignoreboth:erasedups
-export EDITOR=nvim
+export EDITOR=vim
 
 alias g=git
-__git_complete g __git_main
+__git_complete g git
 
 alias gad='git add'
 alias gbr='git branch'
@@ -71,15 +71,15 @@ alias glg='git log --oneline --all --graph --decorate'
 alias grm='git remote'
 alias gst='git status'
 alias gsw='git switch'
-__git_complete gbr _git_branch
-__git_complete gco _git_checkout
-__git_complete gcm _git_commit
-__git_complete gcp _git_cherry_pick
-__git_complete gdf _git_diff
-__git_complete glg _git_log
-__git_complete grm _git_remote
-__git_complete gst _git_status
-__git_complete gsw _git_switch
+__git_complete gbr git_branch
+__git_complete gco git_checkout
+__git_complete gcm git_commit
+__git_complete gcp git_cherry_pick
+__git_complete gdf git_diff
+__git_complete glg git_log
+__git_complete grm git_remote
+__git_complete gst git_status
+__git_complete gsw git_switch
 
 alias k=kubectl
 complete -F __start_kubectl k

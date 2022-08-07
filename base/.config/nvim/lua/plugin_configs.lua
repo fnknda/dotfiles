@@ -1,27 +1,52 @@
-vim.g.submode_timeoutlen = 500
+vim.cmd [[packadd packer.nvim]]
+
+require('packer').startup(function(use)
+	use 'wbthomason/packer.nvim'
+
+	use 'neovim/nvim-lspconfig'
+	use 'Maan2003/lsp_lines.nvim'
+
+	use 'justinmk/vim-sneak'
+	use 'preservim/nerdcommenter'
+	use 'sbdchd/neoformat'
+	use 'SirVer/ultisnips'
+	use 'tpope/vim-fugitive'
+	use 'tpope/vim-repeat'
+	use 'tpope/vim-surround'
+
+	use {
+		'kana/vim-textobj-line',
+		requires = { {'kana/vim-textobj-user'} }
+	}
+
+	use {
+		'nvim-telescope/telescope.nvim', tag = '0.1.0',
+		requires = { {'nvim-lua/plenary.nvim'} }
+	}
+
+	use 'airblade/vim-gitgutter'
+	use 'itchyny/lightline.vim'
+	use 'mhinz/vim-startify'
+	use 'morhetz/gruvbox'
+	use 'nvim-treesitter/nvim-treesitter'
+
+	-- AutoComplete
+	use 'hrsh7th/cmp-buffer'
+	use 'hrsh7th/cmp-cmdline'
+	use 'hrsh7th/cmp-nvim-lsp'
+	use 'hrsh7th/cmp-path'
+	use 'hrsh7th/nvim-cmp'
+	use 'quangnguyen30192/cmp-nvim-ultisnips'
+end)
 
 vim.g.gruvbox_termcolors = 16
 vim.g.gruvbox_invert_signs = 0
 vim.g.gruvbox_invert_selection = 0
 
-vim.g.comfortable_motion_friction = 130.0
-vim.g.comfortable_motion_air_drag = 2.2
-
-vim.g.completion_enable_snippet = 'UltiSnips'
-
-require('trouble').setup {
-	icons = false,
-	fold_open = "v",
-	fold_closed = ">",
-	indent_lines = true,
-	signs = {
-		error = "EROR",
-		warning = "WARN",
-		hint = "HINT",
-		information = "INFO"
-	},
-	use_lsp_diagnostic_signs = false -- enabling this will use the signs defined in your lsp client
-}
+require("lsp_lines").setup()
+vim.diagnostic.config({
+  virtual_text = false,
+})
 
 require('nvim-treesitter.configs').setup {
 	ensure_installed = "all",
@@ -29,13 +54,6 @@ require('nvim-treesitter.configs').setup {
 		enable = true,
 	},
 }
-
-require('orgmode').setup({
-	org_agenda_files = {'~/Documents/org/*'},
-	org_default_notes_file = '~/Documents/org/refile.org',
-})
-
-require('orgmode').setup_ts_grammar()
 
 vim.g.startify_custom_header = {
 ' ',
