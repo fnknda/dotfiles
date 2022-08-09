@@ -56,22 +56,22 @@ require('nvim-treesitter.configs').setup {
 }
 
 vim.g.startify_custom_header = {
-' ',
-'       .x\'                         .x\'                         .x\'                     ',
-'      .XOX,   :k0:                .XOX,   :k0:                .XOX,   :k0:                ',
-'     .KX ,00K0Xlo,               .KX ,00K0Xlo,               .KX ,00K0Xlo,                ',
-'    .ONK,c0NNNNNX:              .ONK,c0NNNNNX:              .ONK,c0NNNNNX:                ',
-'   \'XNNNNNNNNNOKNNx            \'XNNNNNNNNNOKNNx            \'XNNNNNNNNNOKNNx            ',
-'   0NNNNNNddNNX;Nkk;           0NNNNNNddNNX;Nkk;           0NNNNNNddNNX;Nkk;              ',
-'   XNNNNNNXXNNN\'XXXx           XNNNNNNXXNNN\'XXXx           XNNNNNNXXNNN\'XXXx           ',
-'   ONXxXNNNNNNN;XNNX.          ONXxXNNNNNNN;XNNX.          ONXxXNNNNNNN;XNNX.             ',
-'   \'X0oKNNoxNNXdNdO0.          \'X0oKNNoxNNXdNdO0.          \'X0oKNNoxNNXdNdO0.          ',
-' ,kd::0XNNXXNNXXNKc   ;k.    ,kd::0XNNXXNNXXNKc   ;k.    ,kd::0XNNXXNNXXNKc   ;k.         ',
-' Xo    \'cdkOOkxl\'   .co\'     Xo    \'cdkOOkxl\'   .co\'     Xo    \'cdkOOkxl\'   .co\' ',
-' .oOkl:\'..     .\':kx;        .oOkl:\'..     .\':kx;        .oOkl:\'..     .\':kx;       ',
-'     .,:lodxxxol;.               .,:lodxxxol;.               .,:lodxxxol;.                ',
-'                                                                                    Jiji  ',
-' ',
+"                                                                                          ",
+"       .x'                         .x'                         .x'                        ",
+"      .XOX,   :k0:                .XOX,   :k0:                .XOX,   :k0:                ",
+"     .KX ,00K0Xlo,               .KX ,00K0Xlo,               .KX ,00K0Xlo,                ",
+"    .ONK,c0NNNNNX:              .ONK,c0NNNNNX:              .ONK,c0NNNNNX:                ",
+"   'XNNNNNNNNNOKNNx            'XNNNNNNNNNOKNNx            'XNNNNNNNNNOKNNx               ",
+"   0NNNNNNddNNX;Nkk;           0NNNNNNddNNX;Nkk;           0NNNNNNddNNX;Nkk;              ",
+"   XNNNNNNXXNNN'XXXx           XNNNNNNXXNNN'XXXx           XNNNNNNXXNNN'XXXx              ",
+"   ONXxXNNNNNNN;XNNX.          ONXxXNNNNNNN;XNNX.          ONXxXNNNNNNN;XNNX.             ",
+"   'X0oKNNoxNNXdNdO0.          'X0oKNNoxNNXdNdO0.          'X0oKNNoxNNXdNdO0.             ",
+" ,kd::0XNNXXNNXXNKc   ;k.    ,kd::0XNNXXNNXXNKc   ;k.    ,kd::0XNNXXNNXXNKc   ;k.         ",
+" Xo    'cdkOOkxl'   .co'     Xo    'cdkOOkxl'   .co'     Xo    'cdkOOkxl'   .co'          ",
+" .oOkl:'..     .':kx;        .oOkl:'..     .':kx;        .oOkl:'..     .':kx;             ",
+"     .,:lodxxxol;.               .,:lodxxxol;.               .,:lodxxxol;.                ",
+"                                                                                    Jiji  ",
+"                                                                                          ",
 }
 
 vim.cmd('colorscheme gruvbox')
