@@ -94,6 +94,7 @@ bindsym $mod+m move workspace to output left
 workspace_layout tabbed
 
 assign [class="(?i)chrome"] 2
+assign [class="(?i)chromium"] 2
 assign [class="(?i)firefox"] 2
 assign [class="(?i)librewolf"] 2
 assign [class="(?i)nyxt"] 2
@@ -105,6 +106,7 @@ assign [class="(?i)discord"] 3
 assign [class="(?i)element"] 3
 assign [class="(?i)hexchat"] 3
 assign [class="(?i)signal"] 3
+assign [class="(?i)slack"] 3
 assign [class="(?i)telegram"] 3
 
 # Why spotify, why?

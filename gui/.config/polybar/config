@@ -13,7 +13,8 @@ module-margin = 2
 font-0 = Hack:size=11:weight=bold
 
 modules-left = i3
-modules-right = volume battery date
+modules-center = date
+modules-right = volume battery
 
 wm-restack = i3
 
@@ -60,11 +61,10 @@ label-urgent-background = ${colors.black2}
 
 [module/date]
 type = internal/date
-interval = 30
+interval = 1
 
-date = %d/%m/%Y
-time = %H:%M
-label = %date% %time%
+time = %H:%M:%S
+label = %time%
 
 format-underline = ${colors.red}
 
