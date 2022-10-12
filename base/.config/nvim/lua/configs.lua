@@ -40,6 +40,7 @@ vim.o.path = vim.o.path .. "**"
 vim.o.wildmenu = true
 
 -- Miscs
+vim.o.mouse = "a"
 vim.o.lazyredraw = true
 vim.o.shortmess = vim.o.shortmess .. "F"
 vim.o.spelllang = "en_us,pt_br"
