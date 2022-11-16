@@ -69,7 +69,7 @@ label = %time%
 format-underline = ${colors.red}
 
 [module/volume]
-type = internal/volume
+type = internal/alsa
 master-mixer = Master
 
 format-volume = <label-volume>
