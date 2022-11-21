@@ -3,7 +3,7 @@ default_floating_border none
 
 focus_follows_mouse no
 
-set $mod Mod4
+set $mod Mod1
 
 font Hack 9
 
@@ -16,7 +16,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 bindsym $mod+Return exec kitty -e simple_tmux
-bindsym $mod+Shift+s exec tsk
+#bindsym $mod+Shift+s exec tsk
 
 bindsym $mod+x kill
 
@@ -125,7 +125,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec i3-msg exit
 
 # Custom kb
-bindsym Print exec flameshot gui
+bindsym $mod+Shift+s exec flameshot gui
 
 mode "resize" {
 	bindsym h resize shrink width 10 px
