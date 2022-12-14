@@ -4,7 +4,10 @@ require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 
 	use 'neovim/nvim-lspconfig'
-	use 'Maan2003/lsp_lines.nvim'
+	use {
+		'folke/trouble.nvim',
+		requires = 'kyazdani42/nvim-web-devicons',
+	}
 
 	use 'justinmk/vim-sneak'
 	use 'preservim/nerdcommenter'
@@ -20,7 +23,8 @@ require('packer').startup(function(use)
 	}
 
 	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.0',
+		'nvim-telescope/telescope.nvim',
+		tag = '0.1.0',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
@@ -43,13 +47,8 @@ vim.g.gruvbox_termcolors = 16
 vim.g.gruvbox_invert_signs = 0
 vim.g.gruvbox_invert_selection = 0
 
-require("lsp_lines").setup()
-vim.diagnostic.config({
-  virtual_text = false,
-})
-
 require('nvim-treesitter.configs').setup {
-	ensure_installed = "all",
+	ensure_installed = 'all',
 	highlight = {
 		enable = true,
 	},

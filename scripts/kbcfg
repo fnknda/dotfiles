@@ -1,7 +1,4 @@
 #!/bin/sh
 
 xset r rate 200 60
-xset s off
-xset -dpms
-([ -f ~/.Xmodmap ] && xmodmap ~/.Xmodmap) || true
 
