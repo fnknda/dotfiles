@@ -12,7 +12,7 @@ vim.bo.textwidth = 0
 
 -- Prettify stuff
 vim.o.background = 'dark'
-vim.o.cmdheight = 0
+vim.o.cmdheight = 1
 vim.o.hlsearch = true
 vim.o.inccommand = 'split'
 vim.o.laststatus = 3

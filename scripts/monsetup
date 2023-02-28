@@ -1,46 +1,33 @@
-#!/bin/sh
+#!/bin/bash
 
-PRIMARY_MON=eDP1
-SECONDARY_MON=HDMI1
+PRIMARY_MON=eDP-1
+SECONDARY_MON=HDMI-1
+
+OPTIONS=("primary" "secondary")
 
 options() {
-	for (( I=$((${#OPTIONS[@]} - 1)); $I >= 0; I=$(($I - 1)) ))
+	for (( i=$(( ${#OPTIONS[@]} - 1 )); i >= 0; i=$(( $i - 1 )) ))
 	do
-		echo ${OPTIONS[$I]}
+		echo ${OPTIONS[$i]}
 	done
 }
 
-OPTIONS=("double-long" "middle-top" "secondary" "double-high" "primary")
 if [ $# -eq 1 ]
 then
-	OPTION=${OPTIONS[$(((${#OPTIONS[@]} - 1) - $1))]}
+	OPTION=$1
 else
 	OPTION=$(options | rofi -dmenu)
 fi
+
 xrandr --auto
+
 case $OPTION in
 	primary )
-		xrandr --output ${SECONDARY_MON} --off
 		xrandr --output ${PRIMARY_MON} --pos 0x0
+		xrandr --output ${SECONDARY_MON} --off
 	;;
 	secondary )
-		xrandr --output ${PRIMARY_MON} --off
-		xrandr --output ${SECONDARY_MON} --rotate normal
 		xrandr --output ${SECONDARY_MON} --pos 0x0
-	;;
-	middle-top )
-		xrandr --output ${SECONDARY_MON} --above ${PRIMARY_MON}
-		xrandr --output ${SECONDARY_MON} --rotate normal
-		xrandr --output ${PRIMARY_MON} --pos $(( (1920 - 1366)/2 ))x1080
-	;;
-	double-high )
-		xrandr --output ${SECONDARY_MON} --right-of ${PRIMARY_MON}
-		xrandr --output ${SECONDARY_MON} --rotate left
-		xrandr --output ${PRIMARY_MON} --pos 0x$((1920 - 768))
-	;;
-	double-long )
-		xrandr --output ${PRIMARY_MON} --right-of ${SECONDARY_MON}
-		xrandr --output ${PRIMARY_MON} --pos 1920x$((1080 - 768))
+		xrandr --output ${PRIMARY_MON} --off
 	;;
 esac
-feh --bg-fill ~/Documents/wallpapers/current.*

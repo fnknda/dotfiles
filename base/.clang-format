@@ -12,6 +12,7 @@ Cpp11BracedListStyle: true
 EmptyLineBeforeAccessModifier: LogicalBlock
 FixNamespaceComments: false
 IncludeBlocks: Regroup
+IndentAccessModifier: true
 IndentCaseLabels: true
 IndentWidth: 3
 IndentWrappedFunctionNames: true

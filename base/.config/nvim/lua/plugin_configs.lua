@@ -9,6 +9,7 @@ require('packer').startup(function(use)
 		requires = 'kyazdani42/nvim-web-devicons',
 	}
 
+	use 'eandrju/cellular-automaton.nvim'
 	use 'justinmk/vim-sneak'
 	use 'preservim/nerdcommenter'
 	use 'sbdchd/neoformat'

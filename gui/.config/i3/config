@@ -17,6 +17,8 @@ floating_modifier $mod
 
 bindsym $mod+Return exec kitty -e simple_tmux
 #bindsym $mod+Shift+s exec tsk
+bindsym Mod1+Control+Shift+1 exec monsetup primary
+bindsym Mod1+Control+Shift+2 exec monsetup secondary
 
 bindsym $mod+x kill
 
