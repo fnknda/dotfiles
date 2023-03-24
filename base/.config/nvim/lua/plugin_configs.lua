@@ -4,12 +4,20 @@ require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 
 	use 'neovim/nvim-lspconfig'
+	use 'j-hui/fidget.nvim'
 	use {
 		'folke/trouble.nvim',
 		requires = 'kyazdani42/nvim-web-devicons',
 	}
 
 	use 'eandrju/cellular-automaton.nvim'
+	use {
+		'folke/which-key.nvim',
+		config = function()
+			vim.o.timeout = true
+			vim.o.timeoutlen = 500
+		end
+	}
 	use 'justinmk/vim-sneak'
 	use 'preservim/nerdcommenter'
 	use 'sbdchd/neoformat'
@@ -34,6 +42,13 @@ require('packer').startup(function(use)
 	use 'mhinz/vim-startify'
 	use 'morhetz/gruvbox'
 	use 'nvim-treesitter/nvim-treesitter'
+	use {
+		'folke/noice.nvim',
+		requires = {
+			'MunifTanjim/nui.nvim',
+			'rcarriga/nvim-notify',
+		}
+	}
 
 	-- AutoComplete
 	use 'hrsh7th/cmp-buffer'
@@ -53,6 +68,31 @@ require('nvim-treesitter.configs').setup {
 	highlight = {
 		enable = true,
 	},
+}
+
+vim.opt.termguicolors = true
+require("notify").setup {
+	background_colour = "#000000",
+}
+
+require('which-key').setup {
+	triggers = "auto",
+}
+
+require('noice').setup {
+	cmdline = {
+		enabled = true,
+		view = 'cmdline',
+		format = {
+			cmdline = false,
+			search_down = false,
+			search_up = false,
+			filter = false,
+			lua = false,
+			help = false,
+			input = false,
+		}
+	}
 }
 
 vim.g.startify_custom_header = {

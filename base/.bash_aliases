@@ -82,6 +82,9 @@ __git_complete gst git_status
 __git_complete gsw git_switch
 
 alias k=kubectl
+alias kc="k ctx"
+alias kg="k get"
+alias kgp="k get po"
 complete -F __start_kubectl k
 
 alias vim=nvim
