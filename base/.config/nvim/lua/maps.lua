@@ -1,4 +1,5 @@
 local map = vim.api.nvim_set_keymap
+vim.g.mapleader = ' '
 
 -- Add restrictions to vim to force not to use arrow keys on
 

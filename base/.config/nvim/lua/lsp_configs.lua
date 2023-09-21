@@ -25,11 +25,13 @@ lspc.clangd.setup { capabilities = cmp_cap }
 
 lspc.cmake.setup { capabilities = cmp_cap }
 
-lspc.terraformls.setup { capabilities = cmp_cap }
+lspc.gdscript.setup{ capabilities = cmp_cap }
 
 lspc.pylsp.setup { capabilities = cmp_cap }
 
-lspc.gdscript.setup{ capabilities = cmp_cap }
+lspc.terraformls.setup { capabilities = cmp_cap }
+
+lspc.texlab.setup{ capabilities = cmp_cap }
 
 lspc.tsserver.setup{ capabilities = cmp_cap }
 

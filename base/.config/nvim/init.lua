@@ -1,5 +1,4 @@
 vim.api.nvim_set_keymap('n', '<Space>', '', {noremap = true})
-vim.g.mapleader = ' '
 
 require('plugin_configs')
 require('lsp_configs')
