@@ -54,20 +54,22 @@ Here in this repository are configuration files for the following programs:
 #### Base
 
 * bash (Linux' shell)
+* clangd (lsp for c/c++)
 * clang-format (source code auto formatter)
 * gdb (C/C++ debugger)
+* git (version manager)
 * neovim (text editor)
 * tmux (terminal window manager)
 
 #### Gui
 
-* dunst (notification daemon)
 * i3-gaps (window manager)
 * kitty (terminal)
 * picom (window compositor)
 * polybar (i3status alternative)
 * qutebrowser (vim-like browser)
 * rofi (launcher)
+* xorg-xinit
 
 #### Extras
 
@@ -80,11 +82,10 @@ is a list of some other programs I (sometimes) like to use with the ones mention
 Almost indispensable programs
 
 * clang (C/C++ Compiler)
-* clangd (lsp for c/c++)
 * cmake (build system for C/C++)
 * docker (containers)
+* dunst (notification daemon)
 * entr (command executer when modifying files)
-* git (version manager)
 * keepassxc-cli (password manager)
 * man-db (linux manual)
 * man-pages (linux manual)
@@ -134,7 +135,6 @@ Neither good nor bad... Useful nonetheless
 * teeldear (man, but tips and tricks)
 * vlc (media player)
 * xorg-server (window server)
-* xorg-xinit
 
 #### Alternatives
 Alternative programs that might substitute some of the above mentioned
