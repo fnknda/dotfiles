@@ -96,6 +96,18 @@ require('noice').setup {
 	}
 }
 
+require('zen-mode').setup {
+	plugins = {
+		tmux = {
+			enabled = true
+		},
+		kitty = {
+			enabled = true,
+			font = "+4",
+		},
+	},
+}
+
 vim.g.startify_custom_header = {
 "                                                                                          ",
 "       .x'                         .x'                         .x'                        ",
