@@ -25,6 +25,7 @@ require('packer').startup(function(use)
 	use 'tpope/vim-fugitive'
 	use 'tpope/vim-repeat'
 	use 'tpope/vim-surround'
+	use 'folke/zen-mode.nvim'
 
 	use {
 		'kana/vim-textobj-line',

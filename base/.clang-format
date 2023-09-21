@@ -7,12 +7,12 @@ AlwaysBreakTemplateDeclarations: Yes
 BreakBeforeBraces: Stroustrup
 BreakConstructorInitializers: AfterColon
 BreakStringLiterals: true
-ColumnLimit: 80
+ColumnLimit: 0
 Cpp11BracedListStyle: true
 EmptyLineBeforeAccessModifier: LogicalBlock
 FixNamespaceComments: false
 IncludeBlocks: Regroup
-IndentAccessModifier: true
+IndentAccessModifiers: true
 IndentCaseLabels: true
 IndentWidth: 3
 IndentWrappedFunctionNames: true
