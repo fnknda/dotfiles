@@ -53,7 +53,7 @@ ${HOME}/Repos/gitlab/_joao.fukuda/:\
 ${HOME}/Repos/gitlab/joao.fukuda/:\
 ${HOME}/Repos/github/JoaoFukuda/:\
 ${HOME}/Repos/tmp/:\
-${HOME}/Documents/:
+${HOME}/Documents/
 
 export HISTCONTROL=ignoreboth:erasedups
 export EDITOR=vim
