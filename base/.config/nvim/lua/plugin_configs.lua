@@ -3,14 +3,18 @@ vim.cmd [[packadd packer.nvim]]
 require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 
+	-- LSP Configs
 	use 'neovim/nvim-lspconfig'
-	use 'j-hui/fidget.nvim'
+	use {
+		'j-hui/fidget.nvim',
+		tag = 'legacy',
+	}
 	use {
 		'folke/trouble.nvim',
-		requires = 'kyazdani42/nvim-web-devicons',
+		requires = { {'kyazdani42/nvim-web-devicons'} }
 	}
 
-	use 'eandrju/cellular-automaton.nvim'
+	-- Productivity
 	use {
 		'folke/which-key.nvim',
 		config = function()
@@ -25,31 +29,25 @@ require('packer').startup(function(use)
 	use 'tpope/vim-fugitive'
 	use 'tpope/vim-repeat'
 	use 'tpope/vim-surround'
-	use 'folke/zen-mode.nvim'
 
 	use {
 		'kana/vim-textobj-line',
 		requires = { {'kana/vim-textobj-user'} }
 	}
 
+	-- Buffer management
 	use {
 		'nvim-telescope/telescope.nvim',
-		tag = '0.1.0',
+		tag = '0.1.4',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
+	-- Prettify
 	use 'airblade/vim-gitgutter'
 	use 'itchyny/lightline.vim'
 	use 'mhinz/vim-startify'
 	use 'morhetz/gruvbox'
 	use 'nvim-treesitter/nvim-treesitter'
-	use {
-		'folke/noice.nvim',
-		requires = {
-			'MunifTanjim/nui.nvim',
-			'rcarriga/nvim-notify',
-		}
-	}
 
 	-- AutoComplete
 	use 'hrsh7th/cmp-buffer'
@@ -58,11 +56,16 @@ require('packer').startup(function(use)
 	use 'hrsh7th/cmp-path'
 	use 'hrsh7th/nvim-cmp'
 	use 'quangnguyen30192/cmp-nvim-ultisnips'
+
+	-- Miscs
+	use 'eandrju/cellular-automaton.nvim'
+	use 'folke/zen-mode.nvim'
 end)
 
 vim.g.gruvbox_termcolors = 16
 vim.g.gruvbox_invert_signs = 0
 vim.g.gruvbox_invert_selection = 0
+vim.opt.termguicolors = true
 
 require('nvim-treesitter.configs').setup {
 	ensure_installed = 'all',
@@ -71,29 +74,8 @@ require('nvim-treesitter.configs').setup {
 	},
 }
 
-vim.opt.termguicolors = true
-require("notify").setup {
-	background_colour = "#000000",
-}
-
 require('which-key').setup {
 	triggers = "auto",
-}
-
-require('noice').setup {
-	cmdline = {
-		enabled = true,
-		view = 'cmdline',
-		format = {
-			cmdline = false,
-			search_down = false,
-			search_up = false,
-			filter = false,
-			lua = false,
-			help = false,
-			input = false,
-		}
-	}
 }
 
 require('zen-mode').setup {

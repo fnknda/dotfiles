@@ -1,0 +1,22 @@
+#!/bin/python3
+import sys
+
+if __name__ == '__main__':
+    if len(sys.argv) < 2:
+        print('String required')
+        sys.exit(1)
+
+    text = sys.argv[1]
+    for arg in sys.argv[2:]:
+        text += ' ' + arg
+
+    values = []
+    for i in range(0, len(text), 8):
+        subtext = text[i : i + 8]
+        values.append(subtext[::-1].encode())
+
+    values = values[::-1]
+    for v in values:
+        print(f'mov rax, 0x{v.hex()}')
+        print(f'push rax')
+

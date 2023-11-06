@@ -87,6 +87,10 @@ alias kg="k get"
 alias kgp="k get po"
 complete -F __start_kubectl k
 
+alias prc="perf record -F max -g"
+alias prp="perf report -g graph,0"
+alias prpe="perf report -g graph,0,callee"
+
 alias vim=nvim
 
 alias ?=duck
