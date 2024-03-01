@@ -1,4 +1,0 @@
-configuration {
-	modi: "run,window";
-}
-@theme "onedark"

@@ -1,7 +1,6 @@
 vim.api.nvim_set_keymap('n', '<Space>', '', {noremap = true})
 
 require('plugin_configs')
-require('lsp_configs')
 require('configs')
 require('maps')
 

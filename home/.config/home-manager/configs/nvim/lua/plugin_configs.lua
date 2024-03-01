@@ -3,17 +3,6 @@ vim.cmd [[packadd packer.nvim]]
 require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 
-	-- LSP Configs
-	use 'neovim/nvim-lspconfig'
-	use {
-		'j-hui/fidget.nvim',
-		tag = 'legacy',
-	}
-	use {
-		'folke/trouble.nvim',
-		requires = { {'kyazdani42/nvim-web-devicons'} }
-	}
-
 	-- Productivity
 	use {
 		'folke/which-key.nvim',
@@ -68,7 +57,7 @@ vim.g.gruvbox_invert_selection = 0
 vim.opt.termguicolors = true
 
 require('nvim-treesitter.configs').setup {
-	ensure_installed = 'all',
+	ensure_installed = { 'c', 'cpp', 'lua', 'zig', 'vim', 'nix', 'asm' },
 	highlight = {
 		enable = true,
 	},
