@@ -7,10 +7,19 @@
 	nixpkgs.config.allowUnfree = true;
 
 	home.packages = with pkgs; [
-		keepassxc
-		inetutils
-		man-pages
 		docker
+		file
+		htop
+		inetutils
+		keepassxc
+		killall
+		man-pages
+		openvpn
+		pulsemixer
+		tmux
+		transmission
+		unzip
+		wget
 
 		zoxide
 		bat
@@ -18,14 +27,47 @@
 		fd
 		ripgrep
 
+		arandr
+		feh
 		firefox
-		zathura
-		solaar
 		flameshot
+		gimp
+		nyxt
+		solaar
+		vlc
+		zathura
 
 		telegram-desktop
 		discord
 		spotify
+		obs-studio
+
+		gcc
+		gdb
+		gef
+		gnumake
+		nasm
+		patchelf
+		python3
+		texliveFull
+		valgrind
+		xxd
+		zig
+
+		qemu
+		virt-manager
+
+		ffuf
+		hashcat
+		nmap
+		pwntools
+		radare2
+		seclists
+		tcpdump
+		tcpflow
+		thc-hydra
+		wifite2
+		wireshark
 	];
 
 	programs.bash = {
@@ -47,6 +89,7 @@
 		'';
 		shellAliases = {
 			"ls"     = "eza";
+			"l"     = "ls -la";
 			"g"      = "git";
 			"gad"    = "git add";
 			"gbr"    = "git branch";
@@ -77,6 +120,35 @@
 		enable = true;
 		userName = "Joao Fukuda";
 		userEmail = "joao@fukuda.sh";
+		extraConfig = {
+			core = {
+				whitespace = "trailing-space,space-before-tab";
+			};
+			init = {
+				defaultBranch = "main";
+			};
+			diff = {
+				algorithm = "histogram";
+				submodule = "log";
+			};
+			status = {
+				submoduleSummary = "true";
+			};
+			push = {
+				autoSetupRemote = "true";
+				followtags = "true";
+			};
+			merge = {
+				conflictstyle = "zdiff3";
+			};
+			rebase = {
+				autosquash = "true";
+				autostash = "true";
+			};
+			submodule = {
+				recurse = "true";
+			};
+		};
 	};
 
 	programs.kitty = {
