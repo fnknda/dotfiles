@@ -1,4 +1,0 @@
-#!/bin/sh
-
-sed -i "s/background_opacity .*/background_opacity $*/g" $DF/gui/.config/kitty/kitty.conf
-

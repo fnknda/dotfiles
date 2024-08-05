@@ -1,3 +1,0 @@
-#!/bin/sh
-
-elinks "https://en.wikipedia.org/w/index.php?cirrusUserTesting=control&search=$*&title=Special%3ASearch&go=Go&ns0=1"

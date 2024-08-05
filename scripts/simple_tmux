@@ -1,4 +1,0 @@
-#!/bin/bash
-
-tmux new -t 0 || tmux new
-

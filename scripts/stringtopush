@@ -6,9 +6,7 @@ if __name__ == '__main__':
         print('String required')
         sys.exit(1)
 
-    text = sys.argv[1]
-    for arg in sys.argv[2:]:
-        text += ' ' + arg
+    text = ' '.join(sys.argv[1:])
 
     values = []
     for i in range(0, len(text), 8):

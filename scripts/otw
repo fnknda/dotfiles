@@ -1,4 +1,0 @@
-#!/bin/sh
-
-elinks "https://overthewire.org/wargames/bandit/bandit$1.html"
-

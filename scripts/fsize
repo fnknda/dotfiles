@@ -1,4 +1,0 @@
-#!/bin/sh
-
-sed -i "s/font_size .*/font_size $*/g" $DF/gui/.config/kitty/kitty.conf
-

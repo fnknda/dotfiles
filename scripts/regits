@@ -1,6 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 
 ROOT=$(pwd)
+if [ -n "$1" ]; then
+	ROOT="$1"
+fi
+
 for FILE in $(fd '\.git$' -t d --hidden)
 do
 	cd $(realpath ${ROOT}/${FILE})/..
