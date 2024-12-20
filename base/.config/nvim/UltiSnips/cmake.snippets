@@ -1,0 +1,61 @@
+priority 0
+
+snippet cmake "Basic CMakeLists.txt structure"
+cmake_minimum_required(VERSION ${1:3.10})
+project(${2:app})
+
+${0}
+endsnippet
+
+snippet conan "Conan basic setup"
+include(\${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
+${0}
+endsnippet
+
+snippet clangd "Setup to make project work with clangd"
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+${0}
+endsnippet
+
+snippet exec "add_executable"
+add_executable(${0:target})
+endsnippet
+snippet lib "add_library"
+add_library(${0:target})
+endsnippet
+
+snippet find "find_package REQUIRED"
+find_package(${0:pkg} REQUIRED)
+endsnippet
+snippet findop "find_package (OPTIONAL)"
+find_package(${1:pkg})
+if (${1:pkg}_FOUND)
+${0}
+endif()
+endsnippet
+
+snippet warn "Default warnings"
+target_compile_options(${1:target} PRIVATE
+	-Wall
+	-Wextra
+	-Wshadow
+	-Wunused
+	-Wnon-virtual-dtor
+	-Wold-style-cast
+	-Wcast-align
+	-Wunused
+	-Woverloaded-virtual
+	-Wpedantic
+	-Wconversion
+	-Wsign-conversion
+	-Wmisleading-indentation
+	-Wduplicated-cond
+	-Wduplicated-branches
+	-Wlogical-op
+	-Wnull-dereference
+	-Wuseless-cast
+	-Wdouble-promotion
+	-Wformat=2
+)
+endsnippet
