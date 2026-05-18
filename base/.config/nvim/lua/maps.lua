@@ -13,6 +13,10 @@ map('n', '<leader>ft', ':Telescope tags<CR>', { silent = true, noremap = true })
 -- Multi-file workflow
 map('n', '<leader>b', ':Telescope buffers<CR>', { silent = true, noremap = true })
 
+-- LSP
+map('n', '<leader>gd', ':lua vim.lsp.buf.definition()<CR>', { silent = true, noremap = true })
+map('n', '<leader>ls', ':lua vim.lsp.stop_client(vim.lsp.get_clients())<CR>', { silent = true, noremap = true })
+
 -- Miscs
 map('n', '<leader>x', ':noh<CR>', { silent = true, noremap = true  })
 map('n', '<leader>z', ':ZenMode<CR>', { silent = true, noremap = true  })

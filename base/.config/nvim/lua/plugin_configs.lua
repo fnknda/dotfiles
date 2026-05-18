@@ -46,23 +46,28 @@ require("lazy").setup({
 	'mhinz/vim-startify',
 	'morhetz/gruvbox',
 	'nvim-treesitter/nvim-treesitter',
+	{
+		'Aasim-A/scrollEOF.nvim',
+		event = { 'CursorMoved', 'WinScrolled' },
+		opts = {},
+	},
 
 	-- LSP
-	'neovim/nvim-lspconfig',
+	--'neovim/nvim-lspconfig',
 
 	-- AutoComplete
-	'hrsh7th/cmp-buffer',
-	'hrsh7th/cmp-cmdline',
-	'hrsh7th/cmp-nvim-lsp',
-	'hrsh7th/cmp-path',
-	'hrsh7th/nvim-cmp',
-	'quangnguyen30192/cmp-nvim-ultisnips',
+	--'hrsh7th/cmp-buffer',
+	--'hrsh7th/cmp-cmdline',
+	--'hrsh7th/cmp-nvim-lsp',
+	--'hrsh7th/cmp-path',
+	--'hrsh7th/nvim-cmp',
+	--'quangnguyen30192/cmp-nvim-ultisnips',
 
 	-- Miscs
-	'eandrju/cellular-automaton.nvim',
 	'folke/zen-mode.nvim',
 })
 
+vim.g.NERDDefaultAlign = 'left'
 vim.g.gruvbox_termcolors = 16
 vim.g.gruvbox_invert_signs = 0
 vim.g.gruvbox_invert_selection = 0

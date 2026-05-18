@@ -39,13 +39,14 @@ kubernetes_context () {
 	fi
 }
 
-export PS1='\[\e[1;91m\]$(ret_value)\[\e[m\]\[\e[m\]\W\[\e[1;93m\]$(ssh_info)$(git_branch)$(kubernetes_context) \$\[\e[m\] '
+#export PS1='\[\e[1;91m\]$(ret_value)\[\e[m\]\W\[\e[1;93m\]$(ssh_info)$(git_branch)$(kubernetes_context) \$\[\e[m\] '
+export PS1='\[\e[1;93m\]\$\[\e[m\] '
 
 export HISTCONTROL=ignoreboth:erasedups
 export EDITOR=nvim
 export TERMINAL=kitty
 
-export PATH=${PATH}:${HOME}/.bin:${HOME}/.local/share/gem/ruby/3.0.0/bin
+export PATH=${HOME}/.local/bin:${HOME}/.local/share/gem/ruby/3.0.0/bin:${PATH}
 
 source /usr/share/bash-completion/completions/git
 alias g=git
@@ -82,7 +83,9 @@ alias vi=nvim
 alias vim=nvim
 alias ls=eza
 alias l="ls -la"
+alias gdb="gdb -q"
+alias bt=bluetoothctl
 
 alias apod='elinks https://apod.nasa.gov/apod/'
 alias grep='grep --color'
-alias todos='ag "TODO:|FIXME:"'
+alias todos='rg -o "(TODO:|FIXME:).*$"'

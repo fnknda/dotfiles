@@ -137,6 +137,7 @@ assign [class="(?i)vimb"] 2
 
 assign [class="(?i)discord"] 3
 assign [class="(?i)vesktop"] 3
+assign [class="(?i)teamspeak3"] 3
 assign [class="(?i)element"] 3
 assign [class="(?i)hexchat"] 3
 assign [class="(?i)signal"] 3
@@ -147,6 +148,7 @@ assign [class="(?i)telegram"] 3
 for_window [class="(?i)spotify"] move to workspace 4
 
 assign [class="(?i)steam"] 5
+assign [class="(?i)lutris"] 5
 
 assign [class="(?i)virt-manager"] 9
 assign [class="(?i)virtualbox"] 9
@@ -181,6 +183,12 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+mode "game" {
+        bindsym Mod4+0 mode "default"
+}
+
+bindsym Mod4+0 mode "game"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)

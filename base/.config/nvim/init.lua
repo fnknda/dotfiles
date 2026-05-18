@@ -3,7 +3,6 @@ vim.api.nvim_set_keymap('n', '<Space>', '', {noremap = true})
 require('configs')
 require('maps')
 require('plugin_configs')
-require('lsp')
 
 vim.cmd([[
 hi Normal guibg=NONE ctermbg=NONE

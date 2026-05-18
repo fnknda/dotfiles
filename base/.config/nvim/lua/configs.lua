@@ -52,6 +52,7 @@ vim.bo.omnifunc = 'syntaxcomplete#Complete'
 -- Others
 vim.g.netrw_banner = 0
 vim.g.zig_fmt_autosave = 0
+vim.g.python_recommended_style = 0
 vim.cmd('filetype plugin on')
 vim.cmd('filetype indent on')
 vim.cmd('syntax enable')
